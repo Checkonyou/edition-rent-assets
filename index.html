@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>notag — beats without a signature</title>
-<meta name="description" content="notag is a beat producer working anonymously. No drops, no DJ tag, no face. Just the work. Beats for lease, exclusive rights, custom production, mixing and mastering." />
+<meta name="description" content="An anonymous beat producer. No drop, no signature, no face. Lease, exclusive, custom." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,500;12..96,800&family=Hanken+Grotesk:wght@300;400;500;700&family=Martian+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Hanken+Grotesk:wght@400;500&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="notag.css" />
 </head>
 <body>
@@ -15,436 +15,79 @@
 <div class="grain" aria-hidden="true"></div>
 
 <header class="nav">
-  <a class="nav-mark" href="#top" aria-label="notag, home">
+  <a class="nav-mark" href="#top" aria-label="notag">
     <span class="mark-glyph">/</span><span class="mark-word">notag</span>
   </a>
-  <nav class="nav-links" aria-label="primary">
-    <a href="#catalog">Catalog</a>
-    <a href="#manifesto">Manifesto</a>
-    <a href="#services">Services</a>
-    <a href="#credits">Credits</a>
-    <a href="#contact" class="nav-cta">Get a beat <span aria-hidden="true">→</span></a>
-  </nav>
-  <button class="nav-burger" aria-label="Open menu" aria-expanded="false">
-    <span></span><span></span>
-  </button>
+  <a href="mailto:work@notag.studio" class="nav-cta">Get a beat <span aria-hidden="true">→</span></a>
 </header>
 
-<main id="top">
+<main id="top" class="stage">
 
-  <section class="hero" aria-label="Introduction">
-    <div class="hero-grid">
-      <div class="hero-meta" aria-hidden="true">
-        <span>FILE_01 / NTG-2026</span>
-        <span class="hero-meta-dot"></span>
-        <span>UNCREDITED</span>
-      </div>
+  <section class="hero">
+    <div class="hero-meta" aria-hidden="true">
+      <span>FILE_01</span>
+      <span class="dot"></span>
+      <span>UNCREDITED</span>
+      <span class="dot"></span>
+      <span><span class="live"></span>OPEN FOR PLACEMENTS</span>
+    </div>
 
-      <h1 class="hero-mark">
-        <span class="hm-row hm-row-a">
-          <span class="hm-slash" aria-hidden="true">/</span>
-          <span class="hm-word">no</span>
-        </span>
-        <span class="hm-row hm-row-b">
-          <span class="hm-word">tag</span>
-          <span class="hm-dot" aria-hidden="true"></span>
-        </span>
-      </h1>
+    <h1 class="mark">
+      <span class="mark-row a"><span class="slash" aria-hidden="true">/</span>no</span>
+      <span class="mark-row b">tag<span class="stop" aria-hidden="true"></span></span>
+    </h1>
 
-      <p class="hero-lede">
-        A producer working without a name on the record. No drop. No signature. No face on the sleeve. Just the beats, dated and shipped.
-      </p>
+    <p class="lede">
+      An anonymous beat producer. No drop, no signature, no face on the sleeve. Just the beats, dated and shipped.
+    </p>
 
-      <dl class="hero-spec">
-        <div><dt>Status</dt><dd><span class="status-dot"></span>Open for placements</dd></div>
-        <div><dt>Output</dt><dd>3–5 beats / week</dd></div>
-        <div><dt>Base</dt><dd>Anonymous, remote</dd></div>
-        <div><dt>Since</dt><dd>2019</dd></div>
-      </dl>
-
-      <div class="hero-cta">
-        <a href="#catalog" class="btn btn-solid">Hear the catalog</a>
-        <a href="#contact" class="btn btn-ghost">Brief a custom track <span aria-hidden="true">↗</span></a>
-      </div>
-
-      <div class="hero-ticker" aria-hidden="true">
-        <div class="ticker-track">
-          <span>140 BPM</span><span>•</span><span>F MINOR</span><span>•</span><span>808 PRESSED</span><span>•</span><span>NO TAG</span><span>•</span><span>NO DROP</span><span>•</span><span>SHIPPED MONDAYS</span><span>•</span><span>STEMS ON REQUEST</span><span>•</span><span>WAV / 24-BIT</span><span>•</span>
-          <span>140 BPM</span><span>•</span><span>F MINOR</span><span>•</span><span>808 PRESSED</span><span>•</span><span>NO TAG</span><span>•</span><span>NO DROP</span><span>•</span><span>SHIPPED MONDAYS</span><span>•</span><span>STEMS ON REQUEST</span><span>•</span><span>WAV / 24-BIT</span><span>•</span>
-        </div>
-      </div>
+    <div class="cta">
+      <a href="#beats" class="btn btn-solid">Audition the catalog</a>
+      <a href="mailto:work@notag.studio" class="btn btn-ghost">Brief a custom track <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
-
-  <section class="catalog" id="catalog" aria-labelledby="catalog-title">
-    <div class="section-head">
-      <span class="kicker">02 — Catalog</span>
-      <h2 id="catalog-title" class="section-title">Eight beats on the desk this month.</h2>
-      <p class="section-sub">Click a row to audition. Two-bar loops by default; full demos by request. License terms are listed under each track. All files delivered as 24-bit WAV with trackouts.</p>
-    </div>
-
+  <section class="beats" id="beats" aria-label="Catalog">
     <ol class="tracks" role="list">
-      <li class="track" data-bpm="142" data-key="F min" data-mood="Hard / Cinematic">
-        <button class="track-play" aria-label="Play Lateral Damage">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">01</span>
-          <span class="track-title">Lateral Damage</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>142 BPM</span><span>F min</span><span>2:48</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Drill</span><span class="tag">808</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$60</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.4k</strong></span>
-        </div>
+      <li class="track">
+        <button class="play" aria-label="Play Lateral Damage"><span class="g-play"></span><span class="g-pause"></span></button>
+        <div class="t-name">Lateral Damage</div>
+        <div class="wave" aria-hidden="true"><svg viewBox="0 0 400 32" preserveAspectRatio="none"></svg></div>
+        <div class="t-meta">142 · F min · 2:48</div>
+        <div class="t-price">$60 / $1.4k</div>
       </li>
-
-      <li class="track" data-bpm="84" data-key="C# min" data-mood="Slow / Smoke">
-        <button class="track-play" aria-label="Play Quietkeeper">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">02</span>
-          <span class="track-title">Quietkeeper</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>84 BPM</span><span>C# min</span><span>3:11</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Soul</span><span class="tag">Chops</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$60</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.4k</strong></span>
-        </div>
+      <li class="track">
+        <button class="play" aria-label="Play Quietkeeper"><span class="g-play"></span><span class="g-pause"></span></button>
+        <div class="t-name">Quietkeeper</div>
+        <div class="wave" aria-hidden="true"><svg viewBox="0 0 400 32" preserveAspectRatio="none"></svg></div>
+        <div class="t-meta">84 · C# min · 3:11</div>
+        <div class="t-price">$60 / $1.4k</div>
       </li>
-
-      <li class="track is-featured" data-bpm="138" data-key="A min" data-mood="Anthem / Live drums">
-        <button class="track-play" aria-label="Play Public Record">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">03</span>
-          <span class="track-title">Public Record <span class="badge">Featured</span></span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>138 BPM</span><span>A min</span><span>3:42</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Trap</span><span class="tag">Live drums</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$120</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$2.8k</strong></span>
-        </div>
+      <li class="track is-featured">
+        <button class="play" aria-label="Play Public Record"><span class="g-play"></span><span class="g-pause"></span></button>
+        <div class="t-name">Public Record</div>
+        <div class="wave" aria-hidden="true"><svg viewBox="0 0 400 32" preserveAspectRatio="none"></svg></div>
+        <div class="t-meta">138 · A min · 3:42</div>
+        <div class="t-price">$120 / $2.8k</div>
       </li>
-
-      <li class="track" data-bpm="170" data-key="G min" data-mood="Jungle / Cut">
-        <button class="track-play" aria-label="Play Anonymous Witness">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">04</span>
-          <span class="track-title">Anonymous Witness</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>170 BPM</span><span>G min</span><span>2:24</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Jungle</span><span class="tag">Breaks</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$80</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.8k</strong></span>
-        </div>
-      </li>
-
-      <li class="track" data-bpm="92" data-key="D dor" data-mood="Boom-bap / Dusty">
-        <button class="track-play" aria-label="Play Receipt for Nothing">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">05</span>
-          <span class="track-title">Receipt for Nothing</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>92 BPM</span><span>D dor.</span><span>3:02</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Boom-bap</span><span class="tag">Dusty</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$60</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.4k</strong></span>
-        </div>
-      </li>
-
-      <li class="track" data-bpm="128" data-key="B♭ min" data-mood="House-leaning / Late">
-        <button class="track-play" aria-label="Play Off the Books">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">06</span>
-          <span class="track-title">Off the Books</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>128 BPM</span><span>B♭ min</span><span>4:08</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">House</span><span class="tag">Club</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$90</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$2.1k</strong></span>
-        </div>
-      </li>
-
-      <li class="track" data-bpm="146" data-key="E min" data-mood="Drift / Atmospheric">
-        <button class="track-play" aria-label="Play Cold Static">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">07</span>
-          <span class="track-title">Cold Static</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>146 BPM</span><span>E min</span><span>3:30</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Ambient</span><span class="tag">Trap</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$60</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.4k</strong></span>
-        </div>
-      </li>
-
-      <li class="track" data-bpm="76" data-key="F maj" data-mood="Cassette / Lo-fi">
-        <button class="track-play" aria-label="Play Tape Hiss for Christmas">
-          <span class="play-glyph play" aria-hidden="true"></span>
-          <span class="play-glyph pause" aria-hidden="true"></span>
-        </button>
-        <div class="track-id">
-          <span class="track-num">08</span>
-          <span class="track-title">Tape Hiss for Christmas</span>
-        </div>
-        <div class="track-wave" aria-hidden="true"><svg viewBox="0 0 400 40" preserveAspectRatio="none"></svg></div>
-        <div class="track-meta">
-          <span>76 BPM</span><span>F maj</span><span>2:18</span>
-        </div>
-        <div class="track-tags">
-          <span class="tag">Lo-fi</span><span class="tag">Vinyl</span>
-        </div>
-        <div class="track-price">
-          <span class="price-row"><span>Lease</span><strong>$60</strong></span>
-          <span class="price-row"><span>Exclusive</span><strong>$1.4k</strong></span>
-        </div>
+      <li class="track">
+        <button class="play" aria-label="Play Tape Hiss for Christmas"><span class="g-play"></span><span class="g-pause"></span></button>
+        <div class="t-name">Tape Hiss for Christmas</div>
+        <div class="wave" aria-hidden="true"><svg viewBox="0 0 400 32" preserveAspectRatio="none"></svg></div>
+        <div class="t-meta">76 · F maj · 2:18</div>
+        <div class="t-price">$60 / $1.4k</div>
       </li>
     </ol>
-
-    <p class="catalog-foot">
-      Looking for something specific? <a href="#contact">Send a brief.</a> Turnaround on custom work is 7–10 days.
-    </p>
-  </section>
-
-
-  <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
-    <span class="kicker">03 — Manifesto</span>
-    <h2 id="manifesto-title" class="manifesto-title">
-      <span>The producer tag is</span>
-      <span class="ml-strike">a billboard on someone else’s song.</span>
-      <span>I’d rather not.</span>
-    </h2>
-    <div class="manifesto-grid">
-      <p>Producer tags are a marketing decision that became a default. A loud whisper of who made the beat, stapled across the front of the track, optimized for SoundCloud discovery and stolen-loop arrests. They were never about the music.</p>
-      <p>notag ships the work clean. The artist can keep the front of their song. The labels can do A&amp;R without my voice in their conference room. The fans can hear the record the way the artist wants it heard. If credit matters, the splits and the metadata carry it. The drop doesn’t.</p>
-      <p>Anonymity isn’t a gimmick here. It’s how the music gets to be the loudest thing on the file.</p>
-    </div>
-  </section>
-
-
-  <section class="services" id="services" aria-labelledby="services-title">
-    <div class="section-head">
-      <span class="kicker">04 — Services</span>
-      <h2 id="services-title" class="section-title">Four ways to work together.</h2>
-    </div>
-
-    <div class="service-stack">
-      <article class="service">
-        <div class="service-num" aria-hidden="true">S.01</div>
-        <h3 class="service-name">Lease</h3>
-        <p class="service-desc">A non-exclusive license to a beat from the catalog. Released on streaming, distributed, monetized. Up to 100k audio streams, one music video, all stems included. Renewable.</p>
-        <ul class="service-list">
-          <li>Untagged WAV + trackouts</li>
-          <li>50/50 publishing split</li>
-          <li>Same-day delivery</li>
-        </ul>
-        <div class="service-price"><span>from</span><strong>$60</strong><span>per beat</span></div>
-      </article>
-
-      <article class="service">
-        <div class="service-num" aria-hidden="true">S.02</div>
-        <h3 class="service-name">Exclusive</h3>
-        <p class="service-desc">Full transfer of ownership. The beat is delisted the day you sign. Unlimited streams, sync clearance ready, your name on the master. The catalog forgets the file existed.</p>
-        <ul class="service-list">
-          <li>Master assignment + paperwork</li>
-          <li>Beat pulled from catalog</li>
-          <li>Sync &amp; broadcast cleared</li>
-        </ul>
-        <div class="service-price"><span>from</span><strong>$1.4k</strong><span>per beat</span></div>
-      </article>
-
-      <article class="service">
-        <div class="service-num" aria-hidden="true">S.03</div>
-        <h3 class="service-name">Custom</h3>
-        <p class="service-desc">Built from scratch around a reference, a verse, a tempo, a mood, or a deadline. One round of structural revisions and two of mix notes. The beat is yours; no listing, no leaks, no resale.</p>
-        <ul class="service-list">
-          <li>7–10 day turnaround</li>
-          <li>Live instrumentation on request</li>
-          <li>NDA signed before kickoff</li>
-        </ul>
-        <div class="service-price"><span>from</span><strong>$2.5k</strong><span>per beat</span></div>
-      </article>
-
-      <article class="service">
-        <div class="service-num" aria-hidden="true">S.04</div>
-        <h3 class="service-name">Mix &amp; Master</h3>
-        <p class="service-desc">For records made elsewhere that need pressure and shape. ITB mix, hybrid master through a Manley Vari-Mu and a Bettermaker EQ. Reference tracks welcome, stems required.</p>
-        <ul class="service-list">
-          <li>Mix from stems</li>
-          <li>Streaming + vinyl masters</li>
-          <li>3 attended revision rounds</li>
-        </ul>
-        <div class="service-price"><span>from</span><strong>$450</strong><span>per song</span></div>
-      </article>
-    </div>
-  </section>
-
-
-  <section class="credits" id="credits" aria-labelledby="credits-title">
-    <div class="section-head">
-      <span class="kicker">05 — Credits</span>
-      <h2 id="credits-title" class="section-title">Placed, uncredited, occasionally noticed.</h2>
-      <p class="section-sub">Artists notag has shipped beats to since 2019. Names withheld at the artist’s request. Initials and labels are the closest thing to a discography this site will ever publish.</p>
-    </div>
-
-    <ul class="credits-list" role="list">
-      <li><span class="credit-year">2025</span><span class="credit-line">B.M. — single, gold-certified UK</span><span class="credit-tag">Lease</span></li>
-      <li><span class="credit-year">2025</span><span class="credit-line">K.T. — album track, indie major</span><span class="credit-tag">Exclusive</span></li>
-      <li><span class="credit-year">2025</span><span class="credit-line">R.V.G. — feature, charted top 40</span><span class="credit-tag">Custom</span></li>
-      <li><span class="credit-year">2024</span><span class="credit-line">A24 — film trailer, untitled, festival cut</span><span class="credit-tag">Sync</span></li>
-      <li><span class="credit-year">2024</span><span class="credit-line">S.O. — mixtape, three placements</span><span class="credit-tag">Lease ×3</span></li>
-      <li><span class="credit-year">2024</span><span class="credit-line">D.P. — EP, four placements, mixed in-house</span><span class="credit-tag">Custom</span></li>
-      <li><span class="credit-year">2023</span><span class="credit-line">Y.M.A. — debut single, platinum AU</span><span class="credit-tag">Exclusive</span></li>
-      <li><span class="credit-year">2023</span><span class="credit-line">Nike — regional spot, 30s cut</span><span class="credit-tag">Sync</span></li>
-      <li><span class="credit-year">2022</span><span class="credit-line">L.W. &amp; J.D. — collab single</span><span class="credit-tag">Exclusive</span></li>
-      <li><span class="credit-year">2021</span><span class="credit-line">Independent — 40+ leases across SoundCloud / streaming</span><span class="credit-tag">Lease</span></li>
-    </ul>
-
-    <div class="credits-pull">
-      <blockquote>
-        “Sent over the brief at midnight. Had a finished beat by lunch the next day. No tag, no ego, just a track that scared the rest of the EP into shape.”
-      </blockquote>
-      <p>— A&amp;R, undisclosed indie label</p>
-    </div>
-  </section>
-
-
-  <section class="contact" id="contact" aria-labelledby="contact-title">
-    <div class="contact-grid">
-      <div class="contact-copy">
-        <span class="kicker">06 — Contact</span>
-        <h2 id="contact-title" class="section-title">Brief a beat, request stems, or ask the obvious questions.</h2>
-        <p class="section-sub">notag answers everything personally. No assistant, no manager, no auto-reply. Expect a response within 48 hours, sooner on weekdays.</p>
-
-        <dl class="contact-channels">
-          <div><dt>Email</dt><dd><a href="mailto:work@notag.studio">work@notag.studio</a></dd></div>
-          <div><dt>Signal</dt><dd>by request, via email</dd></div>
-          <div><dt>Hours</dt><dd>Mon–Fri, 11:00–19:00 GMT</dd></div>
-          <div><dt>NDAs</dt><dd>Standard or yours</dd></div>
-        </dl>
-      </div>
-
-      <form class="contact-form" novalidate>
-        <div class="field">
-          <label for="f-name">What can I call you</label>
-          <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Artist, label, alias" required />
-        </div>
-        <div class="field">
-          <label for="f-email">Email</label>
-          <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required />
-        </div>
-        <div class="field field-row">
-          <div>
-            <label for="f-type">What you’re after</label>
-            <select id="f-type" name="type">
-              <option>Lease</option>
-              <option>Exclusive</option>
-              <option>Custom production</option>
-              <option>Mix &amp; master</option>
-              <option>Sync / placement</option>
-              <option>Just saying hi</option>
-            </select>
-          </div>
-          <div>
-            <label for="f-budget">Budget</label>
-            <select id="f-budget" name="budget">
-              <option>Under $500</option>
-              <option>$500 — $2k</option>
-              <option>$2k — $10k</option>
-              <option>$10k +</option>
-              <option>Tell me what it should be</option>
-            </select>
-          </div>
-        </div>
-        <div class="field">
-          <label for="f-brief">The brief</label>
-          <textarea id="f-brief" name="brief" rows="5" placeholder="Tempo, mood, reference tracks, deadline, anything that helps."></textarea>
-        </div>
-        <div class="field-actions">
-          <button class="btn btn-solid" type="submit">Send the brief <span aria-hidden="true">→</span></button>
-          <span class="form-note">Encrypted in transit. Replies sent from a person.</span>
-        </div>
-      </form>
-    </div>
+    <p class="beats-foot">Lease &mdash; Exclusive. Stems on request. <a href="mailto:work@notag.studio">work@notag.studio</a></p>
   </section>
 
 </main>
 
-<footer class="footer">
-  <div class="footer-row">
-    <div class="footer-mark">
-      <span class="mark-glyph">/</span><span class="mark-word">notag</span>
-    </div>
-    <p class="footer-line">Beats without a signature. Working since 2019.</p>
-    <p class="footer-meta">© 2026 — independent, undistributed, unmanaged.</p>
-  </div>
-  <div class="footer-glyph" aria-hidden="true">
-    no<span>/</span>tag
-  </div>
+<footer class="foot">
+  <span>© 2026 notag</span>
+  <span>Beats without a signature</span>
 </footer>
 
-<audio id="audio-engine" preload="none"></audio>
 <script src="notag.js" defer></script>
 </body>
 </html>
