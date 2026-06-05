@@ -1,0 +1,61 @@
+{
+  "_comment": "Image prompts for the Edition Rent luxury car-rental site. Edit prompts freely. 'name' becomes the output filename (assets/<name>.<output_format>). Model slugs: 'google/nano-banana' (fast, cheap, great default), 'google/nano-banana-pro', or 'flux-kontext-pro'. image_size accepts ratios like '16:9', '4:3', '3:4', '1:1'. Confirm exact slugs on https://kie.ai/market/text-to-image",
+  "images": [
+    {
+      "name": "hero",
+      "model": "google/nano-banana",
+      "image_size": "16:9",
+      "output_format": "jpeg",
+      "prompt": "Cinematic wide shot of a black luxury sports car parked on a wet city street at dusk, golden hour reflections, moody dark atmosphere, gold and amber highlights, ultra-detailed, professional automotive photography, dramatic lighting, shallow depth of field, elegant and premium mood"
+    },
+    {
+      "name": "fleet-lamborghini",
+      "model": "google/nano-banana",
+      "image_size": "3:4",
+      "output_format": "jpeg",
+      "prompt": "A pristine matte-black Lamborghini supercar, three-quarter front view, photographed in a minimalist dark studio with a single dramatic gold rim light, ultra sharp, luxury automotive editorial photography, deep blacks, premium feel"
+    },
+    {
+      "name": "fleet-ferrari",
+      "model": "google/nano-banana",
+      "image_size": "3:4",
+      "output_format": "jpeg",
+      "prompt": "A glossy deep-burgundy Ferrari, three-quarter side view, dark studio backdrop, elegant gold accent lighting, reflective floor, high-end automotive magazine photography, crisp detail, sophisticated luxury mood"
+    },
+    {
+      "name": "fleet-rollsroyce",
+      "model": "google/nano-banana",
+      "image_size": "3:4",
+      "output_format": "jpeg",
+      "prompt": "A stately black Rolls-Royce Phantom, front three-quarter view, parked outside a grand modern hotel entrance at night, warm gold lighting, chauffeur-luxury atmosphere, refined and opulent, professional photography"
+    },
+    {
+      "name": "featured-bentley",
+      "model": "google/nano-banana",
+      "image_size": "16:9",
+      "output_format": "jpeg",
+      "prompt": "A sleek midnight-blue Bentley Continental GT on a coastal mountain road at golden hour, dynamic elegant composition, warm sunlight, premium grand-tourer mood, cinematic automotive photography, ultra detailed"
+    },
+    {
+      "name": "interior-detail",
+      "model": "google/nano-banana",
+      "image_size": "4:3",
+      "output_format": "jpeg",
+      "prompt": "Close-up of a luxury car interior, hand-stitched cream leather seats with gold contrast stitching, brushed metal and dark wood trim, ambient golden cabin lighting, shallow depth of field, premium craftsmanship, editorial detail shot"
+    },
+    {
+      "name": "about-showroom",
+      "model": "google/nano-banana",
+      "image_size": "16:9",
+      "output_format": "jpeg",
+      "prompt": "An upscale minimalist car showroom interior, polished dark concrete floor, several luxury cars under soft gold spotlights, floor-to-ceiling glass, architectural elegant space, premium brand atmosphere, professional interior photography"
+    },
+    {
+      "name": "about-keys",
+      "model": "google/nano-banana",
+      "image_size": "3:4",
+      "output_format": "jpeg",
+      "prompt": "Elegant close-up of a hand in a tailored suit presenting luxury car keys on a black tray, gold accents, soft directional lighting, premium concierge service mood, refined editorial photography"
+    }
+  ]
+}
