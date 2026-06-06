@@ -1,0 +1,53 @@
+{
+  "_comment": "Higgsfield 'Soul' text-to-image prompts for the Edition Rent site. 'name' becomes assets/<name>.<ext> (extension is detected from the response). width_and_height options: landscape 2048x1152 / 2048x1536, portrait 1536x2048 / 1152x2048, square 1536x1536. quality: '720p' or '1080p'. See cloud.higgsfield.ai docs. enhance_prompt auto-improves the prompt.",
+  "images": [
+    {
+      "name": "hero",
+      "width_and_height": "2048x1152",
+      "quality": "1080p",
+      "prompt": "Cinematic wide shot of a black luxury sports car parked on a wet city street at dusk, golden hour reflections, moody dark atmosphere, gold and amber highlights, ultra-detailed, professional automotive photography, dramatic lighting, shallow depth of field, elegant and premium mood"
+    },
+    {
+      "name": "fleet-lamborghini",
+      "width_and_height": "1536x2048",
+      "quality": "1080p",
+      "prompt": "A pristine matte-black Lamborghini supercar, three-quarter front view, photographed in a minimalist dark studio with a single dramatic gold rim light, ultra sharp, luxury automotive editorial photography, deep blacks, premium feel"
+    },
+    {
+      "name": "fleet-ferrari",
+      "width_and_height": "1536x2048",
+      "quality": "1080p",
+      "prompt": "A glossy deep-burgundy Ferrari, three-quarter side view, dark studio backdrop, elegant gold accent lighting, reflective floor, high-end automotive magazine photography, crisp detail, sophisticated luxury mood"
+    },
+    {
+      "name": "fleet-rollsroyce",
+      "width_and_height": "1536x2048",
+      "quality": "1080p",
+      "prompt": "A stately black Rolls-Royce Phantom, front three-quarter view, parked outside a grand modern hotel entrance at night, warm gold lighting, chauffeur-luxury atmosphere, refined and opulent, professional photography"
+    },
+    {
+      "name": "featured-bentley",
+      "width_and_height": "2048x1152",
+      "quality": "1080p",
+      "prompt": "A sleek midnight-blue Bentley Continental GT on a coastal mountain road at golden hour, dynamic elegant composition, warm sunlight, premium grand-tourer mood, cinematic automotive photography, ultra detailed"
+    },
+    {
+      "name": "interior-detail",
+      "width_and_height": "2048x1536",
+      "quality": "1080p",
+      "prompt": "Close-up of a luxury car interior, hand-stitched cream leather seats with gold contrast stitching, brushed metal and dark wood trim, ambient golden cabin lighting, shallow depth of field, premium craftsmanship, editorial detail shot"
+    },
+    {
+      "name": "about-showroom",
+      "width_and_height": "2048x1152",
+      "quality": "1080p",
+      "prompt": "An upscale minimalist car showroom interior, polished dark concrete floor, several luxury cars under soft gold spotlights, floor-to-ceiling glass, architectural elegant space, premium brand atmosphere, professional interior photography"
+    },
+    {
+      "name": "about-keys",
+      "width_and_height": "1536x2048",
+      "quality": "1080p",
+      "prompt": "Elegant close-up of a hand in a tailored suit presenting luxury car keys on a black tray, gold accents, soft directional lighting, premium concierge service mood, refined editorial photography"
+    }
+  ]
+}

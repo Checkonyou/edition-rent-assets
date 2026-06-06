@@ -1,0 +1,21 @@
+{
+  "name": "edition-rent-assets",
+  "version": "1.0.0",
+  "description": "Assets and AI image-generation tooling for the Edition Rent site",
+  "type": "module",
+  "main": "edition-rent.js",
+  "scripts": {
+    "generate:higgsfield": "node tools/generate-higgsfield.mjs",
+    "generate:kie": "node tools/generate-images.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Checkonyou/edition-rent-assets.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@higgsfield/client": "^0.2.1"
+  }
+}

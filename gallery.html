@@ -52,21 +52,42 @@
       { name: 'about-keys',       ext: 'jpeg', label: 'Concierge' },
     ];
 
+    // The generators may save jpg/jpeg/png/webp depending on provider, so try
+    // each candidate extension before falling back to the placeholder. This
+    // keeps the gallery working from file:// without needing manifest.json.
+    const EXTS = ['jpg', 'jpeg', 'png', 'webp'];
     const grid = document.getElementById('grid');
+
+    function makeImg(it) {
+      const img = document.createElement('img');
+      img.alt = it.label;
+      let i = 0;
+      img.src = `assets/${it.name}.${EXTS[i]}`;
+      img.onerror = () => {
+        i += 1;
+        if (i < EXTS.length) {
+          img.src = `assets/${it.name}.${EXTS[i]}`;
+        } else {
+          img.style.display = 'none';
+          img.nextElementSibling.style.display = 'flex';
+        }
+      };
+      return img;
+    }
+
     for (const it of IMAGES) {
-      const src = `assets/${it.name}.${it.ext}`;
       const card = document.createElement('div');
       card.className = 'card';
-      card.innerHTML = `
-        <img alt="${it.label}" src="${src}"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
-        <div class="placeholder" style="display:none">
-          <span>✦</span>${it.name}.${it.ext}<br>not generated yet
-        </div>
-        <div class="meta">
-          <div class="name">${it.label}</div>
-          <div class="file">assets/${it.name}.${it.ext}</div>
-        </div>`;
+      card.appendChild(makeImg(it));
+      const ph = document.createElement('div');
+      ph.className = 'placeholder';
+      ph.style.display = 'none';
+      ph.innerHTML = `<span>✦</span>${it.name}<br>not generated yet`;
+      card.appendChild(ph);
+      const meta = document.createElement('div');
+      meta.className = 'meta';
+      meta.innerHTML = `<div class="name">${it.label}</div><div class="file">assets/${it.name}.*</div>`;
+      card.appendChild(meta);
       grid.appendChild(card);
     }
   </script>
