@@ -162,17 +162,19 @@ async function main() {
 
   const results = await runPool(items, (it) => generateOne(client, it), CONCURRENCY);
 
-  // Refresh the shared manifest (same shape the kie.ai script uses).
-  const manifestPath = join(ASSETS_DIR, 'manifest.json');
-  let prev = {};
-  if (existsSync(manifestPath)) {
-    try { prev = JSON.parse(await readFile(manifestPath, 'utf8')); } catch { /* ignore */ }
+  // Refresh the shared manifest — but only if something actually landed on
+  // disk, so failed runs don't churn the file.
+  const usable = results.filter((r) => r.status === 'generated' || r.status === 'skipped');
+  if (usable.length > 0) {
+    const manifestPath = join(ASSETS_DIR, 'manifest.json');
+    let prev = {};
+    if (existsSync(manifestPath)) {
+      try { prev = JSON.parse(await readFile(manifestPath, 'utf8')); } catch { /* ignore */ }
+    }
+    const manifest = { generatedAt: new Date().toISOString(), provider: 'higgsfield-soul', images: { ...prev.images } };
+    for (const r of usable) manifest.images[r.name] = { file: r.file };
+    await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
   }
-  const manifest = { generatedAt: new Date().toISOString(), provider: 'higgsfield-soul', images: { ...prev.images } };
-  for (const r of results) {
-    if (r.status === 'generated' || r.status === 'skipped') manifest.images[r.name] = { file: r.file };
-  }
-  await writeFile(manifestPath, JSON.stringify(manifest, null, 2));
 
   const ok = results.filter((r) => r.status === 'generated').length;
   const skipped = results.filter((r) => r.status === 'skipped').length;
