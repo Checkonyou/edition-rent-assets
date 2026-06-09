@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lategan International — Immobilien | Real Estate · Berlin</title>
+<meta name="description" content="Lategan International Immobilien. Kuratierte Architektur und internationale Immobilien zwischen Berlin und Kapstadt. Geführt von Sedick Lategan.">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lategan.css">
+</head>
+<body>
+
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<nav id="navbar">
+  <a href="#top" class="brand" data-cursor="hover">
+    Lategan<span>International</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#portfolio" data-cursor="hover">Portfolio</a></li>
+    <li><a href="#leistungen" data-cursor="hover">Leistungen</a></li>
+    <li><a href="#sedick" data-cursor="hover">Sedick Lategan</a></li>
+    <li><a href="#kontakt" data-cursor="hover">Kontakt</a></li>
+    <li><a href="#kontakt" class="nav-cta" data-cursor="hover">Beratung anfragen</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen" data-cursor="hover">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" id="closeMenu" aria-label="Menü schließen">&times;</button>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#leistungen">Leistungen</a>
+  <a href="#sedick">Sedick Lategan</a>
+  <a href="#kontakt">Kontakt</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-media">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2400&q=80"
+         alt="Freistehende Betonarchitektur mit raumhohen Fenstern im Abendlicht" fetchpriority="high">
+    <div class="hero-grain"></div>
+  </div>
+
+  <div class="hero-meta hero-meta--left">52.5200° N — Berlin</div>
+  <div class="hero-meta hero-meta--right">33.9249° S — Kapstadt</div>
+
+  <div class="hero-inner">
+    <p class="eyebrow eyebrow--light"><span class="tick"></span>Internationale Immobilien · seit 2009</p>
+    <h1 class="hero-title">
+      <span class="line"><span class="word">Lategan</span></span>
+      <span class="line"><span class="word">Inter&shy;national</span></span>
+    </h1>
+    <p class="hero-sub">
+      Architektur mit Haltung. Wir kuratieren außergewöhnliche Objekte
+      zwischen Berlin und Kapstadt — und begleiten ihre Eigentümer
+      diskret durch jeden Schritt.
+    </p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn btn--solid" data-cursor="hover">Portfolio ansehen</a>
+      <a href="#sedick" class="btn btn--ghost" data-cursor="hover">Über Sedick Lategan</a>
+    </div>
+  </div>
+
+  <div class="hero-foot">
+    <div class="scroll-cue"><span class="scroll-bar"></span>Scrollen</div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num" data-count="320">0</span><span class="hstat-plus">+</span><span class="hstat-label">Objekte vermittelt</span></div>
+      <div class="hstat"><span class="hstat-num" data-count="15">0</span><span class="hstat-label">Jahre Markterfahrung</span></div>
+      <div class="hstat"><span class="hstat-num" data-count="2">0</span><span class="hstat-label">Kontinente</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Villen</span><span class="dot">/</span><span>Penthäuser</span><span class="dot">/</span>
+    <span>Architektenhäuser</span><span class="dot">/</span><span>Anlageobjekte</span><span class="dot">/</span>
+    <span>Off-Market</span><span class="dot">/</span><span>Neubau</span><span class="dot">/</span>
+    <span>Villen</span><span class="dot">/</span><span>Penthäuser</span><span class="dot">/</span>
+    <span>Architektenhäuser</span><span class="dot">/</span><span>Anlageobjekte</span><span class="dot">/</span>
+    <span>Off-Market</span><span class="dot">/</span><span>Neubau</span><span class="dot">/</span>
+  </div>
+</div>
+
+<!-- ============ MANIFEST ============ -->
+<section class="manifest" id="manifest">
+  <p class="eyebrow reveal">Die Haltung</p>
+  <h2 class="manifest-text reveal">
+    Eine Immobilie ist kein Produkt. Sie ist ein
+    <em>Standpunkt</em> — gebaut für Menschen, die
+    Maßstäbe nicht annehmen, sondern setzen.
+  </h2>
+  <div class="manifest-cols">
+    <p class="reveal">Wir arbeiten bewusst mit einer überschaubaren Zahl an Objekten. Jedes wird vor der Vermittlung geprüft, fotografiert und erzählt — kein Massenportal, sondern Kuration.</p>
+    <p class="reveal reveal-d1">Zwischen Berliner Altbau, skandinavischem Neubau und den Hängen über Kapstadt: Wir bewegen uns dort, wo gute Architektur und solides Investment dieselbe Sprache sprechen.</p>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="portfolio" id="portfolio">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow reveal">Ausgewählte Objekte</p>
+      <h2 class="section-title reveal">Das Portfolio</h2>
+    </div>
+    <p class="section-head-note reveal reveal-d1">Ein Auszug. Off-Market-Objekte zeigen wir auf Anfrage.</p>
+  </div>
+
+  <div class="folio-grid">
+    <article class="folio folio--tall reveal" data-cursor="view">
+      <div class="folio-img"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1400&q=80" alt="Moderne Villa mit Glasfront und beleuchtetem Pool bei Dämmerung"></div>
+      <div class="folio-body">
+        <span class="folio-tag">Villa · Grunewald</span>
+        <h3 class="folio-name">Haus am Hang</h3>
+        <div class="folio-spec"><span>540 m²</span><span>6 Zi.</span><span>Pool</span></div>
+        <span class="folio-price">€ 6,4 Mio.</span>
+      </div>
+      <span class="folio-index">01</span>
+    </article>
+
+    <article class="folio reveal reveal-d1" data-cursor="view">
+      <div class="folio-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80" alt="Weißes kubisches Architektenhaus mit klaren Linien"></div>
+      <div class="folio-body">
+        <span class="folio-tag">Neubau · Potsdam</span>
+        <h3 class="folio-name">Kubus West</h3>
+        <div class="folio-spec"><span>310 m²</span><span>5 Zi.</span></div>
+        <span class="folio-price">€ 3,1 Mio.</span>
+      </div>
+      <span class="folio-index">02</span>
+    </article>
+
+    <article class="folio reveal reveal-d2" data-cursor="view">
+      <div class="folio-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80" alt="Luxuriöses weißes Anwesen mit Rasenfläche und großen Fenstern"></div>
+      <div class="folio-body">
+        <span class="folio-tag">Anwesen · Kapstadt</span>
+        <h3 class="folio-name">Camps Bay Estate</h3>
+        <div class="folio-spec"><span>720 m²</span><span>7 Zi.</span><span>Meerblick</span></div>
+        <span class="folio-price">auf Anfrage</span>
+      </div>
+      <span class="folio-index">03</span>
+    </article>
+
+    <article class="folio reveal" data-cursor="view">
+      <div class="folio-img"><img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=80" alt="Architektenhaus mit Holz- und Betonfassade im Abendlicht"></div>
+      <div class="folio-body">
+        <span class="folio-tag">Penthouse · Mitte</span>
+        <h3 class="folio-name">Dachterrasse N°7</h3>
+        <div class="folio-spec"><span>240 m²</span><span>4 Zi.</span><span>Terrasse</span></div>
+        <span class="folio-price">€ 2,8 Mio.</span>
+      </div>
+      <span class="folio-index">04</span>
+    </article>
+
+    <article class="folio reveal reveal-d1" data-cursor="view">
+      <div class="folio-img"><img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&q=80" alt="Modernes Landhaus mit raumhoher Verglasung und Garten"></div>
+      <div class="folio-body">
+        <span class="folio-tag">Landhaus · Brandenburg</span>
+        <h3 class="folio-name">Seehaus Lehnitz</h3>
+        <div class="folio-spec"><span>410 m²</span><span>5 Zi.</span><span>Seezugang</span></div>
+        <span class="folio-price">€ 4,2 Mio.</span>
+      </div>
+      <span class="folio-index">05</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ FEATURED (split) ============ -->
+<section class="featured" id="featured">
+  <div class="featured-img">
+    <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1600&q=80" alt="Offener Wohnraum mit Betonwänden, Designermöbeln und Panoramafenster">
+    <span class="featured-badge">Signature</span>
+  </div>
+  <div class="featured-body">
+    <p class="eyebrow reveal">Objekt des Monats</p>
+    <h2 class="featured-title reveal">Penthouse<br><em>Skyline Charlottenburg</em></h2>
+    <p class="featured-desc reveal reveal-d1">
+      Eine Etage, ein Blick über den ganzen Westen Berlins. Sichtbeton trifft
+      auf Eichendielen, eine umlaufende Terrasse und eine Architektur, die sich
+      bewusst zurücknimmt, damit die Stadt sprechen kann.
+    </p>
+    <div class="featured-specs reveal reveal-d2">
+      <div><span class="spec-v">295</span><span class="spec-k">m² Wohnfläche</span></div>
+      <div><span class="spec-v">110</span><span class="spec-k">m² Terrasse</span></div>
+      <div><span class="spec-v">4.20</span><span class="spec-k">m Raumhöhe</span></div>
+      <div><span class="spec-v">2024</span><span class="spec-k">Sanierung</span></div>
+    </div>
+    <a href="#kontakt" class="btn btn--solid reveal reveal-d3" data-cursor="hover">Besichtigung vereinbaren</a>
+  </div>
+</section>
+
+<!-- ============ MIST DIVIDER ============ -->
+<section class="divider" id="divider">
+  <img class="divider-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=80" alt="Nebelverhangene Bergkette über bewaldeten Hängen">
+  <div class="divider-copy">
+    <p class="divider-quote reveal">„Wir verkaufen nicht den Quadratmeter.<br>Wir verkaufen den Ausblick darauf, wie man leben möchte."</p>
+    <p class="divider-by reveal reveal-d1">— Sedick Lategan</p>
+  </div>
+</section>
+
+<!-- ============ LEISTUNGEN ============ -->
+<section class="leistungen" id="leistungen">
+  <div class="section-head">
+    <div>
+      <p class="eyebrow reveal">Wie wir arbeiten</p>
+      <h2 class="section-title reveal">Vier Schritte,<br>null Reibung</h2>
+    </div>
+  </div>
+  <div class="steps">
+    <article class="step reveal">
+      <span class="step-num">01</span>
+      <h3 class="step-title">Briefing</h3>
+      <p class="step-text">Ein vertrauliches Gespräch. Wir verstehen, ob es um Zuhause, Rendite oder beides geht — bevor wir ein einziges Objekt zeigen.</p>
+    </article>
+    <article class="step reveal reveal-d1">
+      <span class="step-num">02</span>
+      <h3 class="step-title">Kuration</h3>
+      <p class="step-text">Aus Markt und Off-Market filtern wir eine kleine, passgenaue Auswahl. Geprüft, bewertet, ehrlich eingeordnet.</p>
+    </article>
+    <article class="step reveal reveal-d2">
+      <span class="step-num">03</span>
+      <h3 class="step-title">Begleitung</h3>
+      <p class="step-text">Besichtigung, Verhandlung, Notar, Finanzierung. Ein Ansprechpartner, der den Prozess führt statt verwaltet.</p>
+    </article>
+    <article class="step reveal reveal-d3">
+      <span class="step-num">04</span>
+      <h3 class="step-title">Übergabe</h3>
+      <p class="step-text">Schlüssel, Dokumente, Netzwerk vor Ort. Auch nach dem Notartermin bleibt die Tür offen.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ SEDICK ============ -->
+<section class="sedick" id="sedick">
+  <div class="sedick-portrait reveal">
+    <!-- Higgsfield/echtes Porträt hier einsetzen: src austauschen, alt anpassen -->
+    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Heller Innenraum mit Sichtbeton — Platzhalter für Porträt von Sedick Lategan">
+    <span class="sedick-monogram">SL</span>
+  </div>
+  <div class="sedick-body">
+    <p class="eyebrow reveal">Geschäftsführer</p>
+    <h2 class="sedick-name reveal">Sedick<br>Lategan</h2>
+    <p class="sedick-lead reveal reveal-d1">
+      Zwischen Berlin und Kapstadt zu Hause — und in beiden Märkten verwurzelt.
+      Sedick Lategan führt Lategan International mit dem Anspruch, Immobilien so
+      zu vermitteln, wie er sie selbst kaufen würde: gründlich, geradeheraus,
+      ohne Verkäuferpathos.
+    </p>
+    <div class="sedick-facts reveal reveal-d2">
+      <div class="fact"><span class="fact-k">Sitz</span><span class="fact-v">Berlin · Kapstadt</span></div>
+      <div class="fact"><span class="fact-k">Ausbildung</span><span class="fact-v">Cape Peninsula University of Technology</span></div>
+      <div class="fact"><span class="fact-k">Schwerpunkt</span><span class="fact-v">Wohn- & Anlageimmobilien</span></div>
+      <div class="fact"><span class="fact-k">Sprachen</span><span class="fact-v">Deutsch · Englisch · Afrikaans</span></div>
+    </div>
+    <a href="https://www.linkedin.com/search/results/all/?keywords=Sedick%20Lategan%20Lategan%20International" target="_blank" rel="noopener" class="btn btn--ghost reveal reveal-d3" data-cursor="hover">
+      Auf LinkedIn vernetzen &nearr;
+    </a>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="voices" id="voices">
+  <p class="eyebrow reveal">Stimmen</p>
+  <div class="voices-grid">
+    <figure class="voice reveal">
+      <blockquote>„Diskret, schnell, ehrlich. Sedick hat uns von einem Objekt abgeraten — und uns zwei Wochen später das richtige gezeigt. So etwas vergisst man nicht."</blockquote>
+      <figcaption><span class="voice-name">Dr. K. Hoffmann</span><span class="voice-role">Käuferin, Grunewald</span></figcaption>
+    </figure>
+    <figure class="voice reveal reveal-d1">
+      <blockquote>„Ein Berliner Penthouse von Kapstadt aus gekauft, ohne ein einziges böses Erwachen. Die Begleitung war jeden Cent wert."</blockquote>
+      <figcaption><span class="voice-name">M. van der Merwe</span><span class="voice-role">Investor, Kapstadt</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta" id="cta">
+  <p class="cta-kicker reveal">Bereit?</p>
+  <h2 class="cta-head reveal reveal-d1">Sprechen wir<br>über Ihr nächstes Zuhause.</h2>
+  <a href="#kontakt" class="btn btn--solid btn--lg reveal reveal-d2" data-cursor="hover">Beratung anfragen</a>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="kontakt" id="kontakt">
+  <div class="kontakt-left">
+    <p class="eyebrow reveal">Kontakt</p>
+    <h2 class="section-title reveal">Schreiben<br>Sie uns</h2>
+    <div class="kontakt-info reveal reveal-d1">
+      <div class="kinfo"><span class="kinfo-k">E-Mail</span><a href="mailto:kontakt@lategan-international.de" data-cursor="hover">kontakt@lategan-international.de</a></div>
+      <div class="kinfo"><span class="kinfo-k">Telefon</span><a href="tel:+493000000000" data-cursor="hover">+49 30 0000 0000</a></div>
+      <div class="kinfo"><span class="kinfo-k">Büro</span><span>Berlin, Deutschland</span></div>
+    </div>
+  </div>
+
+  <form class="kontakt-form reveal reveal-d1" id="kontaktForm" novalidate>
+    <div class="field">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" required placeholder="Ihr Name" data-cursor="text">
+    </div>
+    <div class="field-row">
+      <div class="field">
+        <label for="email">E-Mail</label>
+        <input id="email" name="email" type="email" required placeholder="ihre@email.de" data-cursor="text">
+      </div>
+      <div class="field">
+        <label for="interest">Interesse</label>
+        <select id="interest" name="interest" data-cursor="hover">
+          <option>Kaufen</option>
+          <option>Verkaufen</option>
+          <option>Investment</option>
+          <option>Off-Market-Zugang</option>
+        </select>
+      </div>
+    </div>
+    <div class="field">
+      <label for="msg">Nachricht</label>
+      <textarea id="msg" name="msg" rows="4" placeholder="Wonach suchen Sie?" data-cursor="text"></textarea>
+    </div>
+    <button type="submit" class="btn btn--solid" data-cursor="hover">Anfrage senden</button>
+    <p class="form-success" id="formSuccess">Danke. Wir melden uns innerhalb von 24 Stunden.</p>
+  </form>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-top">
+    <a href="#top" class="footer-brand" data-cursor="hover">Lategan<span>International</span></a>
+    <nav class="footer-nav">
+      <a href="#portfolio" data-cursor="hover">Portfolio</a>
+      <a href="#leistungen" data-cursor="hover">Leistungen</a>
+      <a href="#sedick" data-cursor="hover">Sedick Lategan</a>
+      <a href="#kontakt" data-cursor="hover">Kontakt</a>
+    </nav>
+  </div>
+  <div class="footer-wordmark" aria-hidden="true">LATEGAN</div>
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> Lategan International Immobilien · Real Estate</span>
+    <span>Berlin — Kapstadt</span>
+  </div>
+</footer>
+
+<a href="#kontakt" class="cta-float" data-cursor="hover" aria-label="Beratung anfragen">Beratung &nearr;</a>
+
+<script src="lategan.js"></script>
+</body>
+</html>
