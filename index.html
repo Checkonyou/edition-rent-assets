@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>maiave — Wir fairmitteln Zuhause | Immobilien in Freiburg & Weinheim</title>
+<meta name="description" content="maiave ist ein digitales Immobilien-Startup aus Freiburg. Transparent, fair und auf Augenhöhe: Beratung, Verkauf, Vermietung, Bewertung und Immobiliensuche – mit Herz und Verstand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="maiave.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="navbar">
+  <a href="#top" class="nav-logo" aria-label="maiave Startseite">
+    <img src="images/maiave-logo.png" alt="maiave">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">Über uns</a></li>
+    <li><a href="#why">Warum maiave</a></li>
+    <li><a href="#services">Leistungen</a></li>
+    <li><a href="#partner">Partnermakler</a></li>
+    <li><a href="#tippgeber">Tippgeber</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="tel:+4976155721877" class="nav-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      0761 55721877
+    </a>
+    <a href="#contact" class="nav-cta">Erstgespräch buchen</a>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="close-menu" onclick="toggleMenu()" aria-label="Menü schließen">&times;</button>
+  <a href="#about" onclick="toggleMenu()">Über uns</a>
+  <a href="#why" onclick="toggleMenu()">Warum maiave</a>
+  <a href="#services" onclick="toggleMenu()">Leistungen</a>
+  <a href="#partner" onclick="toggleMenu()">Partnermakler</a>
+  <a href="#tippgeber" onclick="toggleMenu()">Tippgeber</a>
+  <a href="#contact" onclick="toggleMenu()">Kontakt</a>
+  <div class="mm-foot">0761 55721877 · nicole.randoll@maiave.de</div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <img src="images/hero-stadthaeuser.jpg" alt="Hochwertige Stadthäuser">
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow">Immobilien · Freiburg · Weinheim &amp; Umgebung</span>
+      <h1 class="hero-title">Wir <em>fairmitteln</em> Zuhause.</h1>
+      <p class="hero-sub">maiave denkt Immobilienvermittlung neu – digital, transparent und auf Augenhöhe. Ehrliche Beratung mit Herz und Verstand, von der ersten Einschätzung bis zur Schlüsselübergabe.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-light">Jetzt Erstgespräch buchen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#services" class="btn btn-ghost-light">Unsere Leistungen</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stats-inner">
+        <div class="hstat"><span class="hstat-num" data-count="300" data-suffix="+">300+</span><span class="hstat-label">Familien begleitet</span></div>
+        <div class="hstat"><span class="hstat-num" data-count="100" data-suffix=" Mio. €">100 Mio. €</span><span class="hstat-label">Verkaufsvolumen</span></div>
+        <div class="hstat"><span class="hstat-num" data-count="600" data-suffix="+">600+</span><span class="hstat-label">Immobilien verkauft</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue"><span>Entdecken</span><span class="line"></span></div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-figure reveal">
+      <img src="images/beratung.jpg" alt="Persönliche Beratung bei maiave">
+      <div class="about-badge">
+        <div class="num">Augenhöhe</div>
+        <div class="txt">Persönliche Beratung statt anonymer Massenabwicklung.</div>
+      </div>
+    </div>
+    <div class="about-copy reveal d2">
+      <span class="eyebrow">Über uns</span>
+      <h2 class="section-title">Ein Immobilien-Startup, das die Branche <em>neu denkt.</em></h2>
+      <p>Mit Herz, Verstand und digitalen Tools gestalten wir Immobilienvermittlung transparent, fair und auf Augenhöhe. Wir nehmen uns Zeit für ehrliche Einschätzungen – realistisch, nachvollziehbar und immer in Ihrem Interesse.</p>
+      <p>Unser Ziel: Immobilienvermittlung zugänglich, ehrlich und nachhaltig zu machen – für alle. In Freiburg, Weinheim und Umgebung, ganz ohne starre Ladenbüros.</p>
+      <blockquote class="about-quote">„maiave – wir fairmitteln Zuhause."</blockquote>
+      <a href="#contact" class="btn btn-primary">Erstgespräch buchen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="why" id="why">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow center">Warum maiave</span>
+      <h2 class="section-title">Sechs Gründe, uns zu <em>vertrauen.</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Beratung mit Herz &amp; Verstand</h3>
+        <p>Ehrliche, realistische Einschätzungen – ohne geschönte Versprechen. Wir beraten Sie so, wie wir selbst beraten werden möchten.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
+        <h3>Maximale Sichtbarkeit</h3>
+        <p>Digitale Exposés, professionelle Fotografie und gezieltes Social-Media-Marketing bringen Ihre Immobilie vor die richtigen Augen.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Starkes Netzwerk</h3>
+        <p>Lokale Verankerung trifft digitale Expertise. Unser Netzwerk aus Spezialisten öffnet Türen – schneller, als Sie denken.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2a9 9 0 0 0-9 9c0 4 3 7 9 11 6-4 9-7 9-11a9 9 0 0 0-9-9z"/><path d="M9 11l2 2 4-4"/></svg></div>
+        <h3>Nachhaltig &amp; sozial</h3>
+        <p>Mit jedem erfolgreichen Verkauf spenden wir einen Teil unserer Provision an gemeinnützige Zwecke. Werte, die bleiben.</p>
+      </div>
+      <div class="why-card reveal d1">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3>Digitales Maklermodell</h3>
+        <p>Ohne teure Ladenbüros, dafür mit moderner Technik und echtem Service. Effizienz, die wir an Sie weitergeben.</p>
+      </div>
+      <div class="why-card reveal d2">
+        <div class="why-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>3.000 € Tippgeberprämie</h3>
+        <p>Sie kennen jemanden, der verkaufen möchte? Ihr Tipp wird mit bis zu 3.000 € belohnt, sobald wir erfolgreich vermitteln.</p>
+        <span class="tag">Mehr erfahren ↓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Unsere Leistungen</span>
+      <h2 class="section-title">Alles aus einer Hand – <em>ohne Stress.</em></h2>
+      <p class="section-sub">Ob Verkauf, Vermietung oder Suche: Wir begleiten Sie durch jeden Schritt und nehmen Ihnen die Komplexität ab.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <span class="svc-num">01</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Beratung</h3>
+        <p>Persönliche Erstgespräche, in denen wir zuhören, Ihre Ziele verstehen und einen klaren Fahrplan entwickeln.</p>
+        <a href="#contact" class="svc-link">Termin sichern <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card reveal d1">
+        <span class="svc-num">02</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+        <h3>Verkauf</h3>
+        <p>Vom professionellen Exposé bis zum Notartermin – wir vermarkten Ihre Immobilie zum bestmöglichen Preis.</p>
+        <a href="#contact" class="svc-link">Verkauf starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card reveal d2">
+        <span class="svc-num">03</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3"/><path d="M9 9v.01M9 12v.01M9 15v.01"/></svg></div>
+        <h3>Vermietung</h3>
+        <p>Zuverlässige Mieter, geprüfte Unterlagen, faire Verträge. Wir managen den gesamten Vermietungsprozess für Sie.</p>
+        <a href="#contact" class="svc-link">Vermieten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card reveal">
+        <span class="svc-num">04</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div>
+        <h3>Bewertung</h3>
+        <p>Datenbasierte, marktgerechte Wertermittlung – kostenlos und unverbindlich. Sie wissen, was Ihre Immobilie wert ist.</p>
+        <a href="#contact" class="svc-link">Wert ermitteln <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card reveal d1">
+        <span class="svc-num">05</span>
+        <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/><path d="M11 8v6M8 11h6"/></svg></div>
+        <h3>Immobiliensuche</h3>
+        <p>Sie suchen Ihr neues Zuhause? Wir finden passende Objekte – oft, bevor sie überhaupt öffentlich werden.</p>
+        <a href="#contact" class="svc-link">Suche starten <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="svc-card reveal d2" style="background:var(--navy);border-color:var(--navy);color:var(--cream);">
+        <span class="svc-num" style="color:#E8D6B8;">06</span>
+        <div class="svc-ico" style="color:#E8D6B8;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+        <h3 style="color:var(--cream);">Vision Space &amp; 3D</h3>
+        <p style="color:rgba(245,247,248,0.78);">Home-Staging und virtuelle 360°-Rundgänge, die Räume erlebbar machen – noch bevor jemand die Tür öffnet.</p>
+        <a href="#feature" class="svc-link" style="color:#E8D6B8;">Mehr dazu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE (Vision Space / 3D) ============ -->
+<section class="feature" id="feature">
+  <div class="container feature-grid">
+    <div class="feature-copy reveal">
+      <span class="eyebrow">Vision Space · 3D-Rundgänge</span>
+      <h2 class="section-title">Immobilien, die man <em>fühlen</em> kann.</h2>
+      <p>Verkaufen muss nicht überfordernd sein. Mit professioneller Inszenierung und immersiver 3D-Technologie zeigen wir Ihre Immobilie von ihrer besten Seite – online wie offline.</p>
+      <ul class="feature-list">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Virtuelles Home-Staging für leere Räume</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> 360°-Rundgänge rund um die Uhr begehbar</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Hochwertige Architektur- &amp; Drohnenfotografie</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Digitale Exposés, die im Gedächtnis bleiben</li>
+      </ul>
+      <a href="#contact" class="btn btn-light" style="margin-top:32px;">Präsentation anfragen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="feature-figure reveal d2">
+      <img src="images/partner-1.jpg" alt="Beratung vor Ort">
+      <img src="images/partner-2.jpg" alt="maiave Partnermakler">
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">So arbeiten wir</span>
+      <h2 class="section-title">Ihr Weg mit <em>maiave.</em></h2>
+      <p class="section-sub">Vier klare Schritte – ohne Fachchinesisch, ohne Druck, ohne Überraschungen.</p>
+    </div>
+    <div class="process-grid">
+      <div class="step reveal">
+        <div class="step-line"></div>
+        <h3>Erstgespräch</h3>
+        <p>Wir lernen uns kennen, hören zu und verstehen, was Sie wirklich brauchen – kostenlos und unverbindlich.</p>
+      </div>
+      <div class="step reveal d1">
+        <div class="step-line"></div>
+        <h3>Strategie &amp; Bewertung</h3>
+        <p>Marktgerechte Wertermittlung und ein klarer Plan, abgestimmt auf Ihre Ziele und Ihren Zeitrahmen.</p>
+      </div>
+      <div class="step reveal d2">
+        <div class="step-line"></div>
+        <h3>Vermarktung</h3>
+        <p>Professionelle Präsentation, gezieltes Marketing und Betreuung jeder einzelnen Anfrage.</p>
+      </div>
+      <div class="step reveal d3">
+        <div class="step-line"></div>
+        <h3>Abschluss</h3>
+        <p>Verhandlung, Notartermin und Übergabe – wir bleiben an Ihrer Seite bis der Schlüssel den Besitzer wechselt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIPPGEBER BANNER ============ -->
+<section class="tipp" id="tippgeber">
+  <div class="container tipp-inner reveal">
+    <span class="pill">Tippgeberprämie</span>
+    <h2>Ihr Tipp ist uns <em>3.000 €</em> wert.</h2>
+    <p>Sie kennen jemanden, der eine Immobilie verkaufen möchte? Empfehlen Sie uns weiter. Sobald wir erfolgreich vermitteln, belohnen wir Ihren Hinweis mit bis zu 3.000 € – als Dankeschön für Ihr Vertrauen.</p>
+    <a href="#contact" class="btn btn-gold">Tipp einreichen
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ PARTNERMAKLER ============ -->
+<section class="partner" id="partner">
+  <div class="container partner-grid">
+    <div class="partner-figure reveal">
+      <img src="images/partner-2.jpg" alt="maiave Partnermakler im Gespräch">
+      <img src="images/partner-1.jpg" alt="Erfolgreiche Partnermakler">
+    </div>
+    <div class="partner-copy reveal d2">
+      <span class="eyebrow">Partnermakler werden</span>
+      <h2 class="section-title">Selbstständig – aber nie <em>allein.</em></h2>
+      <p>Werden Sie Teil eines digitalen Maklerkonzepts mit fairen Strukturen. Sie konzentrieren sich auf das, was zählt: den Menschen. Um Technik, Marketing und Backoffice kümmern wir uns.</p>
+      <ul class="partner-points">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Faire, transparente Provisionsmodelle</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Moderne digitale Tools &amp; Marketing</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Echtes Team statt Einzelkämpfertum</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 6"/></svg></span> Sinnstiftend &amp; nachhaltig arbeiten</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Partner werden
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEAM / FOUNDER ============ -->
+<section class="team" id="team">
+  <div class="container team-grid">
+    <div class="team-figure reveal">
+      <img src="images/nicole-randoll.jpg" alt="Nicole Randoll, maiave">
+    </div>
+    <div class="team-copy reveal d2">
+      <span class="eyebrow">Das Gesicht hinter maiave</span>
+      <p class="team-quote" style="margin-top:22px;"><span class="mark">„</span>Eine Immobilie ist mehr als Quadratmeter und Zahlen – es ist ein Stück Zuhause. Genau so behandeln wir sie: mit Respekt, Ehrlichkeit und der Zeit, die es braucht.<span class="mark">"</span></p>
+      <div class="team-by">
+        <div class="av">N</div>
+        <div>
+          <div class="nm">Nicole Randoll</div>
+          <div class="ro">Gründerin &amp; Ihre Ansprechpartnerin</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT (DEEP FORM) ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Kontakt</span>
+      <h2 class="section-title">Erzählen Sie uns von Ihrem <em>Vorhaben.</em></h2>
+      <p class="section-sub">Je mehr wir über Ihre Wünsche wissen, desto gezielter können wir Sie beraten. Nehmen Sie sich zwei Minuten – wir melden uns innerhalb von 24 Stunden persönlich bei Ihnen.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div class="form-card reveal">
+        <div class="form-progress">
+          <span class="dot on"></span><span class="dot"></span><span class="dot"></span>
+          <span style="margin-left:6px;">Ihr Anliegen · Details · Kontakt</span>
+        </div>
+
+        <form id="contactForm" novalidate>
+          <!-- 1. Anliegen -->
+          <fieldset class="fieldset">
+            <legend class="fs-legend"><span class="n">1</span> Worum geht es?</legend>
+            <div class="choices" role="radiogroup" aria-label="Anliegen">
+              <label class="choice"><input type="radio" name="anliegen" value="verkaufen" data-mode="owner" checked><span>🏷️ Verkaufen</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="bewerten" data-mode="owner"><span>📊 Bewerten lassen</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="vermieten" data-mode="owner"><span>🔑 Vermieten</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="kaufen" data-mode="search"><span>🔎 Kaufen</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="mieten" data-mode="search"><span>🏠 Mieten</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="partner" data-mode="partner"><span>🤝 Partnermakler</span></label>
+              <label class="choice"><input type="radio" name="anliegen" value="tippgeber" data-mode="tipp"><span>💡 Tippgeber</span></label>
+            </div>
+          </fieldset>
+
+          <!-- 2. Details -->
+          <fieldset class="fieldset">
+            <legend class="fs-legend"><span class="n">2</span> Die Details</legend>
+
+            <!-- OWNER block (verkaufen / bewerten / vermieten) -->
+            <div class="cond show" data-mode-block="owner">
+              <div class="grid-2">
+                <div class="field">
+                  <label class="label">Immobilientyp</label>
+                  <select class="select" name="objekttyp">
+                    <option value="">Bitte wählen</option>
+                    <option>Eigentumswohnung</option>
+                    <option>Einfamilienhaus</option>
+                    <option>Doppelhaushälfte / Reihenhaus</option>
+                    <option>Mehrfamilienhaus</option>
+                    <option>Grundstück</option>
+                    <option>Gewerbeimmobilie</option>
+                    <option>Sonstiges</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="label">Lage / Ort</label>
+                  <input class="input" name="lage" placeholder="z. B. Freiburg-Wiehre">
+                </div>
+              </div>
+              <div class="grid-3">
+                <div class="field">
+                  <label class="label">Wohnfläche <span class="opt">(m²)</span></label>
+                  <input class="input" name="wohnflaeche" type="number" min="0" placeholder="z. B. 120">
+                </div>
+                <div class="field">
+                  <label class="label">Grundstück <span class="opt">(m²)</span></label>
+                  <input class="input" name="grundstueck" type="number" min="0" placeholder="z. B. 450">
+                </div>
+                <div class="field">
+                  <label class="label">Zimmer</label>
+                  <input class="input" name="zimmer_o" type="number" min="0" step="0.5" placeholder="z. B. 4">
+                </div>
+              </div>
+              <div class="grid-3">
+                <div class="field">
+                  <label class="label">Baujahr</label>
+                  <input class="input" name="baujahr" type="number" min="1800" max="2030" placeholder="z. B. 1998">
+                </div>
+                <div class="field">
+                  <label class="label">Zustand</label>
+                  <select class="select" name="zustand">
+                    <option value="">Bitte wählen</option>
+                    <option>Neuwertig / Erstbezug</option>
+                    <option>Gepflegt</option>
+                    <option>Renovierungsbedürftig</option>
+                    <option>Sanierungsbedürftig</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="label">Preisvorstellung <span class="opt">(€)</span></label>
+                  <input class="input" name="preisvorstellung" placeholder="optional">
+                </div>
+              </div>
+            </div>
+
+            <!-- SEARCH block (kaufen / mieten) -->
+            <div class="cond" data-mode-block="search">
+              <div class="grid-2">
+                <div class="field">
+                  <label class="label">Gewünschter Immobilientyp</label>
+                  <select class="select" name="such_typ">
+                    <option value="">Bitte wählen</option>
+                    <option>Eigentumswohnung</option>
+                    <option>Einfamilienhaus</option>
+                    <option>Doppelhaushälfte / Reihenhaus</option>
+                    <option>Mehrfamilienhaus</option>
+                    <option>Grundstück</option>
+                    <option>Gewerbeimmobilie</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label class="label">Wunschregion</label>
+                  <input class="input" name="region" placeholder="z. B. Freiburg, Weinheim, Umkreis 20 km">
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="field">
+                  <label class="label">Zimmer <span class="opt">(min.)</span></label>
+                  <input class="input" name="zimmer_s" type="number" min="0" step="0.5" placeholder="z. B. 3">
+                </div>
+                <div class="field">
+                  <label class="label">Wohnfläche <span class="opt">(min. m²)</span></label>
+                  <input class="input" name="wohnflaeche_s" type="number" min="0" placeholder="z. B. 80">
+                </div>
+              </div>
+              <div class="field">
+                <div class="range-row">
+                  <label class="label" style="margin:0;">Budget <span class="opt">(bis)</span></label>
+                  <span class="range-val" id="budgetOut">600.000 €</span>
+                </div>
+                <input type="range" id="budget" name="budget" min="50000" max="2000000" step="25000" value="600000">
+              </div>
+              <div class="field">
+                <label class="label">Ausstattungswünsche</label>
+                <div class="checks">
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Garten"><span>Garten</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Balkon/Terrasse"><span>Balkon / Terrasse</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Garage/Stellplatz"><span>Garage / Stellplatz</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Aufzug"><span>Aufzug</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Barrierefrei"><span>Barrierefrei</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Neubau"><span>Neubau bevorzugt</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Keller"><span>Keller</span></label>
+                  <label class="check"><input type="checkbox" name="ausstattung" value="Einbaukueche"><span>Einbauküche</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Finanzierung</label>
+                <select class="select" name="finanzierung">
+                  <option value="">Bitte wählen</option>
+                  <option>Bereits geklärt / Eigenkapital vorhanden</option>
+                  <option>Finanzierungszusage liegt vor</option>
+                  <option>In Klärung</option>
+                  <option>Noch offen – bitte beraten</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- PARTNER block -->
+            <div class="cond" data-mode-block="partner">
+              <div class="grid-2">
+                <div class="field">
+                  <label class="label">Aktuelle Tätigkeit</label>
+                  <input class="input" name="taetigkeit" placeholder="z. B. Immobilienmakler/in, Quereinsteiger/in">
+                </div>
+                <div class="field">
+                  <label class="label">Ihre Region</label>
+                  <input class="input" name="partner_region" placeholder="z. B. Freiburg">
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Erfahrung in der Immobilienbranche</label>
+                <select class="select" name="erfahrung">
+                  <option value="">Bitte wählen</option>
+                  <option>Keine – Quereinstieg</option>
+                  <option>Unter 2 Jahre</option>
+                  <option>2–5 Jahre</option>
+                  <option>Mehr als 5 Jahre</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- TIPP block -->
+            <div class="cond" data-mode-block="tipp">
+              <div class="field">
+                <label class="label">Lage der Immobilie <span class="opt">(Tipp)</span></label>
+                <input class="input" name="tipp_lage" placeholder="z. B. Stadtteil, Straße">
+              </div>
+              <div class="field">
+                <label class="label">Ihre Beziehung zum Eigentümer</label>
+                <select class="select" name="beziehung">
+                  <option value="">Bitte wählen</option>
+                  <option>Bekannte/r oder Freund/in</option>
+                  <option>Nachbar/in</option>
+                  <option>Familie</option>
+                  <option>Beruflicher Kontakt</option>
+                  <option>Sonstiges</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Zeitrahmen (always) -->
+            <div class="field" style="margin-top:6px;">
+              <label class="label">Ihr Zeitrahmen</label>
+              <div class="choices">
+                <label class="choice"><input type="radio" name="zeitrahmen" value="sofort" checked><span>So schnell wie möglich</span></label>
+                <label class="choice"><input type="radio" name="zeitrahmen" value="3monate"><span>In 1–3 Monaten</span></label>
+                <label class="choice"><input type="radio" name="zeitrahmen" value="6-12"><span>In 6–12 Monaten</span></label>
+                <label class="choice"><input type="radio" name="zeitrahmen" value="unverbindlich"><span>Erstmal unverbindlich</span></label>
+              </div>
+            </div>
+
+            <!-- Wünsche / Nachricht (always) -->
+            <div class="field">
+              <label class="label">Ihre Wünsche &amp; Anmerkungen</label>
+              <textarea class="textarea" name="nachricht" placeholder="Was ist Ihnen besonders wichtig? Gibt es Besonderheiten, Wünsche oder Fragen, die wir kennen sollten?"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- 3. Kontakt -->
+          <fieldset class="fieldset">
+            <legend class="fs-legend"><span class="n">3</span> So erreichen wir Sie</legend>
+            <div class="grid-3">
+              <div class="field">
+                <label class="label">Anrede</label>
+                <select class="select" name="anrede">
+                  <option value="">–</option>
+                  <option>Frau</option>
+                  <option>Herr</option>
+                  <option>Divers</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="label">Vorname *</label>
+                <input class="input" name="vorname" required placeholder="Vorname">
+              </div>
+              <div class="field">
+                <label class="label">Nachname *</label>
+                <input class="input" name="nachname" required placeholder="Nachname">
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label class="label">E-Mail *</label>
+                <input class="input" name="email" type="email" required placeholder="ihre@email.de">
+              </div>
+              <div class="field">
+                <label class="label">Telefon</label>
+                <input class="input" name="telefon" type="tel" placeholder="+49 …">
+              </div>
+            </div>
+            <div class="grid-2">
+              <div class="field">
+                <label class="label">Bevorzugter Kontaktweg</label>
+                <div class="choices">
+                  <label class="choice"><input type="radio" name="kontaktweg" value="email" checked><span>E-Mail</span></label>
+                  <label class="choice"><input type="radio" name="kontaktweg" value="telefon"><span>Telefon</span></label>
+                  <label class="choice"><input type="radio" name="kontaktweg" value="whatsapp"><span>WhatsApp</span></label>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Beste Erreichbarkeit</label>
+                <select class="select" name="erreichbarkeit">
+                  <option value="">Bitte wählen</option>
+                  <option>Vormittags</option>
+                  <option>Nachmittags</option>
+                  <option>Abends (ab 17 Uhr)</option>
+                  <option>Jederzeit</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="consent">
+            <input type="checkbox" id="datenschutz" name="datenschutz" required>
+            <label for="datenschutz">Ich habe die <a href="#datenschutz">Datenschutzerklärung</a> gelesen und bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden.</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Anfrage absenden
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Vielen Dank!</h3>
+          <p>Wir haben Ihre Anfrage erhalten und melden uns innerhalb von 24 Stunden persönlich bei Ihnen.</p>
+        </div>
+      </div>
+
+      <!-- ASIDE -->
+      <aside class="contact-aside reveal d2">
+        <div class="info-card">
+          <h3>Frage uns gerne direkt</h3>
+          <p class="sub">Lieber persönlich? Wir sind für Sie da.</p>
+          <div class="info-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="k">Adresse</div><div class="v">Kaiser-Joseph-Straße 254<br>79098 Freiburg im Breisgau</div></div>
+          </div>
+          <div class="info-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4h16v16H4z" fill="none"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+            <div><div class="k">E-Mail</div><a class="v" href="mailto:nicole.randoll@maiave.de">nicole.randoll@maiave.de</a></div>
+          </div>
+          <div class="info-row">
+            <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="k">Telefon</div><a class="v" href="tel:+4976155721877">0761 55721877</a><br><a class="v" href="tel:+4916097779748">+49 160 97779748</a></div>
+          </div>
+        </div>
+        <div class="hours-card">
+          <h4>Erreichbarkeit</h4>
+          <div class="hours-row"><span>Montag – Freitag</span><span>09:00 – 18:00</span></div>
+          <div class="hours-row"><span>Samstag</span><span>Nach Vereinbarung</span></div>
+          <div class="hours-row"><span>Sonntag</span><span>Geschlossen</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <img src="images/maiave-logo.png" alt="maiave">
+        <p>Wir fairmitteln Zuhause. Digitale Immobilienvermittlung – transparent, fair und auf Augenhöhe. In Freiburg, Weinheim &amp; Umgebung.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="#services">Beratung</a></li>
+          <li><a href="#services">Verkauf</a></li>
+          <li><a href="#services">Vermietung</a></li>
+          <li><a href="#services">Bewertung</a></li>
+          <li><a href="#services">Immobiliensuche</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>maiave</h4>
+        <ul>
+          <li><a href="#about">Über uns</a></li>
+          <li><a href="#why">Warum maiave</a></li>
+          <li><a href="#partner">Partnermakler</a></li>
+          <li><a href="#tippgeber">Tippgeber</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="tel:+4976155721877">0761 55721877</a></li>
+          <li><a href="mailto:nicole.randoll@maiave.de">nicole.randoll@maiave.de</a></li>
+          <li>Kaiser-Joseph-Str. 254</li>
+          <li>79098 Freiburg i. Br.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 maiave GmbH · Alle Rechte vorbehalten</span>
+      <span><a href="#impressum">Impressum</a> &nbsp;·&nbsp; <a href="#datenschutz">Datenschutzerklärung</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/4916097779748" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.86 9.86 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.8 14.01c-.25.7-1.44 1.33-1.99 1.39-.53.05-1.01.24-3.4-.71-2.87-1.13-4.69-4.07-4.83-4.26-.14-.19-1.15-1.53-1.15-2.92 0-1.39.73-2.07.99-2.36.25-.28.55-.35.73-.35.18 0 .37 0 .53.01.17.01.4-.06.62.48.25.6.85 2.07.93 2.22.07.14.12.31.02.5-.09.19-.14.31-.28.48-.14.16-.29.37-.42.49-.14.14-.28.29-.12.57.16.28.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.22 1.37.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.28.37-.23.62-.14.25.09 1.6.75 1.87.89.28.14.46.21.53.32.07.12.07.66-.18 1.36z"/></svg>
+</a>
+
+<script src="maiave.js"></script>
+</body>
+</html>
