@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Franklin Massage Studio · Zürich</title>
+<meta name="description" content="Franklin Massage Studio. A quiet room in Zürich for considered bodywork, warm rituals, and handmade care. Massage by appointment." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="franklin.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Franklin Massage Studio, home">
+    <span class="brand-name">Franklin</span>
+    <span class="brand-sub">Massage Studio</span>
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="#philosophy">Studio</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#products">Apothecary</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-ghost" href="#visit">Book a ritual</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="mobile-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#philosophy">Studio</a>
+  <a href="#treatments">Treatments</a>
+  <a href="#space">The Space</a>
+  <a href="#products">Apothecary</a>
+  <a href="#visit">Visit</a>
+</div>
+
+<!-- HERO -->
+<main id="top">
+<section class="hero">
+  <div class="hero-media">
+    <img data-photo src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1900&q=70" alt="Warm, candle-lit treatment room at Franklin Massage Studio" />
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">Massage Studio · Zürich</span>
+    <h1>Stillness, <em>handcrafted.</em></h1>
+    <p class="hero-sub">A small, warm room for considered bodywork. We work slowly, with our hands, and let the hour belong entirely to you.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#visit">Book a ritual</a>
+      <a class="btn btn-ghost" href="#treatments">View the menu</a>
+    </div>
+  </div>
+  <span class="hero-scroll" aria-hidden="true">Scroll</span>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section" id="philosophy">
+  <div class="intro">
+    <div class="reveal">
+      <span class="eyebrow">The Studio</span>
+      <p class="intro-statement">We believe touch is a kind of <em>attention</em>. So we keep the room quiet, the light low, and the timing unhurried.</p>
+      <p class="signature">Franklin, founder</p>
+    </div>
+    <div class="intro-body reveal d1">
+      <p>Franklin began as a single treatment room above a courtyard in Zürich, built around one idea: that good bodywork is unrushed and deeply personal. There is no conveyor belt here, no upsell, no clock you can feel ticking.</p>
+      <p>Each ritual is shaped to the body in front of us. We use warm oils, slow pressure, and products we make by hand in small batches. You arrive carrying the week. You leave a little lighter.</p>
+      <a class="btn-line" href="#treatments">Explore the rituals</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="section dark" id="treatments">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Menu</span>
+    <h2>A short list, done with great care.</h2>
+  </div>
+
+  <div class="menu-group reveal">
+    <div class="menu-group-title">
+      <h3>Signature Rituals</h3>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>The Franklin Signature</h4><span class="dur">90 min</span>
+        <p>Our defining treatment. A full-body massage tailored in the room, blending Swedish flow with deeper, intentional work and warm aromatic oils.</p>
+      </div>
+      <div class="menu-price">CHF 280</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Deep Tissue Restoration</h4><span class="dur">60 / 90 min</span>
+        <p>Focused, firm work for held tension across the back, neck, and shoulders. Slow enough to release, never to brace against.</p>
+      </div>
+      <div class="menu-price">CHF 190<small> / 260</small></div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Aromatherapy Calm Ritual</h4><span class="dur">75 min</span>
+        <p>A softer, grounding session finished with our lavender Calm Ritual scrub. Designed for the overwound evening, not the sore muscle.</p>
+      </div>
+      <div class="menu-price">CHF 240</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Hot Stone Stillness</h4><span class="dur">90 min</span>
+        <p>Warm basalt stones laid along the body and worked through the muscle. Deep, radiant heat that quiets a busy mind.</p>
+      </div>
+      <div class="menu-price">CHF 270</div>
+    </div>
+  </div>
+
+  <div class="menu-group reveal">
+    <div class="menu-group-title">
+      <h3>Considered Care</h3>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Citrus Glow Body Polish</h4><span class="dur">90 min</span>
+        <p>A full exfoliation with our Dead Sea salt scrub, followed by a nourishing massage. Skin left soft, bright, and awake.</p>
+      </div>
+      <div class="menu-price">CHF 260</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Prenatal Nurture</h4><span class="dur">60 min</span>
+        <p>Gentle, supported bodywork for the second and third trimester, with side-lying positioning and the lightest of pressure.</p>
+      </div>
+      <div class="menu-price">CHF 200</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>The Pair, Side by Side</h4><span class="dur">90 min</span>
+        <p>Two therapists, two tables, one quiet room. A shared hour for couples or close friends.</p>
+      </div>
+      <div class="menu-price">CHF 540</div>
+    </div>
+  </div>
+
+  <p class="menu-note">Every ritual opens with a warm foot cleanse and closes with tea. Additions, hot towels, scalp work, or extended time, can be arranged when you book.</p>
+</section>
+
+<!-- THE SPACE -->
+<section class="split" id="space">
+  <div class="split-media">
+    <img data-photo src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1300&q=70" alt="Olive linen, warm wood, and candlelight in the studio" />
+  </div>
+  <div class="split-body reveal">
+    <span class="eyebrow">The Space</span>
+    <h2>Warm wood, olive linen, low light.</h2>
+    <p>The studio was made to feel like a held breath. Clay walls, a brick reveal, dried olive branches, and just enough candlelight to soften the edges of the day.</p>
+    <ul class="split-list">
+      <li><span class="num">01</span><span>A private treatment room, never shared, never rushed.</span></li>
+      <li><span class="num">02</span><span>Heated tables and warm linens through the Zürich winter.</span></li>
+      <li><span class="num">03</span><span>A quiet lounge to arrive early and leave slowly.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- THE RITUAL -->
+<section class="split reverse">
+  <div class="split-media">
+    <img data-photo src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1300&q=70" alt="Massage oils and a warm towel arranged on a tray" />
+  </div>
+  <div class="split-body reveal">
+    <span class="eyebrow">The Ritual</span>
+    <h2>How an hour unfolds.</h2>
+    <p>Nothing here asks anything of you. Arrive a few minutes early, settle, and let us read the rest.</p>
+    <ul class="split-list">
+      <li><span class="num">i</span><span>A short, unhurried conversation about how you feel today.</span></li>
+      <li><span class="num">ii</span><span>A warm foot cleanse to mark the start of the hour.</span></li>
+      <li><span class="num">iii</span><span>Bespoke bodywork, with pressure adjusted as we go.</span></li>
+      <li><span class="num">iv</span><span>Tea, water, and time to come back to the room.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRODUCTS / APOTHECARY -->
+<section class="section alt" id="products">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Apothecary</span>
+    <h2>Made by hand, in small batches, in Zürich.</h2>
+    <p class="lede" style="margin-top:1.3rem;">The same scrubs we use in the room, jarred to take home. Two rituals, two moods.</p>
+  </div>
+
+  <div class="products">
+    <article class="product reveal">
+      <div class="product-media">
+        <img data-photo src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=1000&q=70" alt="Citrus Glow Detox Scrub in an amber glass jar" />
+      </div>
+      <div class="product-head">
+        <h3>Citrus Glow Detox Scrub</h3>
+        <span class="price">CHF 38</span>
+      </div>
+      <p class="notes">Dead Sea Salt · Coconut · Grapefruit</p>
+      <p>A brightening polish that wakes the skin. Mineral salt to refine, coconut to soften, grapefruit to lift the morning.</p>
+      <p class="meta">100ml · Handmade in Zürich</p>
+    </article>
+
+    <article class="product reveal d1">
+      <div class="product-media">
+        <img data-photo src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?auto=format&fit=crop&w=1000&q=70" alt="Calm Ritual Soothing Scrub in an amber glass jar" />
+      </div>
+      <div class="product-head">
+        <h3>Calm Ritual Soothing Scrub</h3>
+        <span class="price">CHF 38</span>
+      </div>
+      <p class="notes">Brown Sugar · Jojoba · Lavender</p>
+      <p>A gentler, grounding blend for the evening. Fine sugar to smooth, jojoba to nourish, lavender to slow everything down.</p>
+      <p class="meta">100ml · Handmade in Zürich</p>
+    </article>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section dark">
+  <div class="quote reveal">
+    <span class="eyebrow center">In their words</span>
+    <blockquote style="margin-top:1.6rem;">An hour at Franklin is the closest thing Zürich has to <em>stopping time</em>. I leave feeling like the week has been unpicked.</blockquote>
+    <cite>Marta L. · Returning guest</cite>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section" id="visit">
+  <div class="visit">
+    <div class="visit-detail reveal">
+      <span class="eyebrow">Visit</span>
+      <h3>Come and be quiet for an hour.</h3>
+      <p>Booking is by appointment so the room stays calm and unshared. Tell us how you would like to feel afterward, and we will shape the rest.</p>
+      <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn btn-solid" href="mailto:hello@franklinmassage.ch">Request a booking</a>
+        <a class="btn btn-ghost" href="#treatments">See the menu</a>
+      </div>
+    </div>
+
+    <div class="visit-contact reveal d1">
+      <div class="visit-block">
+        <span class="eyebrow">Studio</span>
+        <dl>
+          <dt>Address</dt><dd>Seefeldstrasse, 8008 Zürich</dd>
+          <dt>Email</dt><dd><a href="mailto:hello@franklinmassage.ch">hello@franklinmassage.ch</a></dd>
+          <dt>Phone</dt><dd><a href="tel:+41440000000">+41 44 000 00 00</a></dd>
+        </dl>
+      </div>
+      <div class="visit-block">
+        <span class="eyebrow">Hours</span>
+        <dl>
+          <dt>Tue – Fri</dt><dd>10:00 – 20:00</dd>
+          <dt>Saturday</dt><dd>09:00 – 18:00</dd>
+          <dt>Sun – Mon</dt><dd>By request</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="brand-name">Franklin</span>
+      <span class="brand-sub" style="opacity:.7;">Massage Studio</span>
+      <p class="footer-tag">A quiet room in Zürich for considered bodywork and handmade care.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#philosophy">Studio</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#space">The Space</a></li>
+        <li><a href="#products">Apothecary</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#visit">Book a ritual</a></li>
+        <li><a href="mailto:hello@franklinmassage.ch">hello@franklinmassage.ch</a></li>
+        <li>Seefeldstrasse, 8008 Zürich</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Franklin Massage Studio</span>
+    <span>Handmade in Zürich</span>
+  </div>
+</footer>
+
+<script src="franklin.js"></script>
+</body>
+</html>
