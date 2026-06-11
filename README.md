@@ -17,10 +17,18 @@ Open `index.html` in a browser. Fonts load from Google Fonts.
 
 ## Imagery
 
-Photo slots use placeholder images and degrade to warm panels if a photo fails
-to load. Swap the `src` of each `<img data-photo>` for the studio's own
-photography (the treatment room, the lounge, and the two scrub jars). The hero,
-the two split sections, and the two product images are the slots to replace.
+Photos live in `assets/img/` and are committed with the site, so it works
+offline and nothing can break at load time:
+
+- `hero.jpg` — warm massage oil poured into open hands (hero)
+- `space.jpg` — calm warm-oak treatment space (The Space)
+- `ritual.jpg` — hands working through a massage (The Ritual)
+- `product-citrus.jpg` / `product-calm.jpg` — the two scrubs (Apothecary)
+
+These are royalty-free Unsplash photographs chosen to match the brief (warm,
+intimate, no clinical light) as stand-ins. Replace them with the studio's own
+photography by dropping files of the same names into `assets/img/`. Each
+`<img>` also degrades to a warm panel if a file is ever missing.
 
 ## Content to confirm with the client
 
