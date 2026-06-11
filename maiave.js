@@ -2,6 +2,17 @@
    maiave — interactions
    ============================================================ */
 
+/* ---- intro reveal (öffnet von der Mitte) ---- */
+const intro = document.getElementById('intro');
+if (intro) {
+  const HOLD = 380;   // kurzer schwarzer Moment
+  const OPEN = 1100;  // Dauer des Aufgehens
+  // erst schwarz halten, dann von der Mitte aufgehen
+  setTimeout(() => document.body.classList.add('intro-done'), HOLD);
+  // Overlay nach der Animation entfernen
+  setTimeout(() => intro.classList.add('is-hidden'), HOLD + OPEN);
+}
+
 /* ---- sticky nav ---- */
 const nav = document.getElementById('navbar');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
