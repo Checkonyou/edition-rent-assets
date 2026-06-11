@@ -2,6 +2,10 @@
    maiave — interactions
    ============================================================ */
 
+/* Progressive enhancement: erst jetzt dürfen Reveal/Intro verstecken.
+   Läuft dieser Code nicht, bleibt die ganze Seite sichtbar. */
+document.documentElement.classList.add('js-anim');
+
 /* ---- intro reveal (öffnet von der Mitte) ---- */
 const intro = document.getElementById('intro');
 if (intro) {
@@ -27,15 +31,27 @@ window.toggleMenu = toggleMenu;
 
 /* ---- reveal on scroll ---- */
 const revealEls = document.querySelectorAll('.reveal');
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach((e) => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      revealObs.unobserve(e.target);
+const showAll = () => revealEls.forEach((el) => el.classList.add('visible'));
+if ('IntersectionObserver' in window) {
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach((el) => revealObs.observe(el));
+  // Failsafe: sollte der Observer (z. B. in Webflow) nicht auslösen, alles zeigen
+  setTimeout(() => revealEls.forEach((el) => {
+    if (!el.classList.contains('visible')) {
+      const r = el.getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('visible');
     }
-  });
-}, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach((el) => revealObs.observe(el));
+  }), 1500);
+} else {
+  showAll();
+}
 
 /* ---- animated stat counters ---- */
 const fmt = (n) => n.toLocaleString('de-DE');
