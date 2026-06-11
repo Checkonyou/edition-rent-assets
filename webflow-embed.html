@@ -1,0 +1,661 @@
+<!-- ============================================================
+     FRANKLIN MASSAGE STUDIO
+     Paste this entire block into ONE Webflow HTML Embed element,
+     on a blank page, then publish. Self-contained: fonts, styles,
+     markup and script are all included. Images are hosted remotely.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+/* Franklin Massage Studio — warm editorial luxury
+   Light, warm, calm. Playfair Display + Lora. OKLCH warm-tinted palette. */
+
+:root {
+  --cream: oklch(0.965 0.013 84);
+  --cream-2: oklch(0.945 0.018 80);
+  --sand: oklch(0.90 0.022 76);
+  --ink: oklch(0.285 0.018 68);
+  --ink-soft: oklch(0.44 0.02 66);
+  --olive: oklch(0.44 0.052 124);
+  --olive-deep: oklch(0.33 0.042 124);
+  --olive-soft: oklch(0.60 0.05 122);
+  --clay: oklch(0.70 0.038 52);
+  --brass: oklch(0.66 0.085 78);
+  --line: oklch(0.84 0.02 74);
+
+  --serif: 'Playfair Display', Georgia, serif;
+  --body: 'Lora', Georgia, serif;
+
+  --pad-x: clamp(1.5rem, 6vw, 7rem);
+  --gap: clamp(3.5rem, 9vw, 9rem);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--body);
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  letter-spacing: 0.005em;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--olive); color: var(--cream); }
+
+/* ---------- Type primitives ---------- */
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.06; letter-spacing: -0.015em; color: var(--ink); }
+
+.eyebrow {
+  font-family: var(--body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--olive);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+.eyebrow::before {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--brass);
+}
+.eyebrow.center { justify-content: center; }
+
+.lede { font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.75; color: var(--ink-soft); max-width: 38ch; }
+
+.measure { max-width: 62ch; }
+
+a { color: inherit; text-decoration: none; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 1.05rem 2.1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 0.45s var(--ease), color 0.45s var(--ease), border-color 0.45s var(--ease), transform 0.45s var(--ease);
+}
+.btn-solid { background: var(--olive); color: var(--cream); }
+.btn-solid:hover { background: var(--olive-deep); transform: translateY(-2px); }
+.btn-ghost { border-color: currentColor; color: inherit; }
+.btn-ghost:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.btn-line {
+  font-family: var(--body);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--olive);
+  border-bottom: 1px solid var(--brass);
+  padding-bottom: 3px;
+  transition: gap 0.4s var(--ease), color 0.4s var(--ease);
+  display: inline-flex;
+  gap: 0.5rem;
+}
+.btn-line:hover { color: var(--olive-deep); gap: 0.9rem; }
+
+/* ---------- Nav ---------- */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1.1rem, 2.5vw, 1.9rem) var(--pad-x);
+  color: var(--cream);
+  transition: background 0.5s var(--ease), color 0.5s var(--ease), padding 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.nav.scrolled {
+  background: color-mix(in oklab, var(--cream) 92%, transparent);
+  backdrop-filter: blur(14px) saturate(1.1);
+  color: var(--ink);
+  padding-top: clamp(0.8rem, 1.6vw, 1.1rem);
+  padding-bottom: clamp(0.8rem, 1.6vw, 1.1rem);
+  box-shadow: 0 1px 0 var(--line);
+}
+.brand { line-height: 1; }
+.brand-name { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; }
+.brand-sub { display: block; font-size: 0.54rem; letter-spacing: 0.42em; text-transform: uppercase; margin-top: 0.32rem; opacity: 0.78; padding-left: 0.32em; }
+.nav-links { display: flex; align-items: center; gap: clamp(1.5rem, 2.5vw, 2.6rem); list-style: none; }
+.nav-links a { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.82; transition: opacity 0.3s; position: relative; }
+.nav-links a:not(.btn)::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: -5px;
+  height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.nav-links a:not(.btn):hover { opacity: 1; }
+.nav-links a:not(.btn):hover::after { transform: scaleX(1); }
+.nav-links .btn { padding: 0.7rem 1.5rem; opacity: 1; }
+.nav .btn-ghost { border-color: currentColor; }
+
+.nav-toggle { display: none; flex-direction: column; gap: 6px; background: none; border: 0; cursor: pointer; padding: 6px; }
+.nav-toggle span { width: 26px; height: 1.5px; background: currentColor; transition: 0.3s var(--ease); }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--pad-x) clamp(3.5rem, 7vw, 6rem);
+  background: var(--olive-deep);
+  overflow: hidden;
+}
+.hero-media { position: absolute; inset: 0; z-index: 0; }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.hero-media::after {
+  content: ''; position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, oklch(0.2 0.02 70 / 0.45) 0%, transparent 28%, transparent 45%, oklch(0.18 0.02 70 / 0.78) 100%),
+    linear-gradient(90deg, oklch(0.18 0.02 70 / 0.4) 0%, transparent 55%);
+}
+.hero-inner { position: relative; z-index: 1; color: var(--cream); max-width: 60rem; }
+.hero h1 {
+  font-size: clamp(3rem, 8.5vw, 6.6rem);
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: -0.02em;
+  margin: 1.6rem 0 1.6rem;
+  text-wrap: balance;
+}
+.hero h1 em { font-style: italic; color: oklch(0.86 0.06 86); }
+.hero .eyebrow { color: oklch(0.88 0.04 86); }
+.hero .eyebrow::before { background: oklch(0.82 0.07 84); }
+.hero-sub { font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height: 1.7; max-width: 44ch; color: oklch(0.92 0.012 86 / 0.88); margin-bottom: 2.4rem; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.hero .btn-ghost { color: var(--cream); border-color: oklch(0.92 0.01 86 / 0.55); }
+.hero .btn-ghost:hover { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.hero-scroll {
+  position: absolute; left: var(--pad-x); bottom: clamp(3.5rem, 7vw, 6rem); z-index: 1;
+  writing-mode: vertical-rl; font-size: 0.62rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: oklch(0.9 0.01 86 / 0.6); display: none;
+}
+
+/* ---------- Section scaffold ---------- */
+.section { padding: var(--gap) var(--pad-x); }
+.section-head { max-width: 52rem; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
+.section-head h2 { font-size: clamp(2rem, 4.6vw, 3.6rem); margin-top: 1.3rem; text-wrap: balance; }
+.section.dark { background: var(--olive); color: oklch(0.93 0.015 86); }
+.section.dark h2, .section.dark h3 { color: var(--cream); }
+.section.dark .eyebrow { color: oklch(0.84 0.05 88); }
+.section.dark .eyebrow::before { background: var(--brass); }
+.section.alt { background: var(--cream-2); }
+
+/* ---------- Philosophy / intro ---------- */
+.intro { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+@media (min-width: 860px) { .intro { grid-template-columns: 1.1fr 1fr; } }
+.intro-statement { font-family: var(--serif); font-size: clamp(1.6rem, 3.2vw, 2.7rem); line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; text-wrap: balance; }
+.intro-statement em { font-style: italic; color: var(--olive); }
+.intro-body p + p { margin-top: 1.3rem; }
+.intro-body { color: var(--ink-soft); }
+.signature { margin-top: 2rem; font-family: var(--serif); font-style: italic; font-size: 1.2rem; color: var(--olive); }
+
+/* ---------- Treatment menu (editorial price list) ---------- */
+.menu-group + .menu-group { margin-top: clamp(3rem, 6vw, 5rem); }
+.menu-group-title { display: flex; align-items: baseline; gap: 1.2rem; margin-bottom: 2rem; }
+.menu-group-title h3 { font-size: clamp(1.5rem, 2.6vw, 2.1rem); font-weight: 600; }
+.menu-group-title .rule { flex: 1; height: 1px; background: var(--line); }
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.4rem;
+  align-items: baseline;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.menu-item:first-of-type { border-top: 1px solid var(--line); }
+.menu-item-main { min-width: 0; }
+.menu-item h4 { font-size: 1.35rem; font-weight: 500; display: inline; }
+.menu-item .dur { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--clay); margin-left: 0.9rem; }
+.menu-item p { font-size: 0.95rem; line-height: 1.65; color: var(--ink-soft); margin-top: 0.55rem; max-width: 52ch; }
+.menu-price { font-family: var(--serif); font-size: 1.4rem; color: var(--olive); white-space: nowrap; }
+.menu-price small { font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.05em; }
+.section.dark .menu-item, .section.dark .menu-item:first-of-type { border-color: oklch(0.55 0.04 124); }
+.section.dark .menu-price { color: oklch(0.86 0.06 88); }
+.section.dark .menu-item p { color: oklch(0.86 0.02 90 / 0.8); }
+.section.dark .menu-item .dur { color: oklch(0.8 0.05 86); }
+.menu-note { margin-top: 2.5rem; font-size: 0.9rem; color: var(--ink-soft); font-style: italic; }
+.section.dark .menu-note { color: oklch(0.85 0.02 90 / 0.75); }
+
+/* ---------- Feature split (the space) ---------- */
+.split { display: grid; grid-template-columns: 1fr; gap: 0; align-items: stretch; }
+@media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } .split.reverse .split-media { order: 2; } }
+.split-media { position: relative; min-height: 60vh; background: var(--sand); overflow: hidden; }
+.split-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.split-body { padding: clamp(2.5rem, 6vw, 6rem) var(--pad-x); display: flex; flex-direction: column; justify-content: center; }
+.split-body h2 { font-size: clamp(1.9rem, 3.6vw, 3rem); margin: 1.2rem 0 1.3rem; }
+.split-body p { color: var(--ink-soft); max-width: 48ch; }
+.split-list { list-style: none; margin-top: 2rem; }
+.split-list li { padding: 1rem 0; border-bottom: 1px solid var(--line); display: flex; align-items: baseline; gap: 1rem; font-size: 0.98rem; }
+.split-list li .num { font-family: var(--serif); font-style: italic; color: var(--brass); font-size: 1.1rem; min-width: 2ch; }
+
+/* ---------- Products ---------- */
+.products { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 4vw, 3rem); }
+@media (min-width: 760px) { .products { grid-template-columns: 1fr 1fr; } }
+.product { display: flex; flex-direction: column; }
+.product-media { aspect-ratio: 4 / 5; background: var(--sand); overflow: hidden; position: relative; }
+.product-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+.product:hover .product-media img { transform: scale(1.04); }
+.product-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1.5rem; }
+.product h3 { font-size: 1.5rem; font-weight: 500; }
+.product .price { font-family: var(--serif); font-size: 1.25rem; color: var(--olive); white-space: nowrap; }
+.product .notes { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-top: 0.7rem; }
+.product p { color: var(--ink-soft); font-size: 0.96rem; margin-top: 0.9rem; max-width: 42ch; }
+.product .meta { margin-top: 1rem; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* ---------- Testimonial ---------- */
+.quote { max-width: 46rem; margin: 0 auto; text-align: center; }
+.quote blockquote { font-family: var(--serif); font-size: clamp(1.5rem, 3.4vw, 2.5rem); line-height: 1.34; font-weight: 500; letter-spacing: -0.01em; text-wrap: balance; }
+.quote blockquote em { font-style: italic; color: oklch(0.86 0.06 88); }
+.quote cite { display: block; margin-top: 1.8rem; font-style: normal; font-size: 0.74rem; letter-spacing: 0.24em; text-transform: uppercase; color: oklch(0.84 0.04 88); }
+
+/* ---------- Visit / contact ---------- */
+.visit { display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 5vw, 4rem); }
+@media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; } }
+.visit-block + .visit-block { margin-top: 2rem; }
+.visit dl { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 2rem; margin-top: 1rem; }
+.visit dt { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); padding-top: 0.15rem; }
+.visit dd { font-size: 1rem; }
+.visit-detail h3 { font-size: clamp(1.6rem, 3vw, 2.3rem); margin: 1.1rem 0 1.4rem; }
+.visit-detail p { color: var(--ink-soft); max-width: 42ch; }
+.visit-contact a:hover { color: var(--olive); }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--olive-deep); color: oklch(0.9 0.015 86); padding: clamp(3.5rem, 6vw, 5.5rem) var(--pad-x) 2.5rem; }
+.footer-top { display: grid; grid-template-columns: 1fr; gap: 2.5rem; padding-bottom: 3rem; border-bottom: 1px solid oklch(0.45 0.04 124); }
+@media (min-width: 760px) { .footer-top { grid-template-columns: 2fr 1fr 1fr; } }
+.footer .brand-name { color: var(--cream); }
+.footer-tag { margin-top: 1.3rem; max-width: 30ch; font-size: 0.95rem; color: oklch(0.86 0.02 88 / 0.8); }
+.footer h4 { font-family: var(--body); font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase; color: oklch(0.82 0.04 88); margin-bottom: 1.1rem; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 0.6rem; font-size: 0.95rem; }
+.footer li a { opacity: 0.85; transition: opacity 0.3s; }
+.footer li a:hover { opacity: 1; }
+.footer-bottom { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; margin-top: 2rem; font-size: 0.78rem; color: oklch(0.82 0.02 88 / 0.6); letter-spacing: 0.04em; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal.d1 { transition-delay: 0.08s; }
+.reveal.d2 { transition-delay: 0.16s; }
+.reveal.d3 { transition-delay: 0.24s; }
+
+/* ---------- Mobile menu ---------- */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 200; background: var(--olive-deep); color: var(--cream);
+  display: flex; flex-direction: column; justify-content: center; gap: 0.4rem; padding: var(--pad-x);
+  transform: translateY(-100%); transition: transform 0.6s var(--ease); visibility: hidden;
+}
+.mobile-menu.open { transform: none; visibility: visible; }
+.mobile-menu a { font-family: var(--serif); font-size: clamp(2rem, 9vw, 3rem); font-weight: 500; padding: 0.5rem 0; }
+.mobile-menu a + a { border-top: 1px solid oklch(0.45 0.04 124); }
+.mobile-close { position: absolute; top: clamp(1.1rem, 2.5vw, 1.9rem); right: var(--pad-x); background: none; border: 0; color: var(--cream); font-size: 2rem; cursor: pointer; line-height: 1; }
+
+@media (max-width: 760px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-scroll { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+</style>
+<!-- NAV -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Franklin Massage Studio, home">
+    <span class="brand-name">Franklin</span>
+    <span class="brand-sub">Massage Studio</span>
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="#philosophy">Studio</a></li>
+      <li><a href="#treatments">Treatments</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#products">Apothecary</a></li>
+      <li><a href="#visit">Visit</a></li>
+      <li><a class="btn btn-ghost" href="#visit">Book a ritual</a></li>
+    </ul>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu">
+  <button class="mobile-close" id="menuClose" aria-label="Close menu">&times;</button>
+  <a href="#philosophy">Studio</a>
+  <a href="#treatments">Treatments</a>
+  <a href="#space">The Space</a>
+  <a href="#products">Apothecary</a>
+  <a href="#visit">Visit</a>
+</div>
+
+<!-- HERO -->
+<main id="top">
+<section class="hero">
+  <div class="hero-media">
+    <img data-photo src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?fm=jpg&q=80&w=2000&fit=crop" alt="Warm amber massage oil poured into open hands in low light" />
+  </div>
+  <div class="hero-inner">
+    <span class="eyebrow">Massage Studio · Zürich</span>
+    <h1>Stillness, <em>handcrafted.</em></h1>
+    <p class="hero-sub">A small, warm room for considered bodywork. We work slowly, with our hands, and let the hour belong entirely to you.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#visit">Book a ritual</a>
+      <a class="btn btn-ghost" href="#treatments">View the menu</a>
+    </div>
+  </div>
+  <span class="hero-scroll" aria-hidden="true">Scroll</span>
+</section>
+
+<!-- PHILOSOPHY -->
+<section class="section" id="philosophy">
+  <div class="intro">
+    <div class="reveal">
+      <span class="eyebrow">The Studio</span>
+      <p class="intro-statement">We believe touch is a kind of <em>attention</em>. So we keep the room quiet, the light low, and the timing unhurried.</p>
+      <p class="signature">Franklin, founder</p>
+    </div>
+    <div class="intro-body reveal d1">
+      <p>Franklin began as a single treatment room above a courtyard in Zürich, built around one idea: that good bodywork is unrushed and deeply personal. There is no conveyor belt here, no upsell, no clock you can feel ticking.</p>
+      <p>Each ritual is shaped to the body in front of us. We use warm oils, slow pressure, and products we make by hand in small batches. You arrive carrying the week. You leave a little lighter.</p>
+      <a class="btn-line" href="#treatments">Explore the rituals</a>
+    </div>
+  </div>
+</section>
+
+<!-- TREATMENTS -->
+<section class="section dark" id="treatments">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Menu</span>
+    <h2>A short list, done with great care.</h2>
+  </div>
+
+  <div class="menu-group reveal">
+    <div class="menu-group-title">
+      <h3>Signature Rituals</h3>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>The Franklin Signature</h4><span class="dur">90 min</span>
+        <p>Our defining treatment. A full-body massage tailored in the room, blending Swedish flow with deeper, intentional work and warm aromatic oils.</p>
+      </div>
+      <div class="menu-price">CHF 280</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Deep Tissue Restoration</h4><span class="dur">60 / 90 min</span>
+        <p>Focused, firm work for held tension across the back, neck, and shoulders. Slow enough to release, never to brace against.</p>
+      </div>
+      <div class="menu-price">CHF 190<small> / 260</small></div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Aromatherapy Calm Ritual</h4><span class="dur">75 min</span>
+        <p>A softer, grounding session finished with our lavender Calm Ritual scrub. Designed for the overwound evening, not the sore muscle.</p>
+      </div>
+      <div class="menu-price">CHF 240</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Hot Stone Stillness</h4><span class="dur">90 min</span>
+        <p>Warm basalt stones laid along the body and worked through the muscle. Deep, radiant heat that quiets a busy mind.</p>
+      </div>
+      <div class="menu-price">CHF 270</div>
+    </div>
+  </div>
+
+  <div class="menu-group reveal">
+    <div class="menu-group-title">
+      <h3>Considered Care</h3>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Citrus Glow Body Polish</h4><span class="dur">90 min</span>
+        <p>A full exfoliation with our Dead Sea salt scrub, followed by a nourishing massage. Skin left soft, bright, and awake.</p>
+      </div>
+      <div class="menu-price">CHF 260</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>Prenatal Nurture</h4><span class="dur">60 min</span>
+        <p>Gentle, supported bodywork for the second and third trimester, with side-lying positioning and the lightest of pressure.</p>
+      </div>
+      <div class="menu-price">CHF 200</div>
+    </div>
+
+    <div class="menu-item">
+      <div class="menu-item-main">
+        <h4>The Pair, Side by Side</h4><span class="dur">90 min</span>
+        <p>Two therapists, two tables, one quiet room. A shared hour for couples or close friends.</p>
+      </div>
+      <div class="menu-price">CHF 540</div>
+    </div>
+  </div>
+
+  <p class="menu-note">Every ritual opens with a warm foot cleanse and closes with tea. Additions, hot towels, scalp work, or extended time, can be arranged when you book.</p>
+</section>
+
+<!-- THE SPACE -->
+<section class="split" id="space">
+  <div class="split-media">
+    <img data-photo src="https://images.unsplash.com/photo-1753117034598-b7cb94f80d76?fm=jpg&q=80&w=1500&fit=crop" alt="A calm treatment space in warm oak, with care oils on a wooden tray" />
+  </div>
+  <div class="split-body reveal">
+    <span class="eyebrow">The Space</span>
+    <h2>Warm wood, olive linen, low light.</h2>
+    <p>The studio was made to feel like a held breath. Clay walls, a brick reveal, dried olive branches, and just enough candlelight to soften the edges of the day.</p>
+    <ul class="split-list">
+      <li><span class="num">01</span><span>A private treatment room, never shared, never rushed.</span></li>
+      <li><span class="num">02</span><span>Heated tables and warm linens through the Zürich winter.</span></li>
+      <li><span class="num">03</span><span>A quiet lounge to arrive early and leave slowly.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- THE RITUAL -->
+<section class="split reverse">
+  <div class="split-media">
+    <img data-photo src="https://images.unsplash.com/photo-1611073615830-9f76902c10fe?fm=jpg&q=80&w=1500&fit=crop" alt="Hands working slowly through a warm massage" />
+  </div>
+  <div class="split-body reveal">
+    <span class="eyebrow">The Ritual</span>
+    <h2>How an hour unfolds.</h2>
+    <p>Nothing here asks anything of you. Arrive a few minutes early, settle, and let us read the rest.</p>
+    <ul class="split-list">
+      <li><span class="num">i</span><span>A short, unhurried conversation about how you feel today.</span></li>
+      <li><span class="num">ii</span><span>A warm foot cleanse to mark the start of the hour.</span></li>
+      <li><span class="num">iii</span><span>Bespoke bodywork, with pressure adjusted as we go.</span></li>
+      <li><span class="num">iv</span><span>Tea, water, and time to come back to the room.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- PRODUCTS / APOTHECARY -->
+<section class="section alt" id="products">
+  <div class="section-head reveal">
+    <span class="eyebrow">The Apothecary</span>
+    <h2>Made by hand, in small batches, in Zürich.</h2>
+    <p class="lede" style="margin-top:1.3rem;">The same scrubs we use in the room, jarred to take home. Two rituals, two moods.</p>
+  </div>
+
+  <div class="products">
+    <article class="product reveal">
+      <div class="product-media">
+        <img data-photo src="https://images.unsplash.com/photo-1624454002302-36b824d7bd0a?fm=jpg&q=82&w=1100&fit=crop" alt="Citrus Glow Detox Scrub in an amber glass jar against warm brick" />
+      </div>
+      <div class="product-head">
+        <h3>Citrus Glow Detox Scrub</h3>
+        <span class="price">CHF 38</span>
+      </div>
+      <p class="notes">Dead Sea Salt · Coconut · Grapefruit</p>
+      <p>A brightening polish that wakes the skin. Mineral salt to refine, coconut to soften, grapefruit to lift the morning.</p>
+      <p class="meta">100ml · Handmade in Zürich</p>
+    </article>
+
+    <article class="product reveal d1">
+      <div class="product-media">
+        <img data-photo src="https://images.unsplash.com/photo-1636740599648-ae84f705fc2e?fm=jpg&q=82&w=1100&fit=crop" alt="Calm Ritual Soothing Scrub among warm amber apothecary bottles" />
+      </div>
+      <div class="product-head">
+        <h3>Calm Ritual Soothing Scrub</h3>
+        <span class="price">CHF 38</span>
+      </div>
+      <p class="notes">Brown Sugar · Jojoba · Lavender</p>
+      <p>A gentler, grounding blend for the evening. Fine sugar to smooth, jojoba to nourish, lavender to slow everything down.</p>
+      <p class="meta">100ml · Handmade in Zürich</p>
+    </article>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="section dark">
+  <div class="quote reveal">
+    <span class="eyebrow center">In their words</span>
+    <blockquote style="margin-top:1.6rem;">An hour at Franklin is the closest thing Zürich has to <em>stopping time</em>. I leave feeling like the week has been unpicked.</blockquote>
+    <cite>Marta L. · Returning guest</cite>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="section" id="visit">
+  <div class="visit">
+    <div class="visit-detail reveal">
+      <span class="eyebrow">Visit</span>
+      <h3>Come and be quiet for an hour.</h3>
+      <p>Booking is by appointment so the room stays calm and unshared. Tell us how you would like to feel afterward, and we will shape the rest.</p>
+      <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+        <a class="btn btn-solid" href="mailto:hello@franklinmassage.ch">Request a booking</a>
+        <a class="btn btn-ghost" href="#treatments">See the menu</a>
+      </div>
+    </div>
+
+    <div class="visit-contact reveal d1">
+      <div class="visit-block">
+        <span class="eyebrow">Studio</span>
+        <dl>
+          <dt>Address</dt><dd>Seefeldstrasse, 8008 Zürich</dd>
+          <dt>Email</dt><dd><a href="mailto:hello@franklinmassage.ch">hello@franklinmassage.ch</a></dd>
+          <dt>Phone</dt><dd><a href="tel:+41440000000">+41 44 000 00 00</a></dd>
+        </dl>
+      </div>
+      <div class="visit-block">
+        <span class="eyebrow">Hours</span>
+        <dl>
+          <dt>Tue – Fri</dt><dd>10:00 – 20:00</dd>
+          <dt>Saturday</dt><dd>09:00 – 18:00</dd>
+          <dt>Sun – Mon</dt><dd>By request</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <span class="brand-name">Franklin</span>
+      <span class="brand-sub" style="opacity:.7;">Massage Studio</span>
+      <p class="footer-tag">A quiet room in Zürich for considered bodywork and handmade care.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#philosophy">Studio</a></li>
+        <li><a href="#treatments">Treatments</a></li>
+        <li><a href="#space">The Space</a></li>
+        <li><a href="#products">Apothecary</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="#visit">Book a ritual</a></li>
+        <li><a href="mailto:hello@franklinmassage.ch">hello@franklinmassage.ch</a></li>
+        <li>Seefeldstrasse, 8008 Zürich</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Franklin Massage Studio</span>
+    <span>Handmade in Zürich</span>
+  </div>
+</footer>
+<script>
+// Franklin Massage Studio — quiet interactions only.
+
+// Nav background on scroll
+const nav = document.querySelector('.nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
+
+// Mobile menu
+const menu = document.getElementById('mobileMenu');
+const toggle = document.getElementById('navToggle');
+const openMenu = () => { menu.classList.add('open'); toggle?.setAttribute('aria-expanded', 'true'); };
+const closeMenu = () => { menu.classList.remove('open'); toggle?.setAttribute('aria-expanded', 'false'); };
+toggle?.addEventListener('click', openMenu);
+document.getElementById('menuClose')?.addEventListener('click', closeMenu);
+menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+
+// Reveal on scroll
+const reveals = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+  );
+  reveals.forEach((el) => io.observe(el));
+} else {
+  reveals.forEach((el) => el.classList.add('in'));
+}
+
+// Graceful image fallback: a failed photo collapses to its warm panel.
+document.querySelectorAll('img[data-photo]').forEach((img) => {
+  img.addEventListener('error', () => { img.style.display = 'none'; });
+});
+</script>
