@@ -17,10 +17,10 @@ Open `index.html` in a browser. Fonts load from Google Fonts.
 
 ## Imagery
 
-Photos live in `assets/img/` and are committed with the site, so it works
-offline and nothing can break at load time:
+The hero is the studio's own video (`assets/hero.mp4`, a 3 MB muted/looping
+H.264 loop, with `assets/img/hero-poster.jpg` as the still fallback). The rest
+are photos in `assets/img/`, committed with the site so nothing breaks at load:
 
-- `hero.jpg` — warm massage oil poured into open hands (hero)
 - `space.jpg` — calm warm-oak treatment space (The Space)
 - `ritual.jpg` — hands working through a massage (The Ritual)
 - `product-citrus.jpg` / `product-calm.jpg` — the two scrubs (Apothecary)
