@@ -1,5 +1,20 @@
 // Franklin Massage Studio — quiet interactions only.
 
+// Intro screen: a brief brand reveal, then lift away.
+(function () {
+  const intro = document.getElementById('introScreen');
+  if (!intro) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.body.classList.add('intro-active');
+  const dismiss = () => {
+    intro.classList.add('done');
+    document.body.classList.remove('intro-active');
+    setTimeout(() => intro.remove(), 1200);
+  };
+  if (reduce) { dismiss(); }
+  else { window.setTimeout(dismiss, 2300); }
+})();
+
 // Nav background on scroll
 const nav = document.querySelector('.nav');
 const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
