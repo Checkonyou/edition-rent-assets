@@ -1,8 +1,8 @@
 <!-- ============================================================
      FRANKLIN MASSAGE STUDIO
-     Paste this entire block into ONE Webflow HTML Embed element,
-     on a blank page, then publish. Self-contained: fonts, styles,
-     markup and script included. Video + images are served from a CDN.
+     Paste this whole block into ONE Webflow HTML Embed (blank page),
+     then publish. Self-contained: fonts, styles, markup, script.
+     Real studio images are served from a CDN.
      ============================================================ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -240,6 +240,47 @@ a { color: inherit; text-decoration: none; }
 .menu-note { margin-top: 2.5rem; font-size: 0.9rem; color: var(--ink-soft); font-style: italic; }
 .section.dark .menu-note { color: oklch(0.85 0.02 90 / 0.75); }
 
+/* ---------- Intro screen ---------- */
+.intro-screen {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--olive-deep);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1.1rem;
+  transition: transform 1.1s var(--ease), opacity 0.8s ease;
+}
+.intro-screen.done { transform: translateY(-101%); pointer-events: none; }
+.intro-name {
+  font-family: var(--serif); color: var(--cream);
+  font-size: clamp(2.4rem, 7vw, 4.5rem); font-weight: 500;
+  letter-spacing: 0.34em; text-transform: uppercase; text-indent: 0.34em;
+  opacity: 0; transform: translateY(14px);
+  animation: introUp 1s var(--ease) 0.25s forwards;
+}
+.intro-sub {
+  font-family: var(--body); color: oklch(0.84 0.05 88);
+  font-size: clamp(0.6rem, 1.4vw, 0.78rem); letter-spacing: 0.5em; text-transform: uppercase; text-indent: 0.5em;
+  opacity: 0; transform: translateY(10px);
+  animation: introUp 1s var(--ease) 0.55s forwards;
+}
+.intro-line { height: 1px; width: 0; background: var(--brass); margin-top: 0.4rem; animation: introLine 1.1s var(--ease) 0.85s forwards; }
+@keyframes introUp { to { opacity: 1; transform: none; } }
+@keyframes introLine { to { width: clamp(70px, 12vw, 130px); } }
+body.intro-active { overflow: hidden; }
+
+/* ---------- Apothecary ---------- */
+.apothecary { display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 5vw, 4.5rem); align-items: center; }
+@media (min-width: 880px) { .apothecary { grid-template-columns: 1fr 1fr; } }
+.apothecary-media { position: relative; aspect-ratio: 4 / 5; background: var(--sand); overflow: hidden; }
+.apothecary-media img { width: 100%; height: 100%; object-fit: cover; }
+.apo-item { padding: 1.6rem 0; border-bottom: 1px solid var(--line); }
+.apo-item:first-of-type { border-top: 1px solid var(--line); }
+.apo-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+.apo-head h3 { font-size: clamp(1.3rem, 2.4vw, 1.7rem); font-weight: 500; }
+.apo-head .price { font-family: var(--serif); font-size: 1.25rem; color: var(--olive); white-space: nowrap; }
+.apo-notes { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--clay); margin-top: 0.6rem; }
+.apo-item p.desc { color: var(--ink-soft); font-size: 0.96rem; margin-top: 0.8rem; max-width: 46ch; }
+.apo-meta { margin-top: 1.6rem; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); }
+
 /* ---------- Feature split (the space) ---------- */
 .split { display: grid; grid-template-columns: 1fr; gap: 0; align-items: stretch; }
 @media (min-width: 900px) { .split { grid-template-columns: 1fr 1fr; } .split.reverse .split-media { order: 2; } }
@@ -326,6 +367,13 @@ a { color: inherit; text-decoration: none; }
   * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
 }
 </style>
+<!-- INTRO -->
+<div class="intro-screen" id="introScreen" aria-hidden="true">
+  <span class="intro-name">Franklin</span>
+  <span class="intro-sub">Massage Studio</span>
+  <span class="intro-line"></span>
+</div>
+
 <!-- NAV -->
 <header class="nav" id="nav">
   <a class="brand" href="#top" aria-label="Franklin Massage Studio, home">
@@ -361,10 +409,7 @@ a { color: inherit; text-decoration: none; }
 <main id="top">
 <section class="hero">
   <div class="hero-media">
-    <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/hero-poster.jpg">
-      <source src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/hero.mp4" type="video/mp4" />
-      <img src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/hero-poster.jpg" alt="The Franklin Massage Studio treatment room in warm low light" />
-    </video>
+    <img src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@9580152ea372a2a73827ec58882e3be471e23655/assets/img/hero.jpg" alt="The Franklin Massage Studio treatment room in warm low light" />
   </div>
   <div class="hero-inner">
     <span class="eyebrow">Massage Studio · Zürich</span>
@@ -387,10 +432,27 @@ a { color: inherit; text-decoration: none; }
       <p class="signature">Franklin, founder</p>
     </div>
     <div class="intro-body reveal d1">
-      <p>Franklin began as a single treatment room above a courtyard in Zürich, built around one idea: that good bodywork is unrushed and deeply personal. There is no conveyor belt here, no upsell, no clock you can feel ticking.</p>
-      <p>Each ritual is shaped to the body in front of us. We use warm oils, slow pressure, and products we make by hand in small batches. You arrive carrying the week. You leave a little lighter.</p>
+      <p>Franklin is a single treatment room in Zürich, built around one idea: that good bodywork is unrushed and deeply personal. There is no conveyor belt here, no upsell, no clock you can feel ticking.</p>
+      <p>Each ritual is shaped to the body in front of us. We use warm oils, slow pressure, and blends we make by hand in small batches. You arrive carrying the week. You leave a little lighter.</p>
       <a class="btn-line" href="#treatments">Explore the rituals</a>
     </div>
+  </div>
+</section>
+
+<!-- THE SPACE -->
+<section class="split" id="space">
+  <div class="split-media">
+    <img src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@9580152ea372a2a73827ec58882e3be471e23655/assets/img/space.jpg" alt="Warm wood shelves, folded linens and candlelight in the studio" />
+  </div>
+  <div class="split-body reveal">
+    <span class="eyebrow">The Space</span>
+    <h2>Warm wood, olive linen, low light.</h2>
+    <p>The studio was made to feel like a held breath. Clay walls, a brick reveal, dried olive branches, and just enough candlelight to soften the edges of the day.</p>
+    <ul class="split-list">
+      <li><span class="num">01</span><span>A private treatment room, never shared, never rushed.</span></li>
+      <li><span class="num">02</span><span>Heated tables and warm linens through the Zürich winter.</span></li>
+      <li><span class="num">03</span><span>Hand blended oils and balms, made on site.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -474,32 +536,15 @@ a { color: inherit; text-decoration: none; }
   <p class="menu-note">Every ritual opens with a warm foot cleanse and closes with tea. Additions, hot towels, scalp work, or extended time, can be arranged when you book.</p>
 </section>
 
-<!-- THE SPACE -->
-<section class="split" id="space">
-  <div class="split-media">
-    <img data-photo src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/space.jpg" alt="A calm treatment space in warm oak, with care oils on a wooden tray" />
-  </div>
-  <div class="split-body reveal">
-    <span class="eyebrow">The Space</span>
-    <h2>Warm wood, olive linen, low light.</h2>
-    <p>The studio was made to feel like a held breath. Clay walls, a brick reveal, dried olive branches, and just enough candlelight to soften the edges of the day.</p>
-    <ul class="split-list">
-      <li><span class="num">01</span><span>A private treatment room, never shared, never rushed.</span></li>
-      <li><span class="num">02</span><span>Heated tables and warm linens through the Zürich winter.</span></li>
-      <li><span class="num">03</span><span>A quiet lounge to arrive early and leave slowly.</span></li>
-    </ul>
-  </div>
-</section>
-
-<!-- THE RITUAL -->
+<!-- THE LOUNGE -->
 <section class="split reverse">
   <div class="split-media">
-    <img data-photo src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/ritual.jpg" alt="Hands working slowly through a warm massage" />
+    <img src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@9580152ea372a2a73827ec58882e3be471e23655/assets/img/lounge.jpg" alt="Two olive armchairs and a candlelit side table in the studio lounge" />
   </div>
   <div class="split-body reveal">
-    <span class="eyebrow">The Ritual</span>
-    <h2>How an hour unfolds.</h2>
-    <p>Nothing here asks anything of you. Arrive a few minutes early, settle, and let us read the rest.</p>
+    <span class="eyebrow">Arrival</span>
+    <h2>Arrive early. Leave slowly.</h2>
+    <p>The hour begins before the table. Settle into the lounge with tea, let the city fall away, and stay a while afterward. Nothing here is rushed.</p>
     <ul class="split-list">
       <li><span class="num">i</span><span>A short, unhurried conversation about how you feel today.</span></li>
       <li><span class="num">ii</span><span>A warm foot cleanse to mark the start of the hour.</span></li>
@@ -509,40 +554,39 @@ a { color: inherit; text-decoration: none; }
   </div>
 </section>
 
-<!-- PRODUCTS / APOTHECARY -->
+<!-- APOTHECARY -->
 <section class="section alt" id="products">
-  <div class="section-head reveal">
-    <span class="eyebrow">The Apothecary</span>
-    <h2>Made by hand, in small batches, in Zürich.</h2>
-    <p class="lede" style="margin-top:1.3rem;">The same scrubs we use in the room, jarred to take home. Two rituals, two moods.</p>
-  </div>
+  <div class="apothecary">
+    <div class="apothecary-media reveal">
+      <img src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@9580152ea372a2a73827ec58882e3be471e23655/assets/img/apothecary.jpg" alt="Handmade oils, balms and candles on the studio shelf" />
+    </div>
+    <div class="apothecary-list reveal d1">
+      <div class="section-head" style="margin-bottom:clamp(1.5rem,3vw,2.5rem);">
+        <span class="eyebrow">The Apothecary</span>
+        <h2>Made by hand, in Zürich.</h2>
+        <p class="lede" style="margin-top:1.2rem;">The same blends we use in the room, jarred to take home. Two rituals, two moods.</p>
+      </div>
 
-  <div class="products">
-    <article class="product reveal">
-      <div class="product-media">
-        <img data-photo src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/product-citrus.jpg" alt="Citrus Glow Detox Scrub in an amber glass jar against warm brick" />
+      <div class="apo-item">
+        <div class="apo-head">
+          <h3>Citrus Glow Detox Scrub</h3>
+          <span class="price">CHF 38</span>
+        </div>
+        <p class="apo-notes">Dead Sea Salt · Coconut · Grapefruit</p>
+        <p class="desc">A brightening polish that wakes the skin. Mineral salt to refine, coconut to soften, grapefruit to lift the morning.</p>
       </div>
-      <div class="product-head">
-        <h3>Citrus Glow Detox Scrub</h3>
-        <span class="price">CHF 38</span>
-      </div>
-      <p class="notes">Dead Sea Salt · Coconut · Grapefruit</p>
-      <p>A brightening polish that wakes the skin. Mineral salt to refine, coconut to soften, grapefruit to lift the morning.</p>
-      <p class="meta">100ml · Handmade in Zürich</p>
-    </article>
 
-    <article class="product reveal d1">
-      <div class="product-media">
-        <img data-photo src="https://cdn.jsdelivr.net/gh/Checkonyou/edition-rent-assets@2e53d7e9c02c590afdd589bf77ee2400f41707f2/assets/img/product-calm.jpg" alt="Calm Ritual Soothing Scrub among warm amber apothecary bottles" />
+      <div class="apo-item">
+        <div class="apo-head">
+          <h3>Calm Ritual Soothing Scrub</h3>
+          <span class="price">CHF 38</span>
+        </div>
+        <p class="apo-notes">Brown Sugar · Jojoba · Lavender</p>
+        <p class="desc">A gentler, grounding blend for the evening. Fine sugar to smooth, jojoba to nourish, lavender to slow everything down.</p>
       </div>
-      <div class="product-head">
-        <h3>Calm Ritual Soothing Scrub</h3>
-        <span class="price">CHF 38</span>
-      </div>
-      <p class="notes">Brown Sugar · Jojoba · Lavender</p>
-      <p>A gentler, grounding blend for the evening. Fine sugar to smooth, jojoba to nourish, lavender to slow everything down.</p>
-      <p class="meta">100ml · Handmade in Zürich</p>
-    </article>
+
+      <p class="apo-meta">100ml · Handmade in Zürich</p>
+    </div>
   </div>
 </section>
 
@@ -623,6 +667,21 @@ a { color: inherit; text-decoration: none; }
 </footer>
 <script>
 // Franklin Massage Studio — quiet interactions only.
+
+// Intro screen: a brief brand reveal, then lift away.
+(function () {
+  const intro = document.getElementById('introScreen');
+  if (!intro) return;
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.body.classList.add('intro-active');
+  const dismiss = () => {
+    intro.classList.add('done');
+    document.body.classList.remove('intro-active');
+    setTimeout(() => intro.remove(), 1200);
+  };
+  if (reduce) { dismiss(); }
+  else { window.setTimeout(dismiss, 2300); }
+})();
 
 // Nav background on scroll
 const nav = document.querySelector('.nav');
