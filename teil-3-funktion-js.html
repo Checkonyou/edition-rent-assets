@@ -1,0 +1,91 @@
+<script>
+const _hdr=document.getElementById('siteHeader');
+const _onScroll=()=>_hdr.classList.toggle('scrolled',scrollY>30);
+window.addEventListener('scroll',_onScroll,{passive:true});_onScroll();
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+const data={intent:'',emotion:'',timing:'',name:''};
+let step=1;const totalSteps=5;
+const emotionMap={
+  verkaufen:{q:'Was ist Ihnen beim Verkauf am wichtigsten?',opts:['Bestmöglicher Preis','Diskretion','Schnelligkeit','Die richtigen Käufer','Eine ehrliche Begleitung']},
+  kaufen:{q:'Wie soll sich Ihr neues Zuhause anfühlen?',opts:['Endlich angekommen','Geborgen & ruhig','Platz für die Familie','Ein Neuanfang','Stolz & repräsentativ']},
+  vermieten:{q:'Was ist Ihnen bei Ihren Mietern am wichtigsten?',opts:['Verlässlichkeit','Sorgfältiger Umgang','Schnelle Vermietung','Langfristigkeit','Fairer Ertrag']},
+  mieten:{q:'Wonach sehnen Sie sich in Ihrem neuen Zuhause?',opts:['Mehr Ruhe','Mehr Platz','Ein Neuanfang','Näher bei der Familie','Endlich angekommen']},
+  bewertung:{q:'Was steckt hinter Ihrer Frage nach dem Wert?',opts:['Verkaufsgedanken','Reine Neugier','Erbschaft / Scheidung','Finanzierung / Bank','Langfristige Planung']}
+};
+const titleMap={verkaufen:'Verkauf besprechen',kaufen:'Ihr neues Zuhause finden',vermieten:'Vermietung anfragen',mieten:'Mietwohnung finden',bewertung:'Kostenlose Bewertung'};
+
+function openBooking(intent){
+  resetBooking();
+  if(intent){
+    data.intent=intent;
+    document.querySelectorAll('[data-step="1"] .opt').forEach(o=>o.classList.toggle('selected',o.dataset.val===intent));
+    buildEmotion();goTo(2);
+  }
+  document.getElementById('bookingModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBooking(){document.getElementById('bookingModal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('bookingModal').addEventListener('click',e=>{if(e.target.id==='bookingModal')closeBooking();});
+function resetBooking(){
+  data.intent='';data.emotion='';data.timing='';data.name='';step=1;
+  document.querySelectorAll('.opt,.chip').forEach(o=>o.classList.remove('selected'));
+  ['fName','lName','fEmail','fPhone','fMsg'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  goTo(1);
+}
+function pick(el,key){
+  el.closest('.step').querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');data[key]=el.dataset.val;
+  if(key==='intent')buildEmotion();
+  validate();
+  if(key==='intent'||key==='timing')setTimeout(nextStep,260);
+}
+function pickChip(el){
+  el.closest('.chips').querySelectorAll('.chip').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');data.emotion=el.textContent;validate();setTimeout(nextStep,260);
+}
+function buildEmotion(){
+  const m=emotionMap[data.intent]||emotionMap.kaufen;data.emotion='';
+  document.getElementById('emoQ').textContent=m.q;
+  const wrap=document.getElementById('emoChips');wrap.innerHTML='';
+  m.opts.forEach(o=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=o;b.onclick=()=>pickChip(b);wrap.appendChild(b);});
+  document.getElementById('modalTitle').textContent=titleMap[data.intent]||'Gespräch mit Claudia Zeni';
+}
+function goTo(s){
+  step=s;
+  document.querySelectorAll('.step').forEach(el=>el.classList.toggle('active',+el.dataset.step===s));
+  document.getElementById('progressBar').style.width=(s/totalSteps*100)+'%';
+  document.getElementById('backBtn').style.visibility=(s>1&&s<5)?'visible':'hidden';
+  document.getElementById('modalFoot').style.display=(s===5)?'none':'flex';
+  const next=document.getElementById('nextBtn');
+  if(s===4){buildSummary();next.textContent='Anfrage senden ✓';}else{next.textContent='Weiter →';}
+  validate();
+}
+function buildSummary(){
+  const labels={verkaufen:'Verkaufen',kaufen:'Kaufen',vermieten:'Vermieten',mieten:'Mieten',bewertung:'Bewertung'};
+  document.getElementById('summary').innerHTML=`<b>Anliegen:</b> ${labels[data.intent]||'—'} &nbsp;·&nbsp; <b>Wichtig:</b> ${data.emotion||'—'} &nbsp;·&nbsp; <b>Zeitpunkt:</b> ${data.timing||'—'}`;
+}
+function validate(){
+  const next=document.getElementById('nextBtn');let ok=false;
+  if(step===1)ok=!!data.intent;
+  else if(step===2)ok=!!data.emotion;
+  else if(step===3)ok=!!data.timing;
+  else if(step===4)ok=document.getElementById('fName').value.trim()&&(document.getElementById('fEmail').value.trim()||document.getElementById('fPhone').value.trim());
+  next.disabled=!ok;
+}
+['fName','lName','fEmail','fPhone'].forEach(id=>document.getElementById(id).addEventListener('input',validate));
+function nextStep(){
+  if(document.getElementById('nextBtn').disabled)return;
+  if(step===1&&!data.emotion)buildEmotion();
+  if(step<4)goTo(step+1);else if(step===4)submitBooking();
+}
+function prevStep(){if(step>1)goTo(step-1);}
+function submitBooking(){
+  data.name=document.getElementById('fName').value.trim();
+  document.getElementById('successName').textContent=data.name?(', '+data.name):'';
+  goTo(5);
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBooking();});
+</script>

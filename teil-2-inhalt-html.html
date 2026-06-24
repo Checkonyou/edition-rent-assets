@@ -1,0 +1,329 @@
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tb-left">Auf ZENI Immobilien ist Verlass · Ihre Maklerin in Zürich</div>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg><a href="tel:+41445168165">+41 44 516 81 65</a></span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a></span>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="navbar">
+  <a href="#top" class="nav-logo"><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2020/08/zeni-immobilien_logo.svg" alt="ZENI Immobilien"></a>
+  <ul class="nav-links">
+    <li><a href="#top">Home</a></li>
+    <li class="has-drop"><a href="#objekte">Immobilien</a>
+      <div class="dropdown"><a href="#objekte">Kaufen</a><a href="#objekte">Mieten</a><a href="#" onclick="openBooking('kaufen');return false;">Suchprofil</a><a href="#kundenstimmen">Referenzen</a></div>
+    </li>
+    <li class="has-drop"><a href="#leistungen">Dienstleistungen</a>
+      <div class="dropdown"><a href="#" onclick="openBooking('bewertung');return false;">Bewertung</a><a href="#" onclick="openBooking('verkaufen');return false;">Verkauf</a><a href="#" onclick="openBooking('vermieten');return false;">Vermietung / Erstvermietung</a><a href="#ablauf">Ablauf</a></div>
+    </li>
+    <li class="has-drop"><a href="#claudia">Über Uns</a>
+      <div class="dropdown"><a href="#claudia">Portrait</a><a href="#kundenstimmen">Kundenstimmen</a><a href="#kontakt">Kontakt</a></div>
+    </li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><button class="nav-cta" onclick="openBooking()">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" style="width:16px;height:16px;stroke:#fff"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      Termin buchen</button></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mclose" onclick="toggleMenu()">&times;</button>
+  <a href="#top" onclick="toggleMenu()">Home</a>
+  <a href="#objekte" onclick="toggleMenu()">Immobilien</a>
+  <a href="#leistungen" onclick="toggleMenu()">Dienstleistungen</a>
+  <a href="#claudia" onclick="toggleMenu()">Über Uns</a>
+  <a href="#kundenstimmen" onclick="toggleMenu()">Kundenstimmen</a>
+  <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+  <button class="nav-cta" style="display:block" onclick="toggleMenu();openBooking()">Termin buchen</button>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg">
+    <video autoplay loop muted playsinline preload="auto"
+           poster="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/02/Startbild-1920x1067.jpg">
+      <source src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2026/03/Website-ohne-Visitenkarte-Hasenbuehlstrasse-9-Affoltern-am-Albis_1.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-inner">
+    <h1>Auf ZENI Immobilien ist Verlass.</h1>
+    <p>Verkauf, Vermietung und Bewertung Ihrer Immobilie – persönlich begleitet von Claudia Zeni. Transparent, diskret und mit langjähriger Erfahrung in Zürich, Zug, Luzern, Aargau und Schwyz.</p>
+    <div class="hero-actions">
+      <button class="btn-cta" onclick="openBooking()">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Gespräch mit Claudia Zeni buchen <span class="arr">→</span>
+      </button>
+      <a href="#objekte" class="btn-outline-light">Aktuelle Objekte ansehen</a>
+    </div>
+    <div class="hero-note"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg> Unverbindlich &amp; kostenlos · Antwort innert 24 Stunden</div>
+  </div>
+</header>
+
+<!-- USP BAR -->
+<div class="usp">
+  <div class="usp-grid">
+    <div class="usp-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l2.5 6.5L21 9l-5 4 1.8 7L12 16l-5.8 4L8 13 3 9l6.5-.5z"/></svg></div><div><b>Langjährige Erfahrung</b><span>Professionelle Vermarktung mit modernster Technik.</span></div></div>
+    <div class="usp-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><div><b>Transparente Kosten</b><span>Faire Konditionen, keine versteckten Gebühren.</span></div></div>
+    <div class="usp-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 19V5a1 1 0 011-1h14a1 1 0 011 1v14M8 15l3-3 2 2 3-4M8 19h12"/></svg></div><div><b>Realistische Bewertung</b><span>Marktbasierte Einschätzung statt Schönrechnerei.</span></div></div>
+    <div class="usp-item"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><div><b>Schnell &amp; diskret</b><span>Kurze Reaktionszeiten und absolute Verschwiegenheit.</span></div></div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<section class="props" id="objekte">
+  <div class="sec-head reveal">
+    <div class="ey">Aktuelle Objekte</div>
+    <h2>Top-Angebote aus unserem Angebot</h2>
+    <p>Eine Auswahl unserer aktuellen Immobilien. Nichts Passendes dabei? Sagen Sie uns, wonach Sie suchen.</p>
+  </div>
+  <div class="prop-grid">
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag">Zu vermieten</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/06/ZENI-Immobilien-Wohnung-W486-Wohnzimmer-moebliert-1920x1276.jpg" alt="2.5-Zimmer Gartenwohnung"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 486 · Zürich</div>
+        <h3>2.5-Zimmer-Gartenwohnung</h3>
+        <div class="prop-meta"><span><b>2.5</b> Zimmer</span><span><b>139.5</b> m²</span><span><b>EG</b> mit Garten</span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 3'100<small>/Mt.</small></div><span class="prop-link" onclick="openBooking('mieten')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag sale">Zu verkaufen</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2025/11/ZENI-Immobilien-Immobilienmakler-in-Zuerich-Objekt-in-Affoltern.png" alt="5.5-Zimmer Einfamilienhaus Affoltern"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Hasenbühlstrasse 9 · Affoltern a.A.</div>
+        <h3>5.5-Zimmer-Einfamilienhaus</h3>
+        <div class="prop-meta"><span><b>5.5</b> Zimmer</span><span><b>446</b> m²</span><span><b>Haus</b> freistehend</span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2'150'000</div><span class="prop-link" onclick="openBooking('kaufen')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag">Zu vermieten</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/11/ZENI-Immobilien-6-Zimmer-Wohnung-kaufen-innenliegende-Terrasse-1920x1280.jpg" alt="3.5-Zimmer Maisonette"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 423 · Zürich</div>
+        <h3>3.5-Zimmer-Maisonette, renoviert</h3>
+        <div class="prop-meta"><span><b>3.5</b> Zimmer</span><span><b>neu</b> renoviert</span><span><b>2</b> Etagen</span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2'650<small>/Mt.</small></div><span class="prop-link" onclick="openBooking('mieten')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag">Zu vermieten</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/07/ZENI-Immobilien-Wohnung-Privat-Garten-1920x1280.jpg" alt="2.5-Zimmer Maisonette"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 423 · Zürich</div>
+        <h3>2.5-Zimmer-Maisonette, renoviert</h3>
+        <div class="prop-meta"><span><b>2.5</b> Zimmer</span><span><b>neu</b> renoviert</span><span><b>ruhig</b> gelegen</span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2'350<small>/Mt.</small></div><span class="prop-link" onclick="openBooking('mieten')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag">Gewerbe</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/07/ZENI-Immobilien-Wohnung-Privat-Badezimmer-1920x1280.jpg" alt="Gewerbefläche Witikon"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 423 · Zürich</div>
+        <h3>Gewerbefläche</h3>
+        <div class="prop-meta"><span><b>52</b> m²</span><span><b>Gewerbe</b></span><span><b>zentral</b></span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2'400<small>/Mt.</small></div><span class="prop-link" onclick="openBooking('mieten')">Anfragen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-tag sale">Zu verkaufen</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2023/05/4E9A5113-HDR-Edit_Aussenaufnahme-Haus-Montana-1920x1280.jpg" alt="Verkaufsobjekt"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Aarauerstrasse 18 · Oberentfelden</div>
+        <h3>Verkaufsfläche / Gewerbe</h3>
+        <div class="prop-meta"><span><b>Gewerbe</b></span><span><b>Kauf</b></span><span><b>Rendite</b></span></div>
+        <div class="prop-foot"><div class="prop-price">CHF 470'000</div><span class="prop-link" onclick="openBooking('kaufen')">Anfragen →</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="props-foot">
+    <button class="btn-cta" onclick="openBooking('kaufen')">Suchprofil erstellen – ich finde Ihr Objekt <span class="arr">→</span></button>
+  </div>
+</section>
+
+<!-- ABOUT CLAUDIA -->
+<div class="about-wrap" id="claudia">
+  <div class="about">
+    <div class="reveal"><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/07/ZENI-Immobilien-Claudia-Zeni-16-1280x1920.jpg" alt="Claudia Zeni"></div>
+    <div class="reveal">
+      <div class="ey">Über uns · Portrait</div>
+      <h2>Engagement und Freude bei der Arbeit</h2>
+      <p>Nach langjähriger Berufserfahrung bei etablierten Immobilienfirmen in Zug und Zürich habe ich 2018 ZENI Immobilien gegründet. Seither begleite ich meine Kundinnen und Kunden persönlich – bei Wohnungen, Neubauprojekten, Gewerbeobjekten und Grundstücken in Zürich, Zug, Luzern, Aargau und Schwyz.</p>
+      <p>Mein Anspruch: ehrliche Beratung, marktgerechte Strategien und eine Zusammenarbeit, auf die Sie sich verlassen können.</p>
+      <div class="vals">
+        <div class="v"><b>Verantwortung</b><span>Ich stehe zu meinem Wort.</span></div>
+        <div class="v"><b>Authentizität</b><span>Ehrlich, auch unbequem.</span></div>
+        <div class="v"><b>Empathie</b><span>Ich höre zuerst zu.</span></div>
+      </div>
+      <button class="btn-cta" onclick="openBooking()">Lernen Sie mich kennen <span class="arr">→</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- WHY PROFI -->
+<section class="profi">
+  <div class="reveal">
+    <div class="ey" style="color:var(--taupe)">Warum eine Profi-Begleitung</div>
+    <h2>Nie mehr ohne! Wählen Sie einen Profi.</h2>
+    <p>Eine Immobilie zu verkaufen oder zu finden ist Vertrauenssache. Mit der richtigen Begleitung sparen Sie Zeit, Nerven – und erzielen am Ende das bessere Ergebnis. Genau dafür bin ich da.</p>
+    <button class="btn-cta" onclick="openBooking()">Jetzt unverbindlich beraten lassen <span class="arr">→</span></button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="kundenstimmen">
+  <div class="sec-head reveal">
+    <div class="ey">Kundenstimmen</div>
+    <h2>Das sagen unsere Kunden über ZENI Immobilien</h2>
+    <p>Über 30 Bewertungen – hier eine kleine Auswahl.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>„Der Verkauf lief reibungslos und stressfrei. Claudia ist kompetent, ehrlich und immer erreichbar – absolut empfehlenswert."</p><div class="who"><div class="av">D</div><div><b>Danny Müller</b><span>Hausverkauf, Zürich</span></div></div></div>
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>„Professional, trustworthy and a real pleasure to work with. Claudia made the whole process easy for us, even from abroad."</p><div class="who"><div class="av">J</div><div><b>J. Anderson</b><span>Kauf, UK</span></div></div></div>
+    <div class="tcard reveal"><div class="stars">★★★★★</div><p>„Kompetent, herzlich und mit einem Gespür für Menschen. Wir haben uns von Anfang bis Ende bestens aufgehoben gefühlt."</p><div class="who"><div class="av">B</div><div><b>Fam. Brunner</b><span>Vermietung, Witikon</span></div></div></div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="ablauf">
+  <div class="sec-head reveal">
+    <div class="ey">Ablauf</div>
+    <h2>Das können Sie von ZENI Immobilien erwarten</h2>
+    <p>Von der ersten Beratung bis zum After-Sales-Service – ein klarer, persönlich begleiteter Prozess.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="proc reveal"><div class="n">01</div><h4>Beratung</h4><p>Persönliches Gespräch, in dem wir Ihre Ziele und den nächsten Schritt klären.</p></div>
+    <div class="proc reveal"><div class="n">02</div><h4>Bewertung</h4><p>Realistische, marktbasierte Einschätzung Ihrer Immobilie.</p></div>
+    <div class="proc reveal"><div class="n">03</div><h4>Vermarktung</h4><p>Professionelle Inszenierung und gezielte Vermarktung mit modernster Technik.</p></div>
+    <div class="proc reveal"><div class="n">04</div><h4>Besichtigungen</h4><p>Wir bringen die richtigen Interessenten – diskret und gut vorbereitet.</p></div>
+    <div class="proc reveal"><div class="n">05</div><h4>Reservation</h4><p>Auswahl der passenden Käufer- oder Mieterschaft.</p></div>
+    <div class="proc reveal"><div class="n">06</div><h4>Vertrag</h4><p>Begleitung bis zur Beurkundung bzw. Vertragsunterzeichnung.</p></div>
+    <div class="proc reveal"><div class="n">07</div><h4>Übergabe</h4><p>Saubere, organisierte Schlüsselübergabe.</p></div>
+    <div class="proc reveal"><div class="n">08</div><h4>After-Sales</h4><p>Ich bin auch danach für Sie da – auf ZENI ist Verlass.</p></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="final-grid">
+    <div class="final-img"></div>
+    <div class="final-text reveal">
+      <div class="ey">Bereit für den nächsten Schritt?</div>
+      <h2>Sie sind noch nicht ganz überzeugt?</h2>
+      <p>Lassen Sie uns reden. In einem persönlichen Gespräch finden wir gemeinsam heraus, was für Sie der richtige Weg ist – unverbindlich und kostenlos.</p>
+      <button class="btn-cta" onclick="openBooking()">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Jetzt Gespräch mit Claudia Zeni buchen <span class="arr">→</span>
+      </button>
+      <div class="reassure">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg> In 30 Sekunden gebucht</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg> Antwort innert 24h</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><path d="M20 6L9 17l-5-5"/></svg> Kostenlos &amp; diskret</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="kontakt">
+  <div class="foot-grid">
+    <div class="foot-logo">
+      <img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2020/08/zeni-immobilien_logo.svg" alt="ZENI Immobilien">
+      <p>ZENI Immobilien GmbH<br>Witikonerstrasse 423<br>8053 Zürich</p>
+      <div class="foot-social">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-12h4v1.5A6 6 0 0116 8zM6 9H2v12h4z"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 12s0-3.5-.5-5a2.6 2.6 0 00-1.8-1.8C18 4.7 12 4.7 12 4.7s-6 0-7.7.5A2.6 2.6 0 002.5 7C2 8.5 2 12 2 12s0 3.5.5 5a2.6 2.6 0 001.8 1.8c1.7.5 7.7.5 7.7.5s6 0 7.7-.5A2.6 2.6 0 0021.5 17c.5-1.5.5-5 .5-5z"/><path d="M10 15l5-3-5-3z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Immobilien</h4>
+      <a href="#objekte">Kaufen</a><a href="#objekte">Mieten</a><a href="#" onclick="openBooking('kaufen');return false;">Suchprofil</a><a href="#kundenstimmen">Referenzen</a>
+    </div>
+    <div>
+      <h4>Dienstleistungen</h4>
+      <a href="#" onclick="openBooking('bewertung');return false;">Bewertung</a><a href="#" onclick="openBooking('verkaufen');return false;">Verkauf</a><a href="#" onclick="openBooking('vermieten');return false;">Vermietung</a><a href="#ablauf">Ablauf</a>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <a href="tel:+41445168165">+41 44 516 81 65</a>
+      <a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a>
+      <a href="https://zeni-immobilien.ch" target="_blank" rel="noopener">www.zeni-immobilien.ch</a>
+      <button class="nav-cta" style="display:inline-flex;margin:14px 0 0" onclick="openBooking()">Termin buchen</button>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 ZENI Immobilien GmbH · Alle Rechte vorbehalten</span>
+    <span><a href="#" style="margin-right:16px">Impressum</a><a href="#">Datenschutz</a></span>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta" onclick="openBooking()">📅 Gespräch mit Claudia Zeni buchen</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <div class="modal-top">
+      <button class="modal-close" onclick="closeBooking()">&times;</button>
+      <h3 id="modalTitle">Gespräch mit Claudia Zeni</h3>
+      <p id="modalSubtitle">In unter einer Minute gebucht – versprochen.</p>
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <div class="step active" data-step="1">
+        <div class="step-q">Womit dürfen wir Ihnen helfen?</div>
+        <div class="step-hint">Wählen Sie, was am ehesten zutrifft.</div>
+        <div class="opts">
+          <button class="opt" data-val="verkaufen" onclick="pick(this,'intent')"><div class="ico">🏡</div><div><b>Ich möchte verkaufen</b><small>Wohnung, Haus oder Grundstück</small></div></button>
+          <button class="opt" data-val="kaufen" onclick="pick(this,'intent')"><div class="ico">🔑</div><div><b>Ich suche ein Zuhause</b><small>Kaufen – für mich oder als Investment</small></div></button>
+          <button class="opt" data-val="vermieten" onclick="pick(this,'intent')"><div class="ico">📋</div><div><b>Ich möchte vermieten</b><small>Auch Erstvermietung von Neubauten</small></div></button>
+          <button class="opt" data-val="mieten" onclick="pick(this,'intent')"><div class="ico">🛋️</div><div><b>Ich suche eine Mietwohnung</b><small>Sagen Sie uns, wonach Sie suchen</small></div></button>
+          <button class="opt" data-val="bewertung" onclick="pick(this,'intent')"><div class="ico">📈</div><div><b>Ich möchte den Wert wissen</b><small>Kostenlose, ehrliche Bewertung</small></div></button>
+        </div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step-q" id="emoQ">Was ist Ihnen dabei am wichtigsten?</div>
+        <div class="step-hint">Es gibt kein richtig oder falsch – wir möchten Sie nur verstehen.</div>
+        <div class="chips" id="emoChips"></div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step-q">Wie fühlt sich der richtige Zeitpunkt an?</div>
+        <div class="step-hint">Damit wir wissen, wie schnell es gehen soll.</div>
+        <div class="opts">
+          <button class="opt" data-val="Am liebsten sofort" onclick="pick(this,'timing')"><div class="ico">⚡</div><div><b>Am liebsten sofort</b><small>Es eilt, ich will vorwärtsmachen</small></div></button>
+          <button class="opt" data-val="In den nächsten Monaten" onclick="pick(this,'timing')"><div class="ico">📅</div><div><b>In den nächsten Monaten</b><small>Ich plane konkret, aber ohne Stress</small></div></button>
+          <button class="opt" data-val="Ich orientiere mich noch" onclick="pick(this,'timing')"><div class="ico">🧭</div><div><b>Ich orientiere mich noch</b><small>Erst mal unverbindlich informieren</small></div></button>
+        </div>
+      </div>
+      <div class="step" data-step="4">
+        <div class="step-q">Wie erreichen wir Sie am besten?</div>
+        <div class="step-hint">Claudia meldet sich persönlich – kein Callcenter, kein Spam.</div>
+        <div class="summary" id="summary"></div>
+        <div class="field-row">
+          <div class="field"><label>Vorname</label><input type="text" id="fName" placeholder="Vorname"></div>
+          <div class="field"><label>Nachname</label><input type="text" id="lName" placeholder="Nachname"></div>
+        </div>
+        <div class="field"><label>E-Mail</label><input type="email" id="fEmail" placeholder="ihre@email.ch"></div>
+        <div class="field"><label>Telefon</label><input type="tel" id="fPhone" placeholder="+41 ..."></div>
+        <div class="field"><label>Möchten Sie uns noch etwas mitgeben? (optional)</label><textarea id="fMsg" rows="2" placeholder="Was Ihnen wichtig wäre …"></textarea></div>
+      </div>
+      <div class="step" data-step="5">
+        <div class="success">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Vielen Dank<span id="successName"></span>!</h3>
+          <p>Ihre Anfrage ist angekommen – Claudia meldet sich persönlich innert <b>24 Stunden</b>. Bis dahin erreichen Sie uns jederzeit direkt:</p>
+          <div class="actions">
+            <a href="tel:+41445168165" class="btn-next" style="text-decoration:none">Anrufen</a>
+            <a href="mailto:info@zeni-immobilien.ch" class="btn-back" style="border:1.5px solid var(--line);border-radius:6px;padding:13px 22px">E-Mail schreiben</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot" id="modalFoot">
+      <button class="btn-back" id="backBtn" onclick="prevStep()" style="visibility:hidden">← Zurück</button>
+      <button class="btn-next" id="nextBtn" onclick="nextStep()" disabled>Weiter →</button>
+    </div>
+  </div>
+</div>
