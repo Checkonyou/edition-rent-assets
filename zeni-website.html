@@ -29,32 +29,50 @@ img{display:block;max-width:100%;}
 a{color:inherit;text-decoration:none;}
 h1,h2,h3,h4{font-family:'Lora',serif;font-weight:500;color:var(--navy);line-height:1.2;}
 
-/* ---------- TOP BAR ---------- */
-.topbar{background:var(--navy);color:#fff;font-size:13px;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;}
-.topbar a{color:rgba(255,255,255,.85);transition:color .2s;}
-.topbar a:hover{color:#fff;}
-.topbar .tb-right{display:flex;gap:22px;align-items:center;}
-.topbar .tb-right span{display:flex;align-items:center;gap:7px;}
-.topbar svg{width:14px;height:14px;stroke:var(--taupe);}
+/* ---------- HEADER (transparent over hero → solid on scroll) ---------- */
+.site-header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .4s ease,box-shadow .4s ease;}
+.site-header::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,20,38,.55),rgba(0,20,38,0));pointer-events:none;z-index:-1;transition:opacity .4s ease;}
+.site-header.scrolled{background:#fff;box-shadow:0 10px 34px -20px rgba(0,38,71,.5);}
+.site-header.scrolled::before{opacity:0;}
+html{scroll-padding-top:96px;}
 
-/* ---------- NAV ---------- */
-nav{position:sticky;top:0;z-index:1000;background:#fff;border-bottom:1px solid var(--line);padding:0 40px;display:flex;align-items:center;justify-content:space-between;transition:box-shadow .3s;}
-nav.scrolled{box-shadow:0 6px 24px -16px rgba(0,38,71,.4);}
-.nav-logo{display:flex;align-items:center;gap:0;padding:16px 0;}
-.nav-logo img{height:46px;}
-.nav-links{display:flex;list-style:none;align-items:center;height:100%;}
+/* slim contact strip */
+.topbar{display:flex;align-items:center;gap:26px;padding:9px 40px;font-size:12.5px;border-bottom:1px solid rgba(255,255,255,.16);max-height:42px;overflow:hidden;color:#fff;transition:max-height .4s ease,opacity .35s ease,padding .4s ease,border-color .4s ease;}
+.topbar .tb-left{margin-right:auto;letter-spacing:.05em;opacity:.9;}
+.topbar span{display:inline-flex;align-items:center;gap:7px;}
+.topbar a{color:#fff;opacity:.9;transition:opacity .2s;}
+.topbar a:hover{opacity:1;}
+.topbar svg{width:14px;height:14px;stroke:var(--taupe);}
+.site-header.scrolled .topbar{max-height:0;opacity:0;padding-top:0;padding-bottom:0;border-color:transparent;}
+
+/* main nav row */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 40px;}
+.nav-logo{display:flex;align-items:center;padding:15px 0;transition:padding .4s ease;}
+.nav-logo img{height:46px;transition:height .4s ease,filter .4s ease;}
+.site-header:not(.scrolled) .nav-logo img{filter:brightness(0) invert(1);}
+.site-header.scrolled .nav-logo{padding:9px 0;}
+.site-header.scrolled .nav-logo img{height:38px;}
+
+.nav-links{display:flex;list-style:none;align-items:center;gap:2px;}
 .nav-links>li{position:relative;}
-.nav-links>li>a{display:flex;align-items:center;padding:26px 18px;font-size:14px;font-weight:500;color:var(--navy);letter-spacing:.01em;transition:color .2s;}
-.nav-links>li>a:hover{color:var(--accent);}
-.nav-links .has-drop>a::after{content:'▾';font-size:10px;margin-left:6px;opacity:.55;}
-.dropdown{position:absolute;top:100%;left:0;background:#fff;border:1px solid var(--line);box-shadow:0 16px 40px -20px rgba(0,38,71,.4);min-width:210px;padding:8px 0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .25s;}
+.nav-links>li>a{position:relative;display:flex;align-items:center;padding:16px;font-size:14px;font-weight:500;letter-spacing:.01em;color:#fff;transition:color .25s;}
+.site-header.scrolled .nav-links>li>a{color:var(--navy);}
+.nav-links>li>a::before{content:'';position:absolute;left:16px;right:16px;bottom:9px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s ease;border-radius:2px;}
+.nav-links>li:hover>a{color:var(--accent);}
+.nav-links>li:hover>a::before{transform:scaleX(1);}
+.nav-links .has-drop>a::after{content:'';width:6px;height:6px;border-right:1.7px solid currentColor;border-bottom:1.7px solid currentColor;transform:rotate(45deg);margin:-3px 0 0 9px;opacity:.65;transition:transform .25s,margin .25s;}
+.nav-links .has-drop:hover>a::after{transform:rotate(225deg);margin-top:2px;}
+
+.dropdown{position:absolute;top:calc(100% - 2px);left:6px;background:#fff;border:1px solid var(--line);border-radius:9px;box-shadow:0 22px 50px -24px rgba(0,38,71,.55);min-width:226px;padding:10px 0;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .25s,visibility .25s,transform .25s;}
 .nav-links>li:hover .dropdown{opacity:1;visibility:visible;transform:translateY(0);}
-.dropdown a{display:block;padding:10px 20px;font-size:13.5px;color:var(--ink);transition:background .2s,color .2s;}
-.dropdown a:hover{background:var(--soft);color:var(--accent);}
-.nav-cta{margin-left:14px;background:var(--accent);color:#fff!important;padding:12px 22px;border-radius:4px;font-size:13.5px;font-weight:600;letter-spacing:.01em;transition:all .25s;box-shadow:0 8px 20px -10px rgba(192,57,43,.7);display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none;font-family:inherit;}
-.nav-cta:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:0 12px 26px -10px rgba(192,57,43,.8);}
+.dropdown a{display:block;padding:11px 22px;font-size:13.5px;color:var(--ink);transition:background .2s,color .2s,padding-left .2s;}
+.dropdown a:hover{background:var(--soft);color:var(--accent);padding-left:27px;}
+
+.nav-cta{margin-left:18px;background:var(--accent);color:#fff!important;padding:11px 24px;border-radius:7px;font-size:13.5px;font-weight:600;letter-spacing:.01em;transition:background .25s,transform .25s,box-shadow .25s;box-shadow:0 10px 26px -12px rgba(192,57,43,.85);display:inline-flex;align-items:center;gap:8px;cursor:pointer;border:none;font-family:inherit;}
+.nav-cta:hover{background:var(--accent-dark);transform:translateY(-2px);box-shadow:0 16px 32px -12px rgba(192,57,43,.95);}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px 0;}
-.hamburger span{width:26px;height:2px;background:var(--navy);border-radius:2px;}
+.hamburger span{width:26px;height:2px;background:#fff;border-radius:2px;transition:background .3s;}
+.site-header.scrolled .hamburger span{background:var(--navy);}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden;}
@@ -245,10 +263,11 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
 
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:1024px){
-  .topbar{padding:8px 20px;}
+  .topbar{padding:8px 20px;gap:18px;}
   .topbar .tb-left{display:none;}
-  nav{padding:0 20px;}
-  .nav-links,.nav-cta{display:none;}
+  .nav{padding:0 20px;}
+  .nav-links,.nav>.nav-cta,.nav-links>li>.nav-cta{display:none;}
+  .nav-links{display:none;}
   .hamburger{display:flex;}
   section,.about-wrap{padding:60px 24px;}
   .hero-inner{padding:70px 24px;}
@@ -264,6 +283,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
   .sticky-cta{display:block;}
 }
 @media(max-width:600px){
+  .topbar span:last-child{display:none;}
   .usp-grid{grid-template-columns:1fr;}
   .usp-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);}
   .prop-grid,.testi-grid,.proc-grid{grid-template-columns:1fr;}
@@ -278,17 +298,17 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
 </head>
 <body>
 
+<!-- HEADER -->
+<header class="site-header" id="siteHeader">
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="tb-left">Auf ZENI Immobilien ist Verlass · Ihre Maklerin in Zürich</div>
-  <div class="tb-right">
-    <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg><a href="tel:+41445168165">+41 44 516 81 65</a></span>
-    <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a></span>
-  </div>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg><a href="tel:+41445168165">+41 44 516 81 65</a></span>
+  <span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg><a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a></span>
 </div>
 
 <!-- NAV -->
-<nav id="navbar">
+<nav class="nav" id="navbar">
   <a href="#top" class="nav-logo"><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2020/08/zeni-immobilien_logo.svg" alt="ZENI Immobilien"></a>
   <ul class="nav-links">
     <li><a href="#top">Home</a></li>
@@ -308,6 +328,7 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
   </ul>
   <button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
 </nav>
+</header>
 
 <div class="mobile-menu" id="mobileMenu">
   <button class="mclose" onclick="toggleMenu()">&times;</button>
@@ -609,7 +630,9 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
 </div>
 
 <script>
-window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',scrollY>40);});
+const _hdr=document.getElementById('siteHeader');
+const _onScroll=()=>_hdr.classList.toggle('scrolled',scrollY>30);
+window.addEventListener('scroll',_onScroll,{passive:true});_onScroll();
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
