@@ -58,7 +58,8 @@ nav.scrolled{box-shadow:0 6px 24px -16px rgba(0,38,71,.4);}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;background:url('https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/02/Startbild-1920x1067.jpg') center/cover;}
+.hero-bg{position:absolute;inset:0;overflow:hidden;background:#001a33;}
+.hero-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,26,48,.78) 0%,rgba(0,38,71,.5) 55%,rgba(0,38,71,.25) 100%);}
 .hero-inner{position:relative;z-index:2;padding:90px 56px;max-width:720px;}
 .hero-kicker{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:30px;margin-bottom:24px;}
@@ -321,7 +322,12 @@ footer{background:var(--navy-deep);color:rgba(255,255,255,.62);padding:60px 56px
 
 <!-- HERO -->
 <header class="hero" id="top">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <video autoplay loop muted playsinline preload="auto"
+           poster="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/02/Startbild-1920x1067.jpg">
+      <source src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2026/03/Website-ohne-Visitenkarte-Hasenbuehlstrasse-9-Affoltern-am-Albis_1.mp4" type="video/mp4">
+    </video>
+  </div>
   <div class="hero-inner">
     <span class="hero-kicker">ZENI Immobilien GmbH · Zürich</span>
     <h1>Auf ZENI Immobilien ist Verlass.</h1>
