@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZENI Immobilien – Auf ZENI Immobilien ist Verlass | Claudia Zeni, Zürich</title>
+<meta name="description" content="ZENI Immobilien GmbH – Ihre persönliche Immobilienmaklerin in Zürich. Verkauf, Vermietung und Bewertung mit Verantwortung, Authentizität und Empathie. Buchen Sie in 30 Sekunden Ihr kostenloses Beratungsgespräch mit Claudia Zeni.">
+<link rel="icon" href="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2020/08/cropped-zeni-immobilien_favicon-180x180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#002647;
+  --navy-deep:#001a30;
+  --taupe:#9b8f8f;
+  --taupe-soft:#c4bcb9;
+  --brass:#b89b6e;
+  --brass-light:#cdb488;
+  --cream:#f7f4ef;
+  --cream-deep:#efe9e1;
+  --white:#ffffff;
+  --ink:#1d2430;
+  --muted:#6c727c;
+  --line:rgba(0,38,71,0.12);
+  --shadow:0 24px 60px -28px rgba(0,38,71,0.35);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:'Cormorant Garamond',serif;}
+em{font-style:italic;color:var(--brass);}
+
+/* ---------- NAV ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 56px;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease;}
+nav.scrolled{background:rgba(247,244,239,0.92);backdrop-filter:blur(16px);padding:14px 56px;border-bottom:1px solid var(--line);box-shadow:0 8px 30px -22px rgba(0,38,71,.4);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:23px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--navy);display:flex;align-items:baseline;gap:2px;}
+.nav-logo b{font-weight:600;}
+.nav-logo span{font-size:11px;letter-spacing:.28em;color:var(--taupe);font-family:'DM Sans',sans-serif;font-weight:400;margin-left:6px;}
+.nav.scrolled .nav-logo,nav.scrolled .nav-logo{color:var(--navy);}
+.nav-links{display:flex;gap:36px;list-style:none;align-items:center;}
+.nav-links a{color:var(--navy);opacity:.78;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;transition:opacity .3s,color .3s;font-weight:400;}
+.nav-links a:hover{opacity:1;color:var(--brass);}
+.nav-cta{background:var(--navy);color:var(--white)!important;opacity:1!important;padding:11px 24px;border-radius:2px;letter-spacing:.1em;transition:background .3s,transform .3s;}
+.nav-cta:hover{background:var(--brass);color:var(--white)!important;transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;}
+.hamburger span{display:block;width:26px;height:2px;background:var(--navy);transition:.3s;border-radius:2px;}
+
+/* color shift when over dark hero (top, not scrolled) */
+nav:not(.scrolled) .nav-logo{color:var(--white);}
+nav:not(.scrolled) .nav-logo span{color:var(--brass-light);}
+nav:not(.scrolled) .nav-links a{color:var(--white);opacity:.85;}
+nav:not(.scrolled) .nav-links a:hover{color:var(--brass-light);}
+nav:not(.scrolled) .nav-cta{background:var(--brass);color:var(--white)!important;}
+nav:not(.scrolled) .nav-cta:hover{background:var(--white);color:var(--navy)!important;}
+nav:not(.scrolled) .hamburger span{background:var(--white);}
+
+/* ---------- HERO ---------- */
+.hero{min-height:100vh;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hero-bg{position:absolute;inset:0;background-image:url('https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/02/Startbild-1920x1067.jpg');background-size:cover;background-position:center;transform:scale(1.06);animation:slowZoom 14s ease-out forwards;}
+@keyframes slowZoom{to{transform:scale(1);}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,26,48,.82) 0%,rgba(0,38,71,.55) 48%,rgba(0,38,71,.32) 100%);}
+.hero-content{position:relative;z-index:3;padding:120px 56px 60px;max-width:760px;animation:fadeUp 1.1s ease-out .2s both;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(36px);}to{opacity:1;transform:translateY(0);}}
+.hero-eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--brass-light);margin-bottom:24px;display:flex;align-items:center;gap:14px;}
+.hero-eyebrow::before{content:'';width:46px;height:1px;background:var(--brass-light);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,7vw,86px);font-weight:300;line-height:1.0;letter-spacing:-.015em;color:var(--white);margin-bottom:26px;}
+.hero h1 em{color:var(--brass-light);}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.82);line-height:1.65;margin-bottom:40px;max-width:520px;font-weight:300;}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+.btn-primary{background:var(--brass);color:var(--white);padding:18px 38px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;border-radius:2px;transition:all .3s;display:inline-flex;align-items:center;gap:12px;box-shadow:0 18px 40px -16px rgba(184,155,110,.7);}
+.btn-primary:hover{background:var(--brass-light);transform:translateY(-2px);box-shadow:0 24px 50px -16px rgba(184,155,110,.85);}
+.btn-primary .arr{transition:transform .3s;}
+.btn-primary:hover .arr{transform:translateX(5px);}
+.btn-ghost{background:transparent;color:var(--white);padding:18px 30px;font-size:13px;font-weight:400;letter-spacing:.08em;border:1px solid rgba(255,255,255,.4);border-radius:2px;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:10px;}
+.btn-ghost:hover{border-color:var(--white);background:rgba(255,255,255,.08);}
+.hero-trust{position:relative;z-index:3;display:flex;gap:30px;margin-top:46px;flex-wrap:wrap;}
+.hero-trust .ht{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.78);font-size:13px;letter-spacing:.02em;}
+.hero-trust .ht b{color:var(--brass-light);font-weight:500;}
+.hero-trust svg{width:18px;height:18px;stroke:var(--brass-light);}
+
+/* ---------- SECTIONS ---------- */
+section{padding:110px 56px;}
+.tag{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--brass);margin-bottom:18px;font-weight:500;}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,4.6vw,56px);font-weight:300;line-height:1.08;letter-spacing:-.01em;color:var(--navy);}
+.lead{font-size:17px;color:var(--muted);line-height:1.75;max-width:560px;margin-top:22px;}
+.gold-line{width:54px;height:2px;background:var(--brass);margin:26px 0;border:none;}
+
+/* ---------- INTENT / QUICK BOOK STRIP ---------- */
+.intent{background:var(--navy);color:var(--white);padding:78px 56px;text-align:center;}
+.intent .title{color:var(--white);}
+.intent .title em{color:var(--brass-light);}
+.intent p{color:rgba(255,255,255,.7);margin:18px auto 40px;max-width:560px;font-size:16px;}
+.intent-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1040px;margin:0 auto;}
+.intent-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:4px;padding:30px 18px;cursor:pointer;transition:all .3s;display:flex;flex-direction:column;align-items:center;gap:14px;}
+.intent-card:hover{background:var(--brass);border-color:var(--brass);transform:translateY(-4px);}
+.intent-card svg{width:30px;height:30px;stroke:var(--brass-light);transition:stroke .3s;}
+.intent-card:hover svg{stroke:var(--white);}
+.intent-card span{font-size:13.5px;letter-spacing:.06em;font-weight:400;}
+
+/* ---------- ABOUT / CLAUDIA ---------- */
+.about{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.about-imgs{position:relative;}
+.about-imgs .main{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;box-shadow:var(--shadow);}
+.about-imgs .badge{position:absolute;bottom:-26px;left:-26px;background:var(--navy);color:var(--white);padding:26px 30px;border-radius:4px;box-shadow:var(--shadow);max-width:230px;}
+.about-imgs .badge b{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:400;color:var(--brass-light);display:block;line-height:1;}
+.about-imgs .badge span{font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.75);display:block;margin-top:8px;}
+.about-content p{font-size:16px;color:var(--ink);line-height:1.8;margin-bottom:18px;opacity:.85;}
+.sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:30px;color:var(--navy);margin-top:14px;}
+.sig small{display:block;font-family:'DM Sans',sans-serif;font-style:normal;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);margin-top:6px;}
+.values{display:flex;gap:18px;margin-top:32px;flex-wrap:wrap;}
+.value{flex:1;min-width:120px;}
+.value b{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--navy);display:block;margin-bottom:4px;}
+.value span{font-size:13px;color:var(--muted);}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--white);}
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:54px;}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+.svc{background:var(--white);padding:46px 38px;transition:background .35s;position:relative;}
+.svc:hover{background:var(--cream);}
+.svc-num{font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--brass);letter-spacing:.1em;}
+.svc h3{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--navy);margin:16px 0 12px;}
+.svc p{font-size:14.5px;color:var(--muted);line-height:1.7;}
+.svc .more{display:inline-block;margin-top:18px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--brass);border-bottom:1px solid transparent;transition:border-color .3s;}
+.svc:hover .more{border-color:var(--brass);}
+
+/* ---------- PROPERTIES ---------- */
+.props{background:var(--cream);}
+.prop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px;}
+.prop{background:var(--white);border-radius:6px;overflow:hidden;box-shadow:0 18px 44px -32px rgba(0,38,71,.45);transition:transform .35s,box-shadow .35s;display:flex;flex-direction:column;}
+.prop:hover{transform:translateY(-6px);box-shadow:0 30px 60px -32px rgba(0,38,71,.5);}
+.prop-img{position:relative;aspect-ratio:4/3;overflow:hidden;}
+.prop-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+.prop:hover .prop-img img{transform:scale(1.06);}
+.prop-badge{position:absolute;top:16px;left:16px;background:var(--navy);color:var(--white);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:2px;}
+.prop-badge.sale{background:var(--brass);}
+.prop-body{padding:26px 26px 28px;display:flex;flex-direction:column;flex:1;}
+.prop-loc{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--taupe);margin-bottom:8px;}
+.prop h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;color:var(--navy);line-height:1.2;margin-bottom:16px;}
+.prop-specs{display:flex;gap:18px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:18px;}
+.prop-spec{font-size:13px;color:var(--muted);display:flex;flex-direction:column;}
+.prop-spec b{font-family:'Cormorant Garamond',serif;font-size:19px;color:var(--navy);font-weight:500;}
+.prop-foot{display:flex;justify-content:space-between;align-items:center;margin-top:auto;}
+.prop-price{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--navy);font-weight:500;}
+.prop-price small{font-size:13px;color:var(--muted);}
+.prop-cta{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);font-weight:500;cursor:pointer;}
+
+/* ---------- WHY / EMOTIONAL BANNER ---------- */
+.feeling{position:relative;padding:130px 56px;text-align:center;background:linear-gradient(rgba(0,26,48,.78),rgba(0,38,71,.82)),url('https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/06/ZENI-Immobilien-Wohnung-W486-Terrasse-1920x1280.jpg');background-size:cover;background-position:center;background-attachment:fixed;color:var(--white);}
+.feeling .tag{color:var(--brass-light);}
+.feeling .title{color:var(--white);max-width:880px;margin:0 auto;}
+.feeling .title em{color:var(--brass-light);}
+.feeling p{color:rgba(255,255,255,.78);max-width:560px;margin:26px auto 40px;font-size:17px;}
+
+/* ---------- TESTIMONIALS ---------- */
+.quotes{background:var(--white);}
+.quotes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:54px;}
+.quote{padding:38px 34px;background:var(--cream);border-radius:6px;border:1px solid var(--line);position:relative;}
+.quote .mark{font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--brass);opacity:.25;line-height:.6;}
+.quote p{font-size:15.5px;line-height:1.7;color:var(--ink);font-style:italic;margin:6px 0 22px;opacity:.88;}
+.quote .who{display:flex;align-items:center;gap:12px;}
+.quote .av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--brass-light);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:18px;}
+.quote .who b{font-size:14px;color:var(--navy);font-weight:500;display:block;}
+.quote .who span{font-size:12px;color:var(--muted);}
+.stars{color:var(--brass);font-size:13px;letter-spacing:2px;}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--navy);color:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
+.contact .title{color:var(--white);}
+.contact .title em{color:var(--brass-light);}
+.contact p.lead{color:rgba(255,255,255,.72);}
+.contact-info{margin-top:38px;display:flex;flex-direction:column;gap:24px;}
+.ci{display:flex;gap:18px;align-items:flex-start;}
+.ci-ic{width:44px;height:44px;flex-shrink:0;border:1px solid rgba(255,255,255,.2);border-radius:3px;display:flex;align-items:center;justify-content:center;}
+.ci-ic svg{width:18px;height:18px;stroke:var(--brass-light);}
+.ci small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);display:block;margin-bottom:4px;}
+.ci a,.ci span{font-size:16px;color:var(--white);}
+.ci a:hover{color:var(--brass-light);}
+.contact-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:44px 40px;text-align:center;}
+.contact-card .title{font-size:34px;margin-bottom:14px;}
+.contact-card p{color:rgba(255,255,255,.7);margin-bottom:28px;font-size:15px;}
+.contact-card img{width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 22px;border:2px solid var(--brass);}
+
+/* ---------- FOOTER ---------- */
+footer{background:var(--navy-deep);color:rgba(255,255,255,.6);padding:70px 56px 36px;}
+.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:50px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.1);}
+.foot-brand{font-family:'Cormorant Garamond',serif;font-size:24px;letter-spacing:.2em;text-transform:uppercase;color:var(--white);margin-bottom:16px;}
+.foot-brand span{color:var(--brass-light);}
+.foot-top p{font-size:14px;line-height:1.7;max-width:300px;}
+.foot-col h4{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--white);margin-bottom:18px;}
+.foot-col a{display:block;font-size:14px;margin-bottom:10px;transition:color .3s;}
+.foot-col a:hover{color:var(--brass-light);}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:26px;font-size:12.5px;flex-wrap:wrap;gap:10px;}
+
+/* ---------- FLOATING CTA ---------- */
+.float-cta{position:fixed;bottom:26px;right:26px;z-index:600;background:var(--brass);color:var(--white);padding:15px 26px;border-radius:40px;font-size:13px;font-weight:500;letter-spacing:.06em;box-shadow:0 16px 40px -12px rgba(184,155,110,.8);cursor:pointer;display:flex;align-items:center;gap:10px;transition:all .3s;border:none;animation:floatIn 1s ease-out 1.4s both;}
+.float-cta:hover{background:var(--navy);transform:translateY(-3px);}
+.float-cta svg{width:18px;height:18px;stroke:currentColor;}
+@keyframes floatIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* ---------- BOOKING MODAL ---------- */
+.modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(0,26,48,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:24px;opacity:0;transition:opacity .3s;}
+.modal-overlay.open{display:flex;opacity:1;}
+.modal{background:var(--cream);width:100%;max-width:620px;border-radius:10px;overflow:hidden;box-shadow:0 40px 100px -30px rgba(0,0,0,.6);position:relative;max-height:92vh;display:flex;flex-direction:column;transform:translateY(16px);transition:transform .35s;}
+.modal-overlay.open .modal{transform:translateY(0);}
+.modal-top{background:var(--navy);padding:26px 34px 22px;color:var(--white);position:relative;}
+.modal-top h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;}
+.modal-top p{font-size:13px;color:rgba(255,255,255,.65);margin-top:4px;}
+.modal-close{position:absolute;top:20px;right:22px;background:none;border:none;color:rgba(255,255,255,.7);font-size:26px;cursor:pointer;line-height:1;transition:color .2s;}
+.modal-close:hover{color:var(--white);}
+.progress{height:3px;background:rgba(255,255,255,.15);border-radius:3px;margin-top:20px;overflow:hidden;}
+.progress-bar{height:100%;background:var(--brass-light);width:20%;transition:width .4s ease;border-radius:3px;}
+.modal-body{padding:34px;overflow-y:auto;}
+.step{display:none;animation:stepIn .4s ease;}
+.step.active{display:block;}
+@keyframes stepIn{from{opacity:0;transform:translateX(14px);}to{opacity:1;transform:translateX(0);}}
+.step-q{font-family:'Cormorant Garamond',serif;font-size:27px;color:var(--navy);font-weight:400;line-height:1.2;margin-bottom:6px;}
+.step-hint{font-size:14px;color:var(--muted);margin-bottom:26px;}
+.opts{display:grid;gap:12px;}
+.opts.two{grid-template-columns:1fr 1fr;}
+.opt{display:flex;align-items:center;gap:14px;padding:18px 20px;background:var(--white);border:1.5px solid var(--line);border-radius:6px;cursor:pointer;transition:all .25s;text-align:left;font-family:inherit;font-size:15px;color:var(--ink);}
+.opt:hover{border-color:var(--brass);background:#fffdf9;}
+.opt.selected{border-color:var(--brass);background:#fbf6ec;box-shadow:0 0 0 3px rgba(184,155,110,.15);}
+.opt .ic{width:38px;height:38px;flex-shrink:0;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;}
+.opt .ic svg{width:20px;height:20px;stroke:var(--brass);}
+.opt .ic span{font-size:20px;}
+.opt b{font-weight:500;display:block;}
+.opt small{display:block;font-size:12.5px;color:var(--muted);font-weight:300;margin-top:2px;}
+.chips{display:flex;flex-wrap:wrap;gap:10px;}
+.chip{padding:11px 18px;border:1.5px solid var(--line);border-radius:30px;background:var(--white);cursor:pointer;font-size:14px;color:var(--ink);font-family:inherit;transition:all .25s;}
+.chip:hover{border-color:var(--brass);}
+.chip.selected{background:var(--navy);color:var(--white);border-color:var(--navy);}
+.field{margin-bottom:18px;}
+.field label{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--taupe);margin-bottom:7px;}
+.field input,.field textarea{width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:6px;background:var(--white);font-family:inherit;font-size:15px;color:var(--ink);transition:border-color .25s;}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--brass);}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.modal-foot{display:flex;justify-content:space-between;align-items:center;padding:20px 34px;border-top:1px solid var(--line);background:var(--cream-deep);}
+.btn-back{background:none;border:none;color:var(--muted);font-family:inherit;font-size:14px;cursor:pointer;padding:8px 4px;transition:color .2s;}
+.btn-back:hover{color:var(--navy);}
+.btn-next{background:var(--navy);color:var(--white);border:none;padding:14px 30px;border-radius:4px;font-family:inherit;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;cursor:pointer;transition:all .3s;display:inline-flex;align-items:center;gap:10px;}
+.btn-next:hover{background:var(--brass);}
+.btn-next:disabled{opacity:.4;cursor:not-allowed;}
+.btn-next.go{background:var(--brass);}
+.btn-next.go:hover{background:var(--brass-light);}
+.summary{background:#fbf6ec;border:1px solid rgba(184,155,110,.4);border-radius:6px;padding:18px 20px;margin-bottom:22px;font-size:14px;color:var(--navy);line-height:1.7;}
+.summary b{color:var(--brass);}
+.success{text-align:center;padding:20px 6px;}
+.success .check{width:74px;height:74px;border-radius:50%;background:var(--brass);display:flex;align-items:center;justify-content:center;margin:0 auto 24px;animation:pop .5s ease;}
+.success .check svg{width:36px;height:36px;stroke:var(--white);stroke-width:3;}
+@keyframes pop{0%{transform:scale(0);}60%{transform:scale(1.15);}100%{transform:scale(1);}}
+.success h3{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--navy);margin-bottom:12px;}
+.success p{font-size:15px;color:var(--muted);max-width:380px;margin:0 auto 26px;line-height:1.7;}
+.success .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+
+/* ---------- MOBILE MENU ---------- */
+.mobile-menu{display:none;position:fixed;inset:0;background:var(--navy);z-index:1500;padding:90px 36px 40px;flex-direction:column;gap:6px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--white);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);}
+.mobile-menu a:hover{color:var(--brass-light);}
+.mobile-menu .mclose{position:absolute;top:26px;right:34px;background:none;border:none;color:var(--white);font-size:32px;cursor:pointer;}
+
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:1024px){
+  nav,nav.scrolled{padding:16px 28px;}
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  section{padding:80px 28px;}
+  .hero-content{padding:110px 28px 40px;}
+  .intent{padding:64px 28px;}
+  .intent-cards{grid-template-columns:repeat(2,1fr);}
+  .about{grid-template-columns:1fr;gap:56px;}
+  .about-imgs{max-width:440px;}
+  .svc-grid{grid-template-columns:1fr;}
+  .prop-grid{grid-template-columns:1fr 1fr;}
+  .quotes-grid{grid-template-columns:1fr;}
+  .contact{grid-template-columns:1fr;gap:46px;}
+  .foot-top{grid-template-columns:1fr 1fr;gap:34px;}
+  .feeling{background-attachment:scroll;}
+}
+@media(max-width:600px){
+  section{padding:64px 20px;}
+  .hero-content{padding:100px 20px 30px;}
+  .hero h1{font-size:42px;}
+  .hero-btns{flex-direction:column;align-items:stretch;}
+  .btn-primary,.btn-ghost{justify-content:center;}
+  .intent-cards{grid-template-columns:1fr;}
+  .prop-grid{grid-template-columns:1fr;}
+  .foot-top{grid-template-columns:1fr;}
+  .field-row{grid-template-columns:1fr;}
+  .opts.two{grid-template-columns:1fr;}
+  .modal-body{padding:26px 22px;}
+  .modal-top,.modal-foot{padding-left:22px;padding-right:22px;}
+  .float-cta span{display:none;}
+  .float-cta{padding:15px;}
+  .about-imgs .badge{left:0;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#top" class="nav-logo"><b>ZENI</b><span>Immobilien</span></a>
+  <ul class="nav-links">
+    <li><a href="#leistungen">Leistungen</a></li>
+    <li><a href="#claudia">Über Claudia</a></li>
+    <li><a href="#objekte">Objekte</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+    <li><a href="#" class="nav-cta" onclick="openBooking();return false;">Termin buchen</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mclose" onclick="toggleMenu()">&times;</button>
+  <a href="#leistungen" onclick="toggleMenu()">Leistungen</a>
+  <a href="#claudia" onclick="toggleMenu()">Über Claudia</a>
+  <a href="#objekte" onclick="toggleMenu()">Objekte</a>
+  <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+  <a href="#" onclick="toggleMenu();openBooking();return false;" style="color:var(--brass-light)">Termin buchen →</a>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Immobilien mit Herz · Zürich</div>
+    <h1>Ihr Zuhause verdient<br>jemanden, der <em>zuhört</em>.</h1>
+    <p class="hero-sub">Ob Verkauf, Vermietung oder Bewertung – bei ZENI Immobilien begleitet Sie Claudia Zeni persönlich. Mit Verantwortung, Authentizität und echtem Gespür für das, was Ihnen wichtig ist.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="openBooking()">Kostenloses Gespräch buchen <span class="arr">→</span></button>
+      <a href="#objekte" class="btn-ghost">Objekte ansehen</a>
+    </div>
+    <div class="hero-trust">
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2l2.5 6.5L21 9l-5 4 1.8 7L12 16l-5.8 4L8 13 3 9l6.5-.5z"/></svg><span><b>Seit 2018</b> persönlich für Sie da</span></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg><span><b>Keine</b> versteckten Kosten</span></div>
+      <div class="ht"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>In 30 Sek.</b> Termin gebucht</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- INTENT / QUICK BOOK -->
+<section class="intent" id="start">
+  <div class="tag" style="color:var(--brass-light)">Sagen Sie mir, worum es geht</div>
+  <h2 class="title">Womit darf ich Ihnen <em>helfen?</em></h2>
+  <p>Ein Klick genügt – und Sie sind direkt im Gespräch. Wählen Sie Ihr Anliegen und ich melde mich persönlich bei Ihnen.</p>
+  <div class="intent-cards">
+    <div class="intent-card" onclick="openBooking('verkaufen')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 9l9-6 9 6v11a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1z"/></svg>
+      <span>Verkaufen</span>
+    </div>
+    <div class="intent-card" onclick="openBooking('kaufen')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M21 21l-5.2-5.2M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
+      <span>Kaufen</span>
+    </div>
+    <div class="intent-card" onclick="openBooking('vermieten')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-5h6v5"/></svg>
+      <span>Vermieten</span>
+    </div>
+    <div class="intent-card" onclick="openBooking('mieten')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M3 11l9-7 9 7M5 10v10h14V10M10 20v-6h4v6"/></svg>
+      <span>Mieten</span>
+    </div>
+    <div class="intent-card" onclick="openBooking('bewertung')">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 19V5a1 1 0 011-1h14a1 1 0 011 1v14M8 15l3-3 2 2 3-4M8 19h12"/></svg>
+      <span>Bewerten</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT CLAUDIA -->
+<section class="about" id="claudia">
+  <div class="about-imgs reveal">
+    <img class="main" src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/07/ZENI-Immobilien-Claudia-Zeni-16-1280x1920.jpg" alt="Claudia Zeni, Inhaberin ZENI Immobilien">
+    <div class="badge"><b>2018</b><span>gegründet aus Überzeugung – heute Ihr verlässlicher Partner in Zürich.</span></div>
+  </div>
+  <div class="about-content reveal">
+    <div class="tag">Über Claudia Zeni</div>
+    <h2 class="title">Immobilien sind für mich<br><em>Vertrauenssache.</em></h2>
+    <hr class="gold-line">
+    <p>Nach langjähriger Erfahrung bei etablierten Immobilienfirmen in Zug und Zürich habe ich 2018 ZENI Immobilien gegründet – mit einer klaren Haltung: Ein Zuhause ist mehr als Quadratmeter. Es ist Geschichte, Gefühl und Zukunft.</p>
+    <p>Ob Wohnungen, Neubauprojekte, Gewerbeobjekte oder Grundstücke in Zürich, Zug, Luzern, Aargau und Schwyz – ich begleite Sie persönlich, ehrlich und mit voller Diskretion.</p>
+    <div class="values">
+      <div class="value"><b>Verantwortung</b><span>Ich stehe zu meinem Wort.</span></div>
+      <div class="value"><b>Authentizität</b><span>Ehrlich, auch wenn's unbequem ist.</span></div>
+      <div class="value"><b>Empathie</b><span>Ich höre zu, bevor ich rede.</span></div>
+    </div>
+    <p class="sig">Claudia Zeni<small>Inhaberin · ZENI Immobilien GmbH</small></p>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="leistungen">
+  <div class="svc-head">
+    <div class="reveal">
+      <div class="tag">Leistungen</div>
+      <h2 class="title">Alles aus einer Hand –<br><em>persönlich begleitet</em></h2>
+    </div>
+    <p class="lead reveal" style="margin-top:0">Von der ersten Einschätzung bis zur Schlüsselübergabe: transparent, ohne versteckte Kosten und mit klarer, marktgerechter Strategie.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc reveal"><div class="svc-num">01</div><h3>Verkauf</h3><p>Realistische Bewertung, durchdachtes Marketing und die richtigen Käufer – diskret und zum bestmöglichen Preis.</p><span class="more" onclick="openBooking('verkaufen')">Verkauf besprechen →</span></div>
+    <div class="svc reveal"><div class="svc-num">02</div><h3>Vermietung & Erstvermietung</h3><p>Von der Inszenierung bis zur Mieterauswahl. Auch komplette Erstvermietungen von Neubauprojekten.</p><span class="more" onclick="openBooking('vermieten')">Vermietung anfragen →</span></div>
+    <div class="svc reveal"><div class="svc-num">03</div><h3>Bewertung</h3><p>Was ist Ihre Immobilie heute wirklich wert? Eine ehrliche, marktbasierte Einschätzung – kostenlos und unverbindlich.</p><span class="more" onclick="openBooking('bewertung')">Wert ermitteln →</span></div>
+    <div class="svc reveal"><div class="svc-num">04</div><h3>Suchprofil</h3><p>Sie suchen – ich finde. Sagen Sie mir, wie Ihr Zuhause sich anfühlen soll, und ich melde mich, sobald es passt.</p><span class="more" onclick="openBooking('kaufen')">Suchprofil erstellen →</span></div>
+    <div class="svc reveal"><div class="svc-num">05</div><h3>Gewerbe</h3><p>Verkauf und Vermietung von Gewerbe- und Renditeobjekten – mit dem Blick fürs Geschäft und fürs Detail.</p><span class="more" onclick="openBooking('verkaufen')">Gewerbe anfragen →</span></div>
+    <div class="svc reveal"><div class="svc-num">06</div><h3>Beratung</h3><p>Unsicher, wo Sie starten sollen? In einem persönlichen Gespräch finden wir gemeinsam Ihren nächsten Schritt.</p><span class="more" onclick="openBooking()">Beratung buchen →</span></div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section class="props" id="objekte">
+  <div class="svc-head">
+    <div class="reveal">
+      <div class="tag">Aktuelle Objekte</div>
+      <h2 class="title">Vielleicht ist Ihr<br>neues <em>Zuhause</em> dabei</h2>
+    </div>
+    <p class="lead reveal" style="margin-top:0">Eine Auswahl aktueller Angebote. Etwas Passendes gesehen – oder gerade nicht? Sagen Sie mir, wonach Sie suchen.</p>
+  </div>
+  <div class="prop-grid">
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-badge">Zu vermieten</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/06/ZENI-Immobilien-Wohnung-W486-Wohnzimmer-moebliert-1920x1276.jpg" alt="2.5-Zimmer Gartenwohnung Witikon"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 486 · Zürich</div>
+        <h3>2.5-Zimmer Gartenwohnung</h3>
+        <div class="prop-specs"><div class="prop-spec"><b>2.5</b>Zimmer</div><div class="prop-spec"><b>139.5</b>m² Fläche</div><div class="prop-spec"><b>EG</b>mit Garten</div></div>
+        <div class="prop-foot"><div class="prop-price">CHF 3'100<small>/Mt.</small></div><span class="prop-cta" onclick="openBooking('mieten')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-badge sale">Zu verkaufen</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2025/11/ZENI-Immobilien-Immobilienmakler-in-Zuerich-Objekt-in-Affoltern.png" alt="5.5-Zimmer Einfamilienhaus Affoltern am Albis"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Hasenbühlstrasse 9 · Affoltern a.A.</div>
+        <h3>5.5-Zimmer Einfamilienhaus</h3>
+        <div class="prop-specs"><div class="prop-spec"><b>5.5</b>Zimmer</div><div class="prop-spec"><b>446</b>m² Wohnfläche</div><div class="prop-spec"><b>Haus</b>freistehend</div></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2.15 Mio.</div><span class="prop-cta" onclick="openBooking('kaufen')">Besichtigen →</span></div>
+      </div>
+    </div>
+    <div class="prop reveal">
+      <div class="prop-img"><span class="prop-badge">Zu vermieten</span><img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/11/ZENI-Immobilien-6-Zimmer-Wohnung-kaufen-innenliegende-Terrasse-1920x1280.jpg" alt="3.5-Zimmer Maisonette Witikon"></div>
+      <div class="prop-body">
+        <div class="prop-loc">Witikonerstrasse 423 · Zürich</div>
+        <h3>3.5-Zimmer Maisonette, renoviert</h3>
+        <div class="prop-specs"><div class="prop-spec"><b>3.5</b>Zimmer</div><div class="prop-spec"><b>neu</b>renoviert</div><div class="prop-spec"><b>Maiso.</b>über 2 Etagen</div></div>
+        <div class="prop-foot"><div class="prop-price">CHF 2'650<small>/Mt.</small></div><span class="prop-cta" onclick="openBooking('mieten')">Besichtigen →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEELING BANNER -->
+<section class="feeling">
+  <div class="reveal">
+    <div class="tag">Warum ZENI</div>
+    <h2 class="title">Ein Zuhause kauft man nicht mit dem Kopf allein –<br>sondern mit dem <em>Bauchgefühl</em>.</h2>
+    <p>Deshalb frage ich nicht nur nach Budget und Zimmerzahl. Ich frage, wie sich Ihr nächstes Kapitel anfühlen soll. Genau dort beginnt unsere Zusammenarbeit.</p>
+    <button class="btn-primary" onclick="openBooking()">Erzählen Sie's mir <span class="arr">→</span></button>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="quotes">
+  <div class="reveal" style="text-align:center;max-width:640px;margin:0 auto">
+    <div class="tag" style="text-align:center">Stimmen</div>
+    <h2 class="title">Auf ZENI Immobilien<br>ist <em>Verlass</em></h2>
+  </div>
+  <div class="quotes-grid">
+    <div class="quote reveal"><div class="mark">"</div><p>Claudia hat unser Haus verkauft, als wäre es ihr eigenes. Ehrlich, schnell und mit einem Gespür für Menschen, das man heute selten findet.</p><div class="who"><div class="av">M</div><div><b>Familie Müller</b><span>Hausverkauf, Zürich</span></div></div></div>
+    <div class="quote reveal"><div class="mark">"</div><p>Endlich eine Maklerin, die wirklich zuhört. Wir haben nicht einfach eine Wohnung gefunden – wir haben ein Zuhause gefunden.</p><div class="who"><div class="av">S</div><div><b>S. & T. Brunner</b><span>Kauf, Zug</span></div></div></div>
+    <div class="quote reveal"><div class="mark">"</div><p>Transparent, diskret und immer erreichbar. Vom ersten Gespräch bis zur Übergabe hatte ich nie das Gefühl, nur eine Nummer zu sein.</p><div class="who"><div class="av">R</div><div><b>R. Keller</b><span>Erstvermietung, Witikon</span></div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="kontakt">
+  <div class="reveal">
+    <div class="tag" style="color:var(--brass-light)">Kontakt</div>
+    <h2 class="title">Lassen Sie uns<br><em>reden</em></h2>
+    <p class="lead">Der erste Schritt kostet nichts – ausser 30 Sekunden. Buchen Sie Ihr persönliches Gespräch oder melden Sie sich direkt.</p>
+    <div class="contact-info">
+      <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></div><div><small>Telefon</small><a href="tel:+41445168165">+41 44 516 81 65</a></div></div>
+      <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/><path d="M22 6l-10 7L2 6"/></svg></div><div><small>E-Mail</small><a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a></div></div>
+      <div class="ci"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><small>Büro</small><span>Witikonerstrasse 423, 8053 Zürich</span></div></div>
+    </div>
+  </div>
+  <div class="contact-card reveal">
+    <img src="https://zeni-immobilien.ch/wp-content/uploads/sites/32/2024/07/ZENI-Immobilien-Claudia-Zeni-08-768x512.jpg" alt="Claudia Zeni">
+    <h2 class="title">Termin in 30 Sekunden</h2>
+    <p>Ein paar kurze Fragen – ehrlich beantwortet – und ich bin bestens auf unser Gespräch vorbereitet.</p>
+    <button class="btn-primary" style="width:100%;justify-content:center" onclick="openBooking()">Jetzt Termin buchen <span class="arr">→</span></button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-brand">ZENI <span>Immobilien</span></div>
+      <p>Auf ZENI Immobilien ist Verlass. Ihre persönliche Immobilienmaklerin in Zürich – mit Verantwortung, Authentizität und Empathie.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Leistungen</h4>
+      <a href="#" onclick="openBooking('verkaufen');return false;">Verkauf</a>
+      <a href="#" onclick="openBooking('vermieten');return false;">Vermietung</a>
+      <a href="#" onclick="openBooking('bewertung');return false;">Bewertung</a>
+      <a href="#" onclick="openBooking('kaufen');return false;">Suchprofil</a>
+    </div>
+    <div class="foot-col">
+      <h4>Kontakt</h4>
+      <a href="tel:+41445168165">+41 44 516 81 65</a>
+      <a href="mailto:info@zeni-immobilien.ch">info@zeni-immobilien.ch</a>
+      <a href="https://zeni-immobilien.ch" target="_blank" rel="noopener">zeni-immobilien.ch</a>
+      <span style="font-size:14px">Witikonerstrasse 423, 8053 Zürich</span>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 ZENI Immobilien GmbH · Alle Rechte vorbehalten</span>
+    <span>Mit ♥ gebaut in Zürich</span>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<button class="float-cta" onclick="openBooking()">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+  <span>Termin buchen</span>
+</button>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <div class="modal-top">
+      <button class="modal-close" onclick="closeBooking()">&times;</button>
+      <h3 id="modalTitle">Ihr persönliches Gespräch</h3>
+      <p id="modalSubtitle">In unter einer Minute – versprochen.</p>
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+    </div>
+    <div class="modal-body" id="modalBody">
+      <!-- STEP 1: INTENT -->
+      <div class="step active" data-step="1">
+        <div class="step-q">Womit darf ich Ihnen helfen?</div>
+        <div class="step-hint">Wählen Sie, was am ehesten zutrifft.</div>
+        <div class="opts">
+          <button class="opt" data-val="verkaufen" onclick="pick(this,'intent')"><div class="ic"><span>🏡</span></div><div><b>Ich möchte verkaufen</b><small>Wohnung, Haus oder Grundstück</small></div></button>
+          <button class="opt" data-val="kaufen" onclick="pick(this,'intent')"><div class="ic"><span>🔑</span></div><div><b>Ich suche ein Zuhause</b><small>Kaufen – für mich oder als Investment</small></div></button>
+          <button class="opt" data-val="vermieten" onclick="pick(this,'intent')"><div class="ic"><span>📋</span></div><div><b>Ich möchte vermieten</b><small>Auch Erstvermietung von Neubauten</small></div></button>
+          <button class="opt" data-val="mieten" onclick="pick(this,'intent')"><div class="ic"><span>🛋️</span></div><div><b>Ich suche eine Mietwohnung</b><small>Sagen Sie mir, wonach Sie suchen</small></div></button>
+          <button class="opt" data-val="bewertung" onclick="pick(this,'intent')"><div class="ic"><span>📈</span></div><div><b>Ich möchte den Wert wissen</b><small>Kostenlose, ehrliche Bewertung</small></div></button>
+        </div>
+      </div>
+
+      <!-- STEP 2: EMOTIONAL Q1 -->
+      <div class="step" data-step="2">
+        <div class="step-q" id="emoQ">Was soll Ihr neues Zuhause vor allem sein?</div>
+        <div class="step-hint">Es gibt kein richtig oder falsch – ich möchte Sie nur verstehen.</div>
+        <div class="chips" id="emoChips"></div>
+      </div>
+
+      <!-- STEP 3: EMOTIONAL Q2 / TIMING -->
+      <div class="step" data-step="3">
+        <div class="step-q" id="timeQ">Wie fühlt sich der richtige Zeitpunkt an?</div>
+        <div class="step-hint">Damit ich weiss, wie schnell Sie's brauchen.</div>
+        <div class="opts">
+          <button class="opt" data-val="Dringend – am liebsten sofort" onclick="pick(this,'timing')"><div class="ic"><span>⚡</span></div><div><b>Am liebsten sofort</b><small>Es eilt, ich will vorwärtsmachen</small></div></button>
+          <button class="opt" data-val="In den nächsten Monaten" onclick="pick(this,'timing')"><div class="ic"><span>📅</span></div><div><b>In den nächsten Monaten</b><small>Ich plane konkret, aber ohne Stress</small></div></button>
+          <button class="opt" data-val="Ich orientiere mich noch" onclick="pick(this,'timing')"><div class="ic"><span>🧭</span></div><div><b>Ich orientiere mich noch</b><small>Erst mal unverbindlich informieren</small></div></button>
+        </div>
+      </div>
+
+      <!-- STEP 4: CONTACT -->
+      <div class="step" data-step="4">
+        <div class="step-q">Wie erreiche ich Sie am besten?</div>
+        <div class="step-hint">Ich melde mich persönlich – kein Callcenter, kein Spam.</div>
+        <div class="summary" id="summary"></div>
+        <div class="field-row">
+          <div class="field"><label>Vorname</label><input type="text" id="fName" placeholder="Claudia"></div>
+          <div class="field"><label>Nachname</label><input type="text" id="lName" placeholder="Zeni"></div>
+        </div>
+        <div class="field"><label>E-Mail</label><input type="email" id="fEmail" placeholder="ihre@email.ch"></div>
+        <div class="field"><label>Telefon</label><input type="tel" id="fPhone" placeholder="+41 ..."></div>
+        <div class="field"><label>Möchten Sie mir noch etwas mitgeben? (optional)</label><textarea id="fMsg" rows="2" placeholder="Was mir wichtig wäre …"></textarea></div>
+      </div>
+
+      <!-- STEP 5: SUCCESS -->
+      <div class="step" data-step="5">
+        <div class="success">
+          <div class="check"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Vielen Dank, <span id="successName">ich</span>!</h3>
+          <p>Ihre Anfrage ist bei mir – ich melde mich persönlich innert <b>24 Stunden</b>. Bis dahin erreichen Sie mich jederzeit direkt:</p>
+          <div class="actions">
+            <a href="tel:+41445168165" class="btn-primary" style="text-decoration:none">Anrufen</a>
+            <a href="mailto:info@zeni-immobilien.ch" class="btn-ghost" style="border-color:var(--line);color:var(--navy)">E-Mail schreiben</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot" id="modalFoot">
+      <button class="btn-back" id="backBtn" onclick="prevStep()" style="visibility:hidden">← Zurück</button>
+      <button class="btn-next" id="nextBtn" onclick="nextStep()" disabled>Weiter →</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* nav scroll */
+window.addEventListener('scroll',()=>{document.getElementById('navbar').classList.toggle('scrolled',scrollY>60);});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
+
+/* reveal on scroll */
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+/* ---------- BOOKING LOGIC ---------- */
+const data={intent:'',emotion:'',timing:'',name:''};
+let step=1;
+const totalSteps=5;
+
+/* emotional question + options change with intent */
+const emotionMap={
+  verkaufen:{q:'Was verbinden Sie mit dieser Immobilie?',opts:['Viele Erinnerungen','Ein Kapitel, das ich abschliesse','Eine Investition','Eine schwierige Situation','Einfach den nächsten Schritt']},
+  kaufen:{q:'Wie soll sich Ihr neues Zuhause anfühlen?',opts:['Endlich angekommen','Geborgen & ruhig','Platz für die Familie','Ein Neuanfang','Stolz & repräsentativ']},
+  vermieten:{q:'Was ist Ihnen bei Ihren Mietern am wichtigsten?',opts:['Verlässlichkeit','Sorgfältiger Umgang','Schnelle Vermietung','Langfristigkeit','Fairer Ertrag']},
+  mieten:{q:'Wonach sehnen Sie sich in Ihrem neuen Zuhause?',opts:['Mehr Ruhe','Mehr Platz','Ein Neuanfang','Näher bei der Familie','Endlich angekommen sein']},
+  bewertung:{q:'Was steckt hinter Ihrer Frage nach dem Wert?',opts:['Verkaufsgedanken','Reine Neugier','Erbschaft / Scheidung','Finanzierung / Bank','Langfristige Planung']}
+};
+const titleMap={
+  verkaufen:'Verkauf besprechen',kaufen:'Ihr neues Zuhause finden',vermieten:'Vermietung anfragen',mieten:'Mietwohnung finden',bewertung:'Kostenlose Bewertung'
+};
+
+function openBooking(intent){
+  resetBooking();
+  if(intent){
+    data.intent=intent;
+    // pre-select intent and skip to step 2
+    document.querySelectorAll('[data-step="1"] .opt').forEach(o=>{o.classList.toggle('selected',o.dataset.val===intent);});
+    buildEmotion();
+    goTo(2);
+  }
+  document.getElementById('bookingModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeBooking(){document.getElementById('bookingModal').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('bookingModal').addEventListener('click',e=>{if(e.target.id==='bookingModal')closeBooking();});
+
+function resetBooking(){
+  data.intent='';data.emotion='';data.timing='';data.name='';
+  step=1;
+  document.querySelectorAll('.opt,.chip').forEach(o=>o.classList.remove('selected'));
+  ['fName','lName','fEmail','fPhone','fMsg'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  goTo(1);
+}
+
+function pick(el,key){
+  const group=el.closest('.step');
+  group.querySelectorAll('.opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  data[key]=el.dataset.val;
+  if(key==='intent'){buildEmotion();}
+  validate();
+  // auto-advance for snappy feel (except last selectable handled by Next)
+  if(key==='intent'||key==='timing'){setTimeout(()=>nextStep(),260);}
+}
+function pickChip(el){
+  el.closest('.chips').querySelectorAll('.chip').forEach(c=>c.classList.remove('selected'));
+  el.classList.add('selected');
+  data.emotion=el.textContent;
+  validate();
+  setTimeout(()=>nextStep(),260);
+}
+function buildEmotion(){
+  const m=emotionMap[data.intent]||emotionMap.kaufen;
+  data.emotion='';
+  document.getElementById('emoQ').textContent=m.q;
+  const wrap=document.getElementById('emoChips');
+  wrap.innerHTML='';
+  m.opts.forEach(o=>{const b=document.createElement('button');b.className='chip';b.type='button';b.textContent=o;b.onclick=()=>pickChip(b);wrap.appendChild(b);});
+  // modal title
+  document.getElementById('modalTitle').textContent=titleMap[data.intent]||'Ihr persönliches Gespräch';
+}
+
+function goTo(s){
+  step=s;
+  document.querySelectorAll('.step').forEach(el=>el.classList.toggle('active',+el.dataset.step===s));
+  document.getElementById('progressBar').style.width=(s/totalSteps*100)+'%';
+  const back=document.getElementById('backBtn');
+  const next=document.getElementById('nextBtn');
+  const foot=document.getElementById('modalFoot');
+  back.style.visibility=(s>1&&s<5)?'visible':'hidden';
+  foot.style.display=(s===5)?'none':'flex';
+  if(s===4){buildSummary();next.textContent='Anfrage senden ✓';next.classList.add('go');}
+  else{next.textContent='Weiter →';next.classList.remove('go');}
+  validate();
+}
+function buildSummary(){
+  const labels={verkaufen:'Verkaufen',kaufen:'Kaufen',vermieten:'Vermieten',mieten:'Mieten',bewertung:'Bewertung'};
+  document.getElementById('summary').innerHTML=
+    `<b>Anliegen:</b> ${labels[data.intent]||'—'} &nbsp;·&nbsp; <b>Wichtig:</b> ${data.emotion||'—'} &nbsp;·&nbsp; <b>Zeitpunkt:</b> ${data.timing||'—'}`;
+}
+function validate(){
+  const next=document.getElementById('nextBtn');
+  let ok=false;
+  if(step===1)ok=!!data.intent;
+  else if(step===2)ok=!!data.emotion;
+  else if(step===3)ok=!!data.timing;
+  else if(step===4)ok=document.getElementById('fName').value.trim()&&(document.getElementById('fEmail').value.trim()||document.getElementById('fPhone').value.trim());
+  next.disabled=!ok;
+}
+['fName','lName','fEmail','fPhone'].forEach(id=>document.getElementById(id).addEventListener('input',validate));
+
+function nextStep(){
+  if(document.getElementById('nextBtn').disabled)return;
+  if(step===1&&!data.emotion)buildEmotion();
+  if(step<4){goTo(step+1);}
+  else if(step===4){submitBooking();}
+}
+function prevStep(){if(step>1)goTo(step-1);}
+
+function submitBooking(){
+  data.name=document.getElementById('fName').value.trim();
+  document.getElementById('successName').textContent=data.name||'vielmals';
+  /* In production: POST to backend / Outlook booking / email.
+     Demo: show confirmation. */
+  goTo(5);
+}
+
+/* keyboard: ESC closes */
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBooking();});
+</script>
+</body>
+</html>
